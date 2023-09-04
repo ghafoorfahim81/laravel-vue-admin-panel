@@ -1,0 +1,440 @@
+[01-Dec-2022 08:34:10 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_07_03_142340_create_currencies_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_07_03_142340_create_currencies_table.php on line 7
+[01-Dec-2022 08:34:10 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_15_064204_create_user_permissions_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_15_064204_create_user_permissions_table.php on line 7
+[01-Dec-2022 08:34:10 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060435_create_permissions_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060435_create_permissions_table.php on line 7
+[01-Dec-2022 08:34:10 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_15_064204_create_user_permissions_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_15_064204_create_user_permissions_table.php on line 7
+[01-Dec-2022 08:34:10 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_07_03_142340_create_currencies_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_07_03_142340_create_currencies_table.php on line 7
+[01-Dec-2022 08:34:10 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_07_03_142340_create_currencies_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_07_03_142340_create_currencies_table.php on line 7
+[01-Dec-2022 08:34:10 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060435_create_permissions_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060435_create_permissions_table.php on line 7
+[01-Dec-2022 08:34:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_15_064204_create_user_permissions_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_15_064204_create_user_permissions_table.php on line 7
+[01-Dec-2022 08:34:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2019_08_19_000000_create_failed_jobs_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2019_08_19_000000_create_failed_jobs_table.php on line 7
+[01-Dec-2022 08:34:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060435_create_permissions_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060435_create_permissions_table.php on line 7
+[01-Dec-2022 08:34:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2019_08_19_000000_create_failed_jobs_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2019_08_19_000000_create_failed_jobs_table.php on line 7
+[01-Dec-2022 08:34:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_15_064204_create_user_permissions_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_15_064204_create_user_permissions_table.php on line 7
+[01-Dec-2022 08:34:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060450_create_permission_groups_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060450_create_permission_groups_table.php on line 7
+[01-Dec-2022 08:34:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2019_08_19_000000_create_failed_jobs_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2019_08_19_000000_create_failed_jobs_table.php on line 7
+[01-Dec-2022 08:34:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_15_064204_create_user_permissions_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_15_064204_create_user_permissions_table.php on line 7
+[01-Dec-2022 08:34:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_07_03_142340_create_currencies_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_07_03_142340_create_currencies_table.php on line 7
+[01-Dec-2022 08:34:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060435_create_permissions_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060435_create_permissions_table.php on line 7
+[01-Dec-2022 08:34:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_07_03_142340_create_currencies_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_07_03_142340_create_currencies_table.php on line 7
+[01-Dec-2022 08:34:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2019_08_19_000000_create_failed_jobs_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2019_08_19_000000_create_failed_jobs_table.php on line 7
+[01-Dec-2022 08:34:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2019_08_19_000000_create_failed_jobs_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2019_08_19_000000_create_failed_jobs_table.php on line 7
+[01-Dec-2022 08:34:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060450_create_permission_groups_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060450_create_permission_groups_table.php on line 7
+[01-Dec-2022 08:34:11 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060435_create_permissions_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060435_create_permissions_table.php on line 7
+[01-Dec-2022 08:34:12 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060450_create_permission_groups_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060450_create_permission_groups_table.php on line 7
+[01-Dec-2022 08:34:12 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_07_03_142340_create_currencies_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_07_03_142340_create_currencies_table.php on line 7
+[01-Dec-2022 08:34:12 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060450_create_permission_groups_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060450_create_permission_groups_table.php on line 7
+[01-Dec-2022 08:34:12 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_15_064204_create_user_permissions_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_15_064204_create_user_permissions_table.php on line 7
+[01-Dec-2022 08:34:12 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_15_064204_create_user_permissions_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_15_064204_create_user_permissions_table.php on line 7
+[01-Dec-2022 08:34:12 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2019_08_19_000000_create_failed_jobs_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2019_08_19_000000_create_failed_jobs_table.php on line 7
+[01-Dec-2022 08:34:12 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_07_03_142340_create_currencies_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_07_03_142340_create_currencies_table.php on line 7
+[01-Dec-2022 08:34:13 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060435_create_permissions_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060435_create_permissions_table.php on line 7
+[01-Dec-2022 08:34:13 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2019_08_19_000000_create_failed_jobs_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2019_08_19_000000_create_failed_jobs_table.php on line 7
+[01-Dec-2022 08:34:13 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060435_create_permissions_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060435_create_permissions_table.php on line 7
+[01-Dec-2022 08:34:13 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2014_10_12_200000_add_two_factor_columns_to_users_table.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2014_10_12_200000_add_two_factor_columns_to_users_table.php on line 8
+[01-Dec-2022 08:34:13 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2014_10_12_200000_add_two_factor_columns_to_users_table.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2014_10_12_200000_add_two_factor_columns_to_users_table.php on line 8
+[01-Dec-2022 08:34:13 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2014_10_12_200000_add_two_factor_columns_to_users_table.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2014_10_12_200000_add_two_factor_columns_to_users_table.php on line 8
+[01-Dec-2022 08:34:14 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2014_10_12_200000_add_two_factor_columns_to_users_table.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2014_10_12_200000_add_two_factor_columns_to_users_table.php on line 8
+[01-Dec-2022 08:34:14 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2014_10_12_200000_add_two_factor_columns_to_users_table.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2014_10_12_200000_add_two_factor_columns_to_users_table.php on line 8
+[01-Dec-2022 08:34:15 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2014_10_12_100000_create_password_resets_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2014_10_12_100000_create_password_resets_table.php on line 7
+[01-Dec-2022 08:34:15 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2014_10_12_100000_create_password_resets_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2014_10_12_100000_create_password_resets_table.php on line 7
+[01-Dec-2022 08:34:15 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2014_10_12_200000_add_two_factor_columns_to_users_table.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2014_10_12_200000_add_two_factor_columns_to_users_table.php on line 8
+[01-Dec-2022 08:34:15 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2014_10_12_100000_create_password_resets_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2014_10_12_100000_create_password_resets_table.php on line 7
+[01-Dec-2022 08:34:16 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2014_10_12_100000_create_password_resets_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2014_10_12_100000_create_password_resets_table.php on line 7
+[01-Dec-2022 08:34:16 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2014_10_12_200000_add_two_factor_columns_to_users_table.php:8
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2014_10_12_200000_add_two_factor_columns_to_users_table.php on line 8
+[01-Dec-2022 08:34:23 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_07_03_145433_create_company_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_07_03_145433_create_company_table.php on line 7
+[01-Dec-2022 08:34:23 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2019_12_14_000001_create_personal_access_tokens_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2019_12_14_000001_create_personal_access_tokens_table.php on line 7
+[01-Dec-2022 08:34:23 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2019_12_14_000001_create_personal_access_tokens_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2019_12_14_000001_create_personal_access_tokens_table.php on line 7
+[01-Dec-2022 08:34:23 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060450_create_permission_groups_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060450_create_permission_groups_table.php on line 7
+[01-Dec-2022 08:34:23 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2019_12_14_000001_create_personal_access_tokens_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2019_12_14_000001_create_personal_access_tokens_table.php on line 7
+[01-Dec-2022 08:34:23 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_04_20_121225_create_settings_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_04_20_121225_create_settings_table.php on line 7
+[01-Dec-2022 08:34:24 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2019_12_14_000001_create_personal_access_tokens_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2019_12_14_000001_create_personal_access_tokens_table.php on line 7
+[01-Dec-2022 08:34:24 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_04_20_121225_create_settings_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_04_20_121225_create_settings_table.php on line 7
+[01-Dec-2022 08:34:24 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_04_20_121225_create_settings_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_04_20_121225_create_settings_table.php on line 7
+[01-Dec-2022 08:34:24 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_07_03_145433_create_company_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_07_03_145433_create_company_table.php on line 7
+[01-Dec-2022 08:34:24 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2019_12_14_000001_create_personal_access_tokens_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2019_12_14_000001_create_personal_access_tokens_table.php on line 7
+[01-Dec-2022 08:34:24 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060450_create_permission_groups_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060450_create_permission_groups_table.php on line 7
+[01-Dec-2022 08:34:24 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_07_03_145433_create_company_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_07_03_145433_create_company_table.php on line 7
+[01-Dec-2022 08:34:24 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060450_create_permission_groups_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060450_create_permission_groups_table.php on line 7
+[01-Dec-2022 08:34:25 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_07_03_145433_create_company_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_07_03_145433_create_company_table.php on line 7
+[01-Dec-2022 08:34:25 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2014_10_12_000000_create_users_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2014_10_12_000000_create_users_table.php on line 7
+[01-Dec-2022 08:34:25 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2014_10_12_000000_create_users_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2014_10_12_000000_create_users_table.php on line 7
+[01-Dec-2022 08:34:25 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_04_20_121225_create_settings_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_04_20_121225_create_settings_table.php on line 7
+[01-Dec-2022 08:34:25 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2019_12_14_000001_create_personal_access_tokens_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2019_12_14_000001_create_personal_access_tokens_table.php on line 7
+[01-Dec-2022 08:34:25 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_07_03_145433_create_company_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_07_03_145433_create_company_table.php on line 7
+[01-Dec-2022 08:34:25 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2014_10_12_000000_create_users_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2014_10_12_000000_create_users_table.php on line 7
+[01-Dec-2022 08:34:26 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2014_10_12_000000_create_users_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2014_10_12_000000_create_users_table.php on line 7
+[01-Dec-2022 08:34:26 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2019_12_14_000001_create_personal_access_tokens_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2019_12_14_000001_create_personal_access_tokens_table.php on line 7
+[01-Dec-2022 08:34:26 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2014_10_12_000000_create_users_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2014_10_12_000000_create_users_table.php on line 7
+[01-Dec-2022 08:34:27 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_07_03_145433_create_company_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_07_03_145433_create_company_table.php on line 7
+[01-Dec-2022 08:34:27 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2014_10_12_000000_create_users_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2014_10_12_000000_create_users_table.php on line 7
+[01-Dec-2022 08:34:27 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2014_10_12_000000_create_users_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2014_10_12_000000_create_users_table.php on line 7
+[01-Dec-2022 08:34:28 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060518_create_roles_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060518_create_roles_table.php on line 7
+[01-Dec-2022 08:34:28 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_08_101309_create_sessions_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_08_101309_create_sessions_table.php on line 7
+[01-Dec-2022 08:34:28 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060518_create_roles_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060518_create_roles_table.php on line 7
+[01-Dec-2022 08:34:28 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_08_101309_create_sessions_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_08_101309_create_sessions_table.php on line 7
+[01-Dec-2022 08:34:28 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060518_create_roles_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060518_create_roles_table.php on line 7
+[01-Dec-2022 08:34:29 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_08_101309_create_sessions_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_08_101309_create_sessions_table.php on line 7
+[01-Dec-2022 08:34:29 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060518_create_roles_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060518_create_roles_table.php on line 7
+[01-Dec-2022 08:34:29 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060518_create_roles_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060518_create_roles_table.php on line 7
+[01-Dec-2022 08:34:29 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_14_062131_create_role_permissions_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_14_062131_create_role_permissions_table.php on line 7
+[01-Dec-2022 08:34:29 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060506_create_permission_permission_groups_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060506_create_permission_permission_groups_table.php on line 7
+[01-Dec-2022 08:34:29 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060506_create_permission_permission_groups_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060506_create_permission_permission_groups_table.php on line 7
+[01-Dec-2022 08:34:29 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_14_062131_create_role_permissions_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_14_062131_create_role_permissions_table.php on line 7
+[01-Dec-2022 08:34:29 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060534_create_user_roles_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060534_create_user_roles_table.php on line 7
+[01-Dec-2022 08:34:29 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060534_create_user_roles_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060534_create_user_roles_table.php on line 7
+[01-Dec-2022 08:34:29 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_08_101309_create_sessions_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_08_101309_create_sessions_table.php on line 7
+[01-Dec-2022 08:34:29 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060506_create_permission_permission_groups_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060506_create_permission_permission_groups_table.php on line 7
+[01-Dec-2022 08:34:29 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_08_101309_create_sessions_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_08_101309_create_sessions_table.php on line 7
+[01-Dec-2022 08:34:29 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060518_create_roles_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060518_create_roles_table.php on line 7
+[01-Dec-2022 08:34:30 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060534_create_user_roles_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060534_create_user_roles_table.php on line 7
+[01-Dec-2022 08:34:30 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060518_create_roles_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060518_create_roles_table.php on line 7
+[01-Dec-2022 08:34:30 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060506_create_permission_permission_groups_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060506_create_permission_permission_groups_table.php on line 7
+[01-Dec-2022 08:34:30 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060534_create_user_roles_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060534_create_user_roles_table.php on line 7
+[01-Dec-2022 08:34:30 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060534_create_user_roles_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060534_create_user_roles_table.php on line 7
+[01-Dec-2022 08:34:31 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_14_062131_create_role_permissions_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_14_062131_create_role_permissions_table.php on line 7
+[01-Dec-2022 08:34:31 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_08_101309_create_sessions_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_08_101309_create_sessions_table.php on line 7
+[01-Dec-2022 08:34:31 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060534_create_user_roles_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060534_create_user_roles_table.php on line 7
+[01-Dec-2022 08:34:31 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060534_create_user_roles_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060534_create_user_roles_table.php on line 7
+[01-Dec-2022 08:34:31 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_08_101309_create_sessions_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_08_101309_create_sessions_table.php on line 7
+[01-Dec-2022 08:34:31 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_14_062131_create_role_permissions_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_14_062131_create_role_permissions_table.php on line 7
+[01-Dec-2022 08:34:32 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060506_create_permission_permission_groups_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060506_create_permission_permission_groups_table.php on line 7
+[01-Dec-2022 08:34:33 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060506_create_permission_permission_groups_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060506_create_permission_permission_groups_table.php on line 7
+[01-Dec-2022 08:34:34 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_07_03_145433_create_company_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_07_03_145433_create_company_table.php on line 7
+[01-Dec-2022 08:34:35 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060506_create_permission_permission_groups_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_14_060506_create_permission_permission_groups_table.php on line 7
+[01-Dec-2022 08:34:36 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_04_20_121225_create_settings_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_04_20_121225_create_settings_table.php on line 7
+[01-Dec-2022 08:34:38 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_04_20_121225_create_settings_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_04_20_121225_create_settings_table.php on line 7
+[01-Dec-2022 08:34:39 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_14_062131_create_role_permissions_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_14_062131_create_role_permissions_table.php on line 7
+[01-Dec-2022 08:34:39 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_04_20_121225_create_settings_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_04_20_121225_create_settings_table.php on line 7
+[01-Dec-2022 08:34:40 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2022_03_14_062131_create_role_permissions_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2022_03_14_062131_create_role_permissions_table.php on line 7
+[01-Dec-2022 08:35:05 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2014_10_12_100000_create_password_resets_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2014_10_12_100000_create_password_resets_table.php on line 7
+[01-Dec-2022 08:35:13 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Database\Migrations\Migration" not found in /home/afghansharqmis/public_html/database/migrations/2014_10_12_100000_create_password_resets_table.php:7
+Stack trace:
+#0 {main}
+  thrown in /home/afghansharqmis/public_html/database/migrations/2014_10_12_100000_create_password_resets_table.php on line 7

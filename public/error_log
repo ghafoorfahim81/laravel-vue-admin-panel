@@ -1,0 +1,25 @@
+[07-Dec-2022 19:24:04 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 8.0.25. in /home/afghansharqmis/public_html/vendor/composer/platform_check.php on line 24
+[07-Dec-2022 19:24:19 UTC] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.1.0". You are running 8.0.25. in /home/afghansharqmis/public_html/vendor/composer/platform_check.php on line 24
+[07-Dec-2022 20:55:58 UTC] PHP Fatal error:  Uncaught BadMethodCallException: Method Illuminate\Foundation\Application::configure does not exist. in /home/afghansharqmis/public_html/vendor/laravel/framework/src/Illuminate/Macroable/Traits/Macroable.php:113
+Stack trace:
+#0 /home/afghansharqmis/public_html/bootstrap/app.php(44): Illuminate\Foundation\Application->__call('configure', Array)
+#1 /home/afghansharqmis/public_html/public/index.php(47): require_once('/home/afghansha...')
+#2 {main}
+  thrown in /home/afghansharqmis/public_html/vendor/laravel/framework/src/Illuminate/Macroable/Traits/Macroable.php on line 113
+[07-Dec-2022 20:56:04 UTC] PHP Fatal error:  Uncaught BadMethodCallException: Method Illuminate\Foundation\Application::configure does not exist. in /home/afghansharqmis/public_html/vendor/laravel/framework/src/Illuminate/Macroable/Traits/Macroable.php:113
+Stack trace:
+#0 /home/afghansharqmis/public_html/bootstrap/app.php(44): Illuminate\Foundation\Application->__call('configure', Array)
+#1 /home/afghansharqmis/public_html/public/index.php(47): require_once('/home/afghansha...')
+#2 {main}
+  thrown in /home/afghansharqmis/public_html/vendor/laravel/framework/src/Illuminate/Macroable/Traits/Macroable.php on line 113
+[07-Dec-2022 20:56:25 UTC] PHP Fatal error:  Uncaught BadMethodCallException: Method Illuminate\Foundation\Application::configure does not exist. in /home/afghansharqmis/public_html/vendor/laravel/framework/src/Illuminate/Macroable/Traits/Macroable.php:113
+Stack trace:
+#0 /home/afghansharqmis/public_html/bootstrap/app.php(17): Illuminate\Foundation\Application->__call('configure', Array)
+#1 /home/afghansharqmis/public_html/public/index.php(47): require_once('/home/afghansha...')
+#2 {main}
+  thrown in /home/afghansharqmis/public_html/vendor/laravel/framework/src/Illuminate/Macroable/Traits/Macroable.php on line 113
+[09-Feb-2023 13:38:26 Asia/Kabul] PHP Fatal error:  Unparenthesized `a ? b : c ? d : e` is not supported. Use either `(a ? b : c) ? d : e` or `a ? b : (c ? d : e)` in /home/afghansharqmis/public_html/app/Http/Controllers/InvoiceController.php on line 198
+[09-Feb-2023 13:49:59 Asia/Kabul] PHP Fatal error:  Unparenthesized `a ? b : c ? d : e` is not supported. Use either `(a ? b : c) ? d : e` or `a ? b : (c ? d : e)` in /home/afghansharqmis/public_html/app/Http/Controllers/InvoiceController.php on line 198
+[16-May-2023 10:20:54 Asia/Kabul] PHP Fatal error:  Cannot use temporary expression in write context in /home/afghansharqmis/public_html/app/Http/Controllers/InvoiceController.php on line 41
+[15-Jul-2023 10:39:18 Asia/Kabul] PHP Fatal error:  Trait "App\Traits\Seed\PermissionTrait" not found in /home/afghansharqmis/public_html/database/seeders/PermissionsTableSeeder.php on line 12
+[15-Jul-2023 10:41:11 Asia/Kabul] PHP Fatal error:  Trait "App\Traits\Seed\PermissionTrait" not found in /home/afghansharqmis/public_html/database/seeders/PermissionsTableSeeder.php on line 12
