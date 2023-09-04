@@ -209,8 +209,8 @@
                     </li>
                     @endif
                     @if(hasPermission(['product_list']))
-                    <li class="{{ (request()->is('product')) ? 'bg-custom_sidebar_li' : '' }}">
-                        <a href=" {{ route('product.index') }} " class="waves-effect ">
+                    <li class="{{ (request()->is('products')) ? 'bg-custom_sidebar_li' : '' }}">
+                        <a href=" {{ route('products.index') }} " class="waves-effect ">
                             <div class="d-inline-block icons-sm mr-1"><i style="color: #1da1f2" class="fas fa-file-invoice-dollar"></i></div>
                             <span >Product</span>
                         </a>

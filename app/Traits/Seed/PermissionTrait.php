@@ -130,7 +130,7 @@ trait PermissionTrait
         $g = (new PermissionGroup())->where('name', 'order')->first();
         if (!$g) {
             $g = PermissionGroup::create([
-                'name' => 'about_us',
+                'name' => 'about Us',
                 'category' => 'admin',
             ]);
         }
@@ -165,7 +165,7 @@ trait PermissionTrait
         $g = (new PermissionGroup())->where('name', 'invoice')->first();
         if (!$g) {
             $g = PermissionGroup::create([
-                'name' => 'contact_us',
+                'name' => 'contact Us',
                 'category' => 'admin',
             ]);
         }

@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('backend.layouts.master')
 @section('title', __('lang.detail_of').' '.__('lang.user'))
 @section('css')
     <link href="{{ asset('css/vue-select.css') }}" rel="stylesheet" type="text/css"/>

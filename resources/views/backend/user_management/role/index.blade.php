@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('backend.layouts.master')
 @section('title', __('lang.role_list'))
 @section('css')
 
@@ -30,7 +30,7 @@
                                     <template slot="tbody">
                                     <tbody v-show="!apiData.data">
                                             <tr v-for="skeleton in 4">
-                                                
+
 
                                                 <td>
                                                     <skeleton-loader-vue
@@ -72,7 +72,7 @@
                                                         />
                                                 </td>
 
-                                               
+
                                             </tr>
                                         </tbody>
                                         <tbody v-show="apiData.data">

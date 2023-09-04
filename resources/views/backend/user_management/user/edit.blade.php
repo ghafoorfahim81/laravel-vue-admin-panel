@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('backend.layouts.master')
 @section('title', __('lang.edit').' '.__('lang.user'))
 @section('css')
     <link href="{{ asset('css/vue-select.css') }}" rel="stylesheet" type="text/css"/>
@@ -126,7 +126,7 @@
                                                     <label for="">@lang('lang.province')
                                                     </label>
                                                     <v-select :select-on-tab="true" v-model="selected_province" label="name" :options="provinces" placeholder="@lang('lang.selectProvince')" >
-                                                      
+
                                                         <template v-slot:no-options="{ search, searching }">
                                                             <template v-if="searching">
                                                                 @lang('lang.no_record_found_for') @{{search}}

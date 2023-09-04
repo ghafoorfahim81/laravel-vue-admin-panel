@@ -15,6 +15,26 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->text('description')->nullable();
+            $table->double('price')->nullable();
+            $table->double('discount')->nullable();
+            $table->double('stock_quantity')->nullable();
+            $table->uuid('category_id')->nullable();
+            $table->uuid('sub_category_id')->nullable();
+            $table->uuid('brand_id')->nullable();
+            $table->boolean('featured')->nullable();
+            $table->boolean('is_active')->nullable();
+            $table->string('image')->nullable();
+            $table->json('gallery_image')->nullable();
+            $table->string('slug')->nullable();
+            $table->string('weight')->nullable();
+            $table->string('sizes')->nullable();
+            $table->string('colors')->nullable();
+            $table->string('unit')->nullable();
+            $table->string('dimensions')->nullable();
+            $table->text('tags')->nullable();
+            $table->text('language')->nullable();
             $table->timestamps();
         });
     }

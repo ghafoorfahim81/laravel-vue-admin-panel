@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('backend.layouts.master')
 @section('title', __('lang.add').' '.__('lang.user'))
 @section('css')
 <link href="{{ asset('css/vue-select.css') }}" rel="stylesheet" type="text/css" />
@@ -98,22 +98,7 @@
 
                                         </div>
                                     </div>
-                                    <div class="col-xl-4">
-                                        <div class="form-group">
-                                            <label for="">@lang('lang.province')
-                                            </label>
-                                            <v-select :select-on-tab="true" v-model="selected_province" label="name" :options="provinces" placeholder="@lang('lang.selectProvince')">
-                                                <template v-slot:no-options="{ search, searching }">
-                                                    <template v-if="searching">
-                                                        @lang('lang.no_record_found_for') @{{search}}
-                                                    </template>
-                                                    <em class="v-select-search-hint" v-else>@lang('lang.type_to_search')</em>
-                                                </template>
-                                            </v-select>
-                                            <input type="hidden" name="province" :value="(selected_province == null) ? null : selected_province.id">
 
-                                        </div>
-                                    </div>
 
                                     <div class="col-xl-4">
                                         <div class="form-group">
@@ -181,7 +166,7 @@
             </div>
         </div>
         <!-- end row -->
-      
+
     </div>
     <!-- end container-fluid -->
 </div>
@@ -200,8 +185,6 @@
             select_all: false,
             role: {!!$role!!},
             selected_role: [],
-            provinces: {!!$provinces!!},
-            selected_province: null,
             form: {
                 fullname: null,
                 email: null,

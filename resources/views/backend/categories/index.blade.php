@@ -108,7 +108,6 @@
 
                                     </template>
                                 </datatable>
-                                <Pagination align="center" :limit="1" :data="apiData" @pagination-change-page="getRecord"></Pagination>
                             </div>
                         </div>
                     </div>
@@ -222,6 +221,9 @@
                         $('#add_modal').modal('hide')
                         this.reset();
                         this.getRecord();
+                    }
+                    else{
+                        // toastSuccess(response.data.message,'warning');
                     }
                 });
             },

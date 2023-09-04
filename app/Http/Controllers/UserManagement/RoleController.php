@@ -43,7 +43,7 @@ class RoleController extends Controller
         if ($request->ajax()) {
             return $this->role->roleList($request);
         }
-        return view('user_management.role.index');
+        return view('backend.user_management.role.index');
     }
 
     /**
@@ -56,7 +56,7 @@ class RoleController extends Controller
         $this->setMenu(['add#role' => 'role/create']);
         $permission_data = $this->permissions();
 
-        return view('user_management.role.create', [
+        return view('backend.user_management.role.create', [
             'permission_data' => json_encode($permission_data),
         ]);
     }
@@ -123,7 +123,7 @@ class RoleController extends Controller
 
             $permission_data = json_encode($permission_data);
 
-            return view('user_management.role.edit', [
+            return view('backend.user_management.role.edit', [
                 'role' => $role,
                 'permission_data' => $permission_data,
             ]);
@@ -143,7 +143,7 @@ class RoleController extends Controller
 
             $permission_data = json_encode($permission_data);
 
-            return view('user_management.role.show', compact('permission_data', 'role'));
+            return view('backend.user_management.role.show', compact('permission_data', 'role'));
         }
 
     }
@@ -267,7 +267,7 @@ class RoleController extends Controller
             }
             array_push($permission_data, [
                 'permission_group_id' => $value->id,
-                'permission_group_name' => __('permission.' . $value->name),
+                'permission_group_name' =>  $value->name,
                 'permissions' => $temp,
                 'checked' => null
             ]);

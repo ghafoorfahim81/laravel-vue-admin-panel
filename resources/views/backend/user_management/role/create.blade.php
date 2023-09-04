@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('backend.layouts.master')
 @section('title', __('lang.add').' '.__('lang.role'))
 @section('css')
 @endsection
@@ -19,11 +19,11 @@
                                     <div class="row">
                                         <div class="col-xl-12">
                                             <span><span style="color:red">@lang('lang.note')</span>: @lang('lang.required_note')</span><br>
-                                           
+
                                         </div>
                                         <div class="col-xl-6">
                                             <div class="form-group">
-                                                
+
                                                 <input type="text" name="name" class="form-control"
                                                        v-validate="'required'" data-vv-as="@lang('lang.name')"
                                                        placeholder="@lang('lang.name')">

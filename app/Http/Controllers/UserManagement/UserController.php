@@ -49,7 +49,7 @@ class UserController extends Controller
         if ($request->ajax()) {
             return $this->user->userList($request);
         }
-        return view('user_management.user.index');
+        return view('backend.user_management.user.index');
     }
     public function checkEmail(Request $request)
     {
@@ -64,11 +64,11 @@ class UserController extends Controller
     {
 
         $this->setMenu(['add#user' => 'user/create']);
-        $provinces = DB::table('provinces')->get(['id' ,'name']);
+        $provinces = [];
         $role = (new Role())->where('roles.name','!=','abar tarnegar')->get();
         $permission_data = \App\Http\Controllers\UserManagement\RoleController::permissions();
 
-        return view('user_management.user.create', [
+        return view('backend.user_management.user.create', [
             'role' => json_encode($role),
             'permission_data' => json_encode($permission_data),
             'provinces'=>$provinces
@@ -83,14 +83,6 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        // $this->validate($request, [
-        //     'email' => "required|unique:users,email|regex:/^\S*$/u",
-        //     'password' => 'required',
-        //     'confirm_password' => 'required|same:password',
-        //     'role_ids' => 'required',
-        // ]);
-
-// return $request->all();
         $role_ids = $request->get('role_ids');
         if (!is_array($role_ids)) {
             $role_ids = [$role_ids];
@@ -131,7 +123,6 @@ class UserController extends Controller
                 'setting' => auth()->user()->setting,
                 'password' => bcrypt($request->get('password')),
                 'profile_photo_path' => $photo_path,
-                'province_id' => $request->province,
                 'location_id' => json_encode($all_zone_province_id),
                 'type' => ($zone_id)?'province':'main',
                 'current_company'   => auth()->user()->current_company,
@@ -141,7 +132,7 @@ class UserController extends Controller
             // $result = insertRecord('users', $data, $request, 0, 0);
             $result = $this->user->create($data);
             $user = $this->user->find($result->id);
-            for ($i=0; $i < count($role_ids); $i++) { 
+            for ($i=0; $i < count($role_ids); $i++) {
                 # code...
                 $result = $user->roles()->attach($role_ids[$i], ['id' => Str::uuid()->toString()]);
             }
@@ -191,7 +182,7 @@ class UserController extends Controller
             $userRole = (new Role())->where('roles.name','!=','abar tarnegar')->whereIn('id', $roleId)->get();
 // dd($selected_province);
 // return $selected_province;
-            return view('user_management.user.edit', [
+            return view('backend.user_management.user.edit', [
                 'role' => json_encode($role),
                 'super' => $super,
                 'userRole' => json_encode($userRole),
@@ -214,7 +205,7 @@ class UserController extends Controller
         if ($id) {
             $user = $this->user->userDetail($id);
 
-            return view('user_management.user.show', [
+            return view('backend.user_management.user.show', [
                 'user' => $user,
             ]);
         }
@@ -231,7 +222,7 @@ class UserController extends Controller
             'setting'  =>$request->form
         ]);
     }
-    
+
 
     public function checkPassword(Request $request)
     {
@@ -260,11 +251,11 @@ class UserController extends Controller
         $id = $id;
         if($id != auth()->user()->id)
         {
-            return view('shared.pages-404');
+            return view('backend.shared.pages-404');
         }
         else{
             $user = $this->user->userDetail($id);
-            return view('user_management.user.profile', compact('user'));
+            return view('backend.user_management.user.profile', compact('user'));
         }
     }
 
@@ -344,7 +335,7 @@ class UserController extends Controller
                     'location_id' => json_encode($all_zone_province_id),
                     'type' => ($zone_id)?'province':'main',
                     'current_company'   => auth()->user()->current_company,
-                    
+
                 ];
 
                 if ($request->get('password') != '') {
@@ -352,13 +343,13 @@ class UserController extends Controller
 
                 }
 
-               
-                
+
+
                 updateRecord('users', 'id', $id, $data, $request);
 
 
                 (new UserRole())->where('user_id', $id)->delete();
-                for ($i=0; $i < count($role_ids); $i++) { 
+                for ($i=0; $i < count($role_ids); $i++) {
                     # code...
                     $user->roles()->attach($role_ids[$i], ['id' => Str::uuid()->toString()]);
                 }

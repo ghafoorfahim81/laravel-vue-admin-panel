@@ -1,4 +1,4 @@
-    @extends('layouts.master')
+@extends('backend.layouts.master')
 @section('title', __('lang.user_list'))
 @section('css')
 

@@ -71,12 +71,12 @@ Route::middleware('auth')->group(function () {
     Route::post('categories/post/{id}', ['uses' => 'CategoryController@update', 'middleware' => ['permission:category_edit'], 'as' => 'categories.update']);
     Route::post('categories/{id}', ['uses' => 'CategoryController@destroy', 'middleware' => ['permission:category_delete'], 'as' => 'categories.destroy']);
 
-    Route::get('/product', ['uses'=>'ProductController@index','middleware' => [ 'permission:product_list'],'as'=>'product.index']);
-    Route::get('/product/create', ['uses'=>'ProductController@create', 'middleware' => [ 'permission:product_create'],'as'=>'product.create']);
-    Route::post('/product/store', ['uses'=>'ProductController@store', 'middleware' => [ 'permission:product_create'],'as'=>'product.store']);
-    Route::post('/product/edit', ['uses'=>'ProductController@edit', 'middleware' => [ 'permission:product_edit'],'as'=>'product.edit']);
-    Route::post('/product/update', ['uses'=>'ProductController@update', 'middleware' => [ 'permission:product_edit'],'as'=>'product.update']);
-    Route::get('/product/all', ['uses'=>'ProductController@getItems', 'middleware' => [ 'permission:product_list'],'as'=>'product.all']);
+    Route::get('products', ['uses'=>'ProductController@index','middleware' => [ 'permission:product_list'],'as'=>'products.index']);
+    Route::get('products/create', ['uses'=>'ProductController@create', 'middleware' => [ 'permission:product_create'],'as'=>'products.create']);
+    Route::post('products/store', ['uses'=>'ProductController@store', 'middleware' => [ 'permission:product_create'],'as'=>'products.store']);
+    Route::post('products/edit', ['uses'=>'ProductController@edit', 'middleware' => [ 'permission:product_edit'],'as'=>'products.edit']);
+    Route::post('products/update', ['uses'=>'ProductController@update', 'middleware' => [ 'permission:product_edit'],'as'=>'products.update']);
+    Route::get('products/all', ['uses'=>'ProductController@getItems', 'middleware' => [ 'permission:product_list'],'as'=>'products.all']);
 
 
     Route::get('/about-us', ['uses'=>'AboutController@index','middleware' => [ 'permission:about_us_list'],'as'=>'about-us.index']);
