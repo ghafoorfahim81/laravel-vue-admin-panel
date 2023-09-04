@@ -22,7 +22,6 @@ Vue.component('swal', swal);
 Vue.component('Avater',Avatar);
 
 window.Avatar=Avatar;
-
 // Vue.component('multiRage', Tagify);
 import VueSkeletonLoader from 'skeleton-loader-vue';
 
@@ -43,16 +42,38 @@ import fa from 'vee-validate/dist/locale/fa.js';
   Validator.localize({ fa: fa });
 Vue.use(VeeValidate, { locale: "fa" });
 
-
-
-
-
-
-
 Vue.component('datatable', require('./components/LaravelVueDatatable.vue').default);
 Vue.component('save-banner', require('./components/SaveBanner.vue').default);
 Vue.component('table-skeleton', require('./components/skeletons/TableSkeleton.vue').default);
 
 // Vue.component('pagination', require('./pagination/LaravelVuePagination.vue').default);
 // Vue.component('my-calendar', require('./components/calendar/MyCalendar.vue').default);
-Alpine.start();
+
+
+Vue.mixin({
+    data() {
+        return {
+            categories:[],
+        }
+    },
+    computed: {},
+    mounted() {
+
+    },
+    methods: {
+        //search Items from create and edit modal
+
+        async getDropdownItem(types) {
+            return new Promise((resovle, reject) => {
+                axios.get('/getData' + '?type=' + types).then(res => {
+                    resovle(res.data);
+                    if (types.includes('categories')) {
+                        this.categories = res.data.categories;
+                    }
+
+                })
+            })
+
+        },
+    }
+})

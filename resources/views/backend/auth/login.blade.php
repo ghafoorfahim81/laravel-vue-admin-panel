@@ -34,7 +34,7 @@
         </style>
     </head>
     <body  class=" bg-white">
-       
+
         <div class="account-pages my-5 pt-sm-5">
             <div class="container">
                 <!-- end row -->
@@ -50,9 +50,9 @@
                                 <div class="p-2">
                                     <div class="text-center mb-5">
                                         <!-- <a  class="logo"> <img src="{{ asset('assets/images/company_logo/left-logo.png') }}" alt="user-image" -->
-                                        
+
                                     </div>
-                                    <h5 class="mb-5 text-center text-xl h2 font-weight-bold text-info">Afghan Sharq MSP Login Page</h5>
+                                    <h5 class="mb-5 text-center text-xl h2 font-weight-bold text-info">Salamat Organic</h5>
                                     <x-jet-validation-errors class="mb-4 text-danger text-center" />
                                     @if (session('status'))
                                         <div class="mb-4 font-medium text-sm text-green-600">
@@ -101,7 +101,7 @@
                         </div>
                     </div>
 
-                    
+
                 </div>
                 <!-- end row -->
             </div>

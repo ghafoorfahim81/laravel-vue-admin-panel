@@ -2,21 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\ExpenseCategory;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
-class ExpenseCategoryController extends Controller
+class CategoryController extends Controller
 {
-    protected $expense_category;
-     function __construct(ExpenseCategory $expense_category) {
-        $this->expense_category = $expense_category;
+    protected $category;
+     function __construct(Category $category) {
+        $this->category = $category;
     }
     public function index(Request $request)
     {
         if($request->ajax())
-            return $this->expense_category->getExpenseCategories($request);
-        return view('expense_categories.index');
+            return $this->category->getCategories($request);
+        return view('backend.categories.index');
     }
 
     public function create(Request $request)
@@ -26,50 +26,55 @@ class ExpenseCategoryController extends Controller
     public function categories(Request $request)
     {
 
-        $expense_category = $this->expense_category->where('company_id', auth()->user()->current_company);
+        $category = $this->category->where('company_id', auth()->user()->current_company);
         if(auth()->user()->type=='main') {
             $zone_id = DB::table('zones')->where('name','CENTRAL')->first()->id;
             $admin_zone = DB::table('provinces')->where('zone_id',$zone_id)->pluck('id');
-            $expense_category= $expense_category->whereIn('location_id', $admin_zone);
+            $category= $category->whereIn('location_id', $admin_zone);
         } else {
 
-            $expense_category=  $expense_category->whereIn('location_id', json_decode(auth()->user()->location_id, true));
+            $category=  $category->whereIn('location_id', json_decode(auth()->user()->location_id, true));
         }
-        return $expense_category->get();
+        return $category->get();
         // ->where('categories.user_type',auth()->user()->type)
     }
 
     public function store(Request $request)
     {
-        $location_id = json_decode(auth()->user()->location_id,true)[0];
-        if(auth()->user()->type=='main') {
-            $zone_id = DB::table('zones')->where('name','CENTRAL')->first()->id;
-            $location_id = DB::table('provinces')->where('zone_id',$zone_id)->first()->id;
-        }
+        try {
+            DB::beginTransaction();
 
-       $data = [
-           'name'                   => $request->name,
-           'description'            => $request->description,
-           'company_id'             => auth()->user()->current_company,
-            'location_id'           => $location_id,
-       ];
-       $this->expense_category->create($data);
+            $data = $request->only(['name', 'description', 'parent_id']);
+            $this->category->create($data);
+
+            DB::commit();
+            return response()->json(['status' => 201,'message'=> 'Category created successfully',
+            ]);
+        } catch (\Exception $e) {
+            DB::rollback();
+
+            if ($e instanceof ValidationException) {
+                return response()->json(['errors' => $e->errors()], 422);
+            }
+
+            return response()->json(['message' => 'Category creation failed'], 500);
+        }
     }
+
 
     public function edit($id)
     {
-        // return $id;
-        return $this->expense_category->find($id);
+        return $this->category->find($id);
     }
 
     public function update(Request $request, $id)
     {
-        $expense_category = $this->expense_category->find($id);
+        $category = $this->category->find($id);
         $data = [
             'name'                   => $request->name,
             'description'            => $request->description,
         ];
-        $expense_category->update($data);
+        $category->update($data);
     }
 
     public function destroy(Request $request, $id){
@@ -80,7 +85,7 @@ class ExpenseCategoryController extends Controller
 
             if(count($request->ids) > 0){
 
-                $categories = $this->expense_category->whereIn('id', $request->ids)->get();
+                $categories = $this->category->whereIn('id', $request->ids)->get();
                 DB::beginTransaction();
 
                 foreach ($categories as $key => $value) {
@@ -103,7 +108,7 @@ class ExpenseCategoryController extends Controller
                 }
             } else {
                 // DB::beginTransaction();
-                $category = $this->expense_category->find($id);
+                $category = $this->category->find($id);
 
                     if(checkForDelete($related_tables, 'category_id', $id) == false){
 

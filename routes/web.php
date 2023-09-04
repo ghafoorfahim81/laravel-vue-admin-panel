@@ -62,14 +62,14 @@ Route::get('/mail/send', ['uses' => 'ItemController@sendMail', 'as' => 'item.mai
 Route::middleware('auth')->group(function () {
 
 
-    Route::get('category', ['uses' => 'CategoryController@index', 'middleware' => ['permission:category_list'], 'as' => 'category.index']);
-    Route::get('categoryAll', ['uses' => 'CategoryController@categories', 'middleware' => ['permission:category_list'], 'as' => 'categories']);
-    Route::get('category/create', ['uses' => 'CategoryController@create', 'middleware' => ['permission:category_create'], 'as' => 'category.create']);
-    Route::post('category/store', ['uses' => 'CategoryController@store', 'middleware' => ['permission:category_create'], 'as' => 'category.store']);
+    Route::get('categories', ['uses' => 'CategoryController@index', 'middleware' => ['permission:category_list'], 'as' => 'categories.index']);
+    Route::get('categoriesAll', ['uses' => 'CategoryController@categories', 'middleware' => ['permission:category_list'], 'as' => 'categories']);
+    Route::get('categories/create', ['uses' => 'CategoryController@create', 'middleware' => ['permission:category_create'], 'as' => 'categories.create']);
+    Route::post('categories/store', ['uses' => 'CategoryController@store', 'middleware' => ['permission:category_create'], 'as' => 'categories.store']);
         Route::get('expense/{id}', ['uses' => 'Controller@show', 'middleware' => ['permission:expense_view'], 'as' => 'expense.show']);
-    Route::get('category/edit/{id}', ['uses' => 'CategoryController@edit', 'middleware' => ['permission:category_edit'], 'as' => 'category.edit']);
-    Route::post('category/post/{id}', ['uses' => 'CategoryController@update', 'middleware' => ['permission:category_edit'], 'as' => 'category.update']);
-    Route::post('category/{id}', ['uses' => 'CategoryController@destroy', 'middleware' => ['permission:category_delete'], 'as' => 'category.destroy']);
+    Route::get('categories/edit/{id}', ['uses' => 'CategoryController@edit', 'middleware' => ['permission:category_edit'], 'as' => 'categories.edit']);
+    Route::post('categories/post/{id}', ['uses' => 'CategoryController@update', 'middleware' => ['permission:category_edit'], 'as' => 'categories.update']);
+    Route::post('categories/{id}', ['uses' => 'CategoryController@destroy', 'middleware' => ['permission:category_delete'], 'as' => 'categories.destroy']);
 
     Route::get('/product', ['uses'=>'ProductController@index','middleware' => [ 'permission:product_list'],'as'=>'product.index']);
     Route::get('/product/create', ['uses'=>'ProductController@create', 'middleware' => [ 'permission:product_create'],'as'=>'product.create']);
@@ -106,6 +106,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/blog/update', ['uses'=>'CommentController@update', 'middleware' => [ 'permission:blog_edit'],'as'=>'blog.update']);
 
 
+    Route::get('getData', [\App\Http\Controllers\SalamatController::class, 'getData'])->name('getData');
 
 
     Route::post('/checkpassword', ['uses'=>'AdminController@checkpassword', 'as'=>'checkpassword']);

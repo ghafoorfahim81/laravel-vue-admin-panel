@@ -28,7 +28,7 @@ class DashboardController extends Controller
 //        dd('hi');
         if (hasPermission(['dashboard_show']) && auth()->user()->type == 'main' || hasPermission(['organization_dashboard'])) {
 
-            return view('dashboard.dashboard', [
+            return view('backend.dashboard.dashboard', [
 //                'totalInvoices' =>$totalInvoices,
             ]);
         }

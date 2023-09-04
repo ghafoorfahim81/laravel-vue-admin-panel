@@ -189,7 +189,7 @@
                 <!-- Left Menu Start -->
 
                 <ul class="metismenu list-unstyled pt-2 px-2 " id="side-menu">
- 
+
 
                     <!-- {{ (request()->is('transactions.index')) ? 'bg-light-blue-7 text-white mx-3 shadow-lg p-2 rounded border border-white' : '' }} -->
                     @if(hasPermission(['dashboard_show']))
@@ -201,8 +201,8 @@
                     </li>
                     @endif
                     @if(hasPermission(['category_list']))
-                    <li class="{{ (request()->is('category*')) ? 'bg-custom_sidebar_li' : '' }}">
-                        <a href=" {{ route('category.index') }} " class="waves-effect ">
+                    <li class="{{ (request()->is('categories*')) ? 'bg-custom_sidebar_li' : '' }}">
+                        <a href=" {{ route('categories.index') }} " class="waves-effect ">
                             <div class="d-inline-block icons-sm mr-1"><i style="color: #1da1f2" class="fas fa-list-alt"></i></div>
                             <span >Category</span>
                         </a>
