@@ -106,7 +106,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/blog/update', ['uses'=>'CommentController@update', 'middleware' => [ 'permission:blog_edit'],'as'=>'blog.update']);
 
 
-    Route::get('getData', [\App\Http\Controllers\SalamatController::class, 'getData'])->name('getData');
+    Route::get('get-dropdown-data', [\App\Http\Controllers\EcommerceController::class, 'getDropdownData'])->name('get-dropdown-data');
 
 
     Route::post('/checkpassword', ['uses'=>'AdminController@checkpassword', 'as'=>'checkpassword']);

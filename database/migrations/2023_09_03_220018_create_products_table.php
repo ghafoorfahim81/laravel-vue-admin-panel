@@ -15,8 +15,6 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->text('description')->nullable();
             $table->double('price')->nullable();
             $table->double('discount')->nullable();
             $table->double('stock_quantity')->nullable();
@@ -34,7 +32,6 @@ return new class extends Migration
             $table->string('unit')->nullable();
             $table->string('dimensions')->nullable();
             $table->text('tags')->nullable();
-            $table->text('language')->nullable();
             $table->timestamps();
         });
     }

@@ -6443,7 +6443,8 @@ vue_dist_vue_esm_js__WEBPACK_IMPORTED_MODULE_1__["default"].component('table-ske
 vue_dist_vue_esm_js__WEBPACK_IMPORTED_MODULE_1__["default"].mixin({
   data: function data() {
     return {
-      categories: []
+      categories: [],
+      languages: []
     };
   },
   computed: {},
@@ -6457,10 +6458,13 @@ vue_dist_vue_esm_js__WEBPACK_IMPORTED_MODULE_1__["default"].mixin({
           while (1) switch (_context.prev = _context.next) {
             case 0:
               return _context.abrupt("return", new Promise(function (resovle, reject) {
-                axios.get('/getData' + '?type=' + types).then(function (res) {
+                axios.get('/get-dropdown-data' + '?type=' + types).then(function (res) {
                   resovle(res.data);
                   if (types.includes('categories')) {
                     _this.categories = res.data.categories;
+                  }
+                  if (types.includes('languages')) {
+                    _this.languages = res.data.languages;
                   }
                 });
               }));

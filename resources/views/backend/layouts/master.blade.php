@@ -403,8 +403,11 @@
 
 <script src="{{ asset('assets/js/mdbootstrap.min.js') }}"></script>
 <script src="{{ asset('assets/libs/jquery/jquery.min.js') }}"></script>
+<script src="{{asset('assets/libs/tinymce/tinymce.min.js')}}" type="text/javascript"></script>
+<script src="{{asset('assets/libs/ckeditor4/ckeditor.js')}}" type="text/javascript"></script>
+<script src="{{asset('assets/js/pages/form-editor.init.js')}}" type="text/javascript"></script>
+
 <script src="{{ asset('assets/libs/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script src="{{ asset('assets/libs/metismenu/metisMenu.min.js') }}"></script>
 <script src="{{ asset('assets/libs/simplebar/simplebar.min.js') }}"></script>
@@ -414,7 +417,6 @@
 
 
 <script src="{{ asset('assets/js/app.js') }}"></script>
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
 <!-- Custom js -->
 <script src="{{ asset('js/custom.js') }}"></script>
 

@@ -22,11 +22,11 @@ class RolesTableSeeder extends Seeder
     public function run()
     {
         // role table
-        $r=(new Role())->where('name','abar tarnegar')->first();
+        $r=(new Role())->where('name','supper admin')->first();
         if(!$r)
         {
             $r=Role::create([
-                'name'=>'abar tarnegar'
+                'name'=>'supper admin'
             ]);
 
             foreach(Permission::all() AS $key=>$value)
@@ -34,6 +34,6 @@ class RolesTableSeeder extends Seeder
                 $r->permissions()->attach($value, ['id' => Str::uuid()->toString()]);
             }
         }
- 
+
     }
 }

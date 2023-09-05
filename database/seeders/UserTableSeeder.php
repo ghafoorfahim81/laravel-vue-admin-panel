@@ -17,7 +17,7 @@ class UserTableSeeder extends Seeder {
      * @return void
      */
     public function run() {
-        $role = (new Role()) -> where('name', 'abar tarnegar') -> first();
+        $role = (new Role()) -> where('name', 'supper admin') -> first();
         $user = (new User()) -> where('name', 'admin') -> first();
         // $zone=(new Zone())->get(['id']);
 

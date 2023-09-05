@@ -54,6 +54,7 @@ Vue.mixin({
     data() {
         return {
             categories:[],
+            languages:[],
         }
     },
     computed: {},
@@ -65,10 +66,13 @@ Vue.mixin({
 
         async getDropdownItem(types) {
             return new Promise((resovle, reject) => {
-                axios.get('/getData' + '?type=' + types).then(res => {
+                axios.get('/get-dropdown-data' + '?type=' + types).then(res => {
                     resovle(res.data);
                     if (types.includes('categories')) {
                         this.categories = res.data.categories;
+                    }
+                    if (types.includes('languages')) {
+                        this.languages = res.data.languages;
                     }
 
                 })
