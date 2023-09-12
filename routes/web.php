@@ -4,14 +4,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Client\ClientController;
 use App\Http\Controllers\DashboardController;
-// use App\Http\Controllers\Client\PriorityController;
-// use App\Http\Controllers\Client\WellbeingController;
 use App\Http\Controllers\Client\ClinicalASController;
 use App\Http\Controllers\Client\ReferralController;
 use App\Http\Controllers\Partial\DisabilityController;
 use App\Http\Controllers\Partial\SymptomController;
 use App\Http\Controllers\Partial\MajorSymptomController;
-// use App\Http\Controllers\Psycho\AppointmentController;
 use App\Http\Controllers\TimingController;
 use App\Http\Controllers\PsychologistController;
 use App\Http\Controllers\CompanyController;
@@ -51,9 +48,18 @@ use App\Http\Controllers\Reports;
 
 Route::get('/testPdf', ['uses' => 'Report\ReportController@index',  'as' => 'tests.index']);
 
-Route::get('/dbFresh', function () {
-    Artisan::call('migrate:fresh --seed');
-});
+// Route::get('/frontend', ['uses'=>'HomeController@index', 'as'=>'frontend']);
+
+Route::get('/','Fronted\Home\HomeController@index')->name('home.index');
+Route::get('about-us','Fronted\AboutUs\AboutUsController@index')->name('about-us.index');
+Route::get('contact-us','Fronted\ContactUs\ContactUsController@index')->name('contact-us.index');
+Route::get('get-dropdown-data', [\App\Http\Controllers\EcommerceController::class, 'getDropdownData'])->name('get-dropdown-data');
+
+
+// Route::get('/frontend', function () {
+//     return view('frontend.layouts.master');
+// });
+
 
 Route::get('/company/create', ['uses' => 'CompanyController@create', 'middleware' => [ 'permission:company_create'], 'as' => 'company.create']);
 Route::post('/company/store', ['uses' => 'CompanyController@store', 'middleware' => [ 'permission:company_create'], 'as' => 'company.store']);
@@ -61,7 +67,7 @@ Route::get('/mail/send', ['uses' => 'ItemController@sendMail', 'as' => 'item.mai
 
 Route::middleware('auth')->group(function () {
 
-
+    Route::get('dashboard', ['uses'=>'DashboardController@index','as'=>'dashboard']);
     Route::get('categories', ['uses' => 'CategoryController@index', 'middleware' => ['permission:category_list'], 'as' => 'categories.index']);
     Route::get('categoriesAll', ['uses' => 'CategoryController@categories', 'middleware' => ['permission:category_list'], 'as' => 'categories']);
     Route::get('categories/create', ['uses' => 'CategoryController@create', 'middleware' => ['permission:category_create'], 'as' => 'categories.create']);
@@ -76,16 +82,16 @@ Route::middleware('auth')->group(function () {
     Route::post('products/store', ['uses'=>'ProductController@store', 'middleware' => [ 'permission:product_create'],'as'=>'products.store']);
     Route::post('products/edit', ['uses'=>'ProductController@edit', 'middleware' => [ 'permission:product_edit'],'as'=>'products.edit']);
     Route::post('products/update', ['uses'=>'ProductController@update', 'middleware' => [ 'permission:product_edit'],'as'=>'products.update']);
-    Route::get('products/all', ['uses'=>'ProductController@getItems', 'middleware' => [ 'permission:product_list'],'as'=>'products.all']);
+    Route::post('products/{id}', ['uses' => 'ProductController@destroy', 'middleware' => ['permission:product_delete'], 'as' => 'products.destroy']);
 
 
-    Route::get('/about-us', ['uses'=>'AboutController@index','middleware' => [ 'permission:about_us_list'],'as'=>'about-us.index']);
+    Route::get('/about_us', ['uses'=>'AboutController@index','middleware' => [ 'permission:about_us_list'],'as'=>'about_us.index']);
     Route::get('/about-us/create', ['uses'=>'AboutController@create', 'middleware' => [ 'permission:about_us_create'],'as'=>'about-us.create']);
     Route::post('/about-us/store', ['uses'=>'AboutController@store', 'middleware' => [ 'permission:about_us_create'],'as'=>'about-us.store']);
     Route::post('/about-us/edit', ['uses'=>'AboutController@edit', 'middleware' => [ 'permission:about_us_edit'],'as'=>'about-us.edit']);
     Route::post('/about-us/update', ['uses'=>'AboutController@update', 'middleware' => [ 'permission:about_us_edit'],'as'=>'about-us.update']);
 
-    Route::get('/contact-us', ['uses'=>'ContactController@index','middleware' => [ 'permission:contact_us_list'],'as'=>'contact-us.index']);
+    Route::get('/contact_us', ['uses'=>'ContactController@index','middleware' => [ 'permission:contact_us_list'],'as'=>'contact_us.index']);
     Route::get('/contact-us/create', ['uses'=>'ContactController@create', 'middleware' => [ 'permission:contact_us_create'],'as'=>'contact-us.create']);
     Route::post('/contact-us/store', ['uses'=>'ContactController@store', 'middleware' => [ 'permission:contact_us_create'],'as'=>'contact-us.store']);
     Route::post('/contact-us/edit', ['uses'=>'ContactController@edit', 'middleware' => [ 'permission:contact_us_edit'],'as'=>'contact-us.edit']);
@@ -106,12 +112,9 @@ Route::middleware('auth')->group(function () {
     Route::post('/blog/update', ['uses'=>'CommentController@update', 'middleware' => [ 'permission:blog_edit'],'as'=>'blog.update']);
 
 
-    Route::get('get-dropdown-data', [\App\Http\Controllers\EcommerceController::class, 'getDropdownData'])->name('get-dropdown-data');
-
-
     Route::post('/checkpassword', ['uses'=>'AdminController@checkpassword', 'as'=>'checkpassword']);
 
-    Route::get('/', ['uses'=>'DashboardController@index','as'=>'dashboard']);
+//    Route::get('/', ['uses'=>'DashboardController@index','as'=>'dashboard']);
     Route::get('/dashboardData', ['uses'=>'DashboardController@dashboardData', 'middleware' => ['permission:dashboard_show'],'as'=>'dashboardData']);
 
     Route::get('/clientsDashboard', ['uses'=>'DashboardController@index','middleware'=>['permission:dashboard_show'],'as'=>'getClientDashboard']);

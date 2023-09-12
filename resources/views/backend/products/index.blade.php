@@ -143,7 +143,7 @@
                         {
                             label: "@lang('lang.name')",
                             name: 'products.name',
-                            sort: true,
+                            sort: false,
                             activeSort: true,
                             order_direction: 'desc',
                         },
@@ -215,10 +215,10 @@
                 deleteRecord(id = null) {
 
                     if (id && id != null) {
-                        deleteItem(`user/${id}`);
+                        deleteItem(`products/${id}`);
                         this.selectedRows = [];
                     } else {
-                        deleteItem(`user/${this.selectedRows}`);
+                        deleteItem(`products/${this.selectedRows}`);
                         this.selectedRows = [];
                     }
 

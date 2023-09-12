@@ -55,6 +55,7 @@ Vue.mixin({
         return {
             categories:[],
             languages:[],
+            products:[],
         }
     },
     computed: {},
@@ -74,7 +75,6 @@ Vue.mixin({
                     if (types.includes('languages')) {
                         this.languages = res.data.languages;
                     }
-
                 })
             })
 

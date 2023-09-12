@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Language;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class EcommerceController extends Controller
@@ -17,6 +18,9 @@ class EcommerceController extends Controller
         }
         if (in_array('languages', $type)) {
             $response['languages'] =  Language::get(['name','code']);
+        }
+        if (in_array('products', $type)) {
+            $response['products'] =(new Product())->getProductsList();
         }
         return $response;
     }

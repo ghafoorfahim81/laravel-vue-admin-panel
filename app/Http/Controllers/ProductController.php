@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Product;
 use App\Models\ProductTranslation;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
 
@@ -93,7 +94,7 @@ class ProductController extends Controller
                 ]);
             }
         }
-        dd('hi');
+        return redirect()->route('products.index');
     }
 
     /**
@@ -136,8 +137,53 @@ class ProductController extends Controller
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request,$id)
     {
-        //
+        $product   = $this->product->find($id);
+        $related_tables = ['expenses'];
+        $count = 0;
+        try {
+
+            if(count($request->ids) > 0){
+
+                $categories = $this->category->whereIn('id', $request->ids)->get();
+                DB::beginTransaction();
+
+                foreach ($categories as $key => $value) {
+
+                    if(checkForDelete($related_tables, 'category_id', $value->id) == false){
+
+                        // $this->crd->where('currency_id', $value->id)->delete();
+                        deleteRecord('categories', 'id', $value->id);
+                    }else {
+                        $count += 1;
+                    }
+
+                }
+                DB::commit();
+                if($count > 0){
+                    return ['result' => 0, 'message' => 'First Delete Related Data'];
+                } else {
+
+                    return ['result' => 1, 'message' => __('message.success')];
+                }
+            } else {
+                // DB::beginTransaction();
+                $category = $this->category->find($id);
+
+                if(checkForDelete($related_tables, 'category_id', $id) == false){
+
+                    // $this->crd->where('currency_id', $id)->delete();
+                    deleteRecord('categories', 'id', $id);
+                    return ['result' => 1, 'message' => __('message.success')];
+                }
+                // DB::commit();
+            }
+
+            return ['result' => 0, 'message' => 'First Delete Related Data'];
+        } catch (\Exception $e) {
+            DB::rollBack();
+            return response()->json(['message' => __('message.error')], 422);
+        }
     }
 }
