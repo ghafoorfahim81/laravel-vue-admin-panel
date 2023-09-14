@@ -58,7 +58,7 @@ Route::get('/company/create', ['uses' => 'CompanyController@create', 'middleware
 Route::post('/company/store', ['uses' => 'CompanyController@store', 'middleware' => ['permission:company_create'], 'as' => 'company.store']);
 Route::get('/mail/send', ['uses' => 'ItemController@sendMail', 'as' => 'item.mail']);
 
-Route::middleware('auth')->group(function () {
+Route::middleware('auth')->group(callback: function () {
 
     Route::get('dashboard', ['uses' => 'DashboardController@index', 'as' => 'dashboard']);
     Route::get('categories', ['uses' => 'CategoryController@index', 'middleware' => ['permission:category_list'], 'as' => 'categories.index']);
@@ -143,6 +143,27 @@ Route::middleware('auth')->group(function () {
         Route::get('role/{id}', ['uses' => 'RoleController@show', 'middleware' => ['permission:role_view'], 'as' => 'role.show']);
         Route::patch('role/{id}', ['uses' => 'RoleController@update', 'middleware' => ['permission:role_edit'], 'as' => 'role.update']);
         Route::post('role/{id}', ['uses' => 'RoleController@destroy', 'middleware' => ['permission:role_delete'], 'as' => 'role']);
+
+        // post-category
+        Route::get('post-category', ['uses' => 'RoleController@index', 'middleware' => ['permission:role_list'], 'as' => 'post-category.index']);
+        Route::get('post-category/create', ['uses' => 'RoleController@create', 'middleware' => ['permission:role_create'], 'as' => 'post-category.create']);
+        Route::post('post-category/store', ['uses' => 'RoleController@store', 'middleware' => ['permission:role_create'], 'as' => 'post-category.store']);
+        Route::get('post-category/edit/{id}', ['uses' => 'RoleController@edit', 'middleware' => ['permission:role_edit'], 'as' => 'post-category.edit']);
+        Route::get('post-category/{id}', ['uses' => 'RoleController@show', 'middleware' => ['permission:role_view'], 'as' => 'post-category.show']);
+        Route::patch('post-category/{id}', ['uses' => 'RoleController@update', 'middleware' => ['permission:role_edit'], 'as' => 'post-category.update']);
+        Route::post('post-category/{id}', ['uses' => 'RoleController@destroy', 'middleware' => ['permission:role_delete'], 'as' => 'post-category']);
+
+        // post
+        Route::get('post', ['uses' => 'RoleController@index', 'middleware' => ['permission:role_list'], 'as' => 'post.index']);
+        Route::get('post/create', ['uses' => 'RoleController@create', 'middleware' => ['permission:role_create'], 'as' => 'post.create']);
+        Route::post('post/store', ['uses' => 'RoleController@store', 'middleware' => ['permission:role_create'], 'as' => 'post.store']);
+        Route::get('post/edit/{id}', ['uses' => 'RoleController@edit', 'middleware' => ['permission:role_edit'], 'as' => 'post.edit']);
+        Route::get('post/{id}', ['uses' => 'RoleController@show', 'middleware' => ['permission:role_view'], 'as' => 'post.show']);
+        Route::patch('post/{id}', ['uses' => 'RoleController@update', 'middleware' => ['permission:role_edit'], 'as' => 'post.update']);
+        Route::post('post/{id}', ['uses' => 'RoleController@destroy', 'middleware' => ['permission:role_delete'], 'as' => 'post']);
+
+
+
     });
 
 });

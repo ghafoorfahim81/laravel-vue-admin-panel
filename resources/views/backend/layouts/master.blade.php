@@ -259,6 +259,15 @@
                     </li>
                     @endif
 
+                    @if(hasPermission(['blog_list']))
+                    <li class="{{ (request()->is('post-category*')) ? 'bg-custom_sidebar_li' : '' }}">
+                        <a href=" {{ route('post-category.index') }} " class="waves-effect">
+                            <div class="d-inline-block icons-sm mr-1"><i style="color: #1da1f2" class="fas fa-chart-bar"></i></div>
+                            <span >Post Category</span>
+                        </a>
+                    </li>
+                    @endif
+
                     @if(hasPermission(['user_list'])
                     || hasPermission(['role_list']))
                         <!-- <li>
