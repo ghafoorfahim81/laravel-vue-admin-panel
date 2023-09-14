@@ -206,16 +206,12 @@
 {{--                                            </li>--}}
 {{--                                        </ul>--}}
 {{--                                    </li>--}}
-                                    <li><a href="#"> Fresh Meat</a></li>
-                                    <li><a href="#"> Butter & Eggs</a></li>
-                                    <li><a href="#">Milk</a></li>
-                                    <li><a href="#">Oil & Vinegars</a></li>
-                                    <li><a href="#"> Bread</a></li>
-                                    <li><a href="#"> Jam & Honey</a></li>
-                                    <li><a href="#"> Frozen Food</a></li>
-                                    <li class="hidden"><a href="shop.html">New Sofas</a></li>
-                                    <li class="hidden"><a href="shop.html">Sleight Sofas</a></li>
-                                    <li><a href="#" id="more-btn"><i class="fa fa-plus" aria-hidden="true"></i> More Categories</a></li>
+                                    @foreach(categories() as $category)
+                                    <li><a href="#">{{$category->name}}</a></li>
+                                    @endforeach
+{{--                                    <li class="hidden"><a href="shop.html">New Sofas</a></li>--}}
+{{--                                    <li class="hidden"><a href="shop.html">Sleight Sofas</a></li>--}}
+{{--                                    <li><a href="#" id="more-btn"><i class="fa fa-plus" aria-hidden="true"></i> More Categories</a></li>--}}
                                 </ul>
                             </div>
                         </div>

@@ -6444,7 +6444,8 @@ vue_dist_vue_esm_js__WEBPACK_IMPORTED_MODULE_1__["default"].mixin({
   data: function data() {
     return {
       categories: [],
-      languages: []
+      languages: [],
+      products: []
     };
   },
   computed: {},
@@ -6465,6 +6466,9 @@ vue_dist_vue_esm_js__WEBPACK_IMPORTED_MODULE_1__["default"].mixin({
                   }
                   if (types.includes('languages')) {
                     _this.languages = res.data.languages;
+                  }
+                  if (types.includes('products')) {
+                    _this.products = res.data.products;
                   }
                 });
               }));

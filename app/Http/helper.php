@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Category;
 use App\Models\User;
 use Illuminate\Support\Facades\Schema;
 use App\Traits\HasPermissionTrait;
@@ -314,10 +315,11 @@ function companyInfo()
         ];
         return $homeCurrency;
     }
-
+    function categories(){
+        return Category::all();
+    }
     function pushTransaction($account_id,$account_name, $amount, $currency = null, $rate = 1, $type = 'dr', $remark = null, $date = null, $location_id = null)
     {
-
         if (!$account_id) return false;
 
         if ($rate == null) {

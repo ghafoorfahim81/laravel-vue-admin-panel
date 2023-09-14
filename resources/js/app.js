@@ -75,6 +75,9 @@ Vue.mixin({
                     if (types.includes('languages')) {
                         this.languages = res.data.languages;
                     }
+                    if (types.includes('products')) {
+                        this.products = res.data.products;
+                    }
                 })
             })
 
