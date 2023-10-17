@@ -42,12 +42,10 @@ class SiteInfoController extends Controller
     public function store(Request $request)
     {
         $siteInfo = SiteInfo::first();
-//        dd($request->all());
         $filename =null;
         if ($request->hasFile('logo')) {
             $image = $request->file('logo');
             $filename = time() . '.' . $image->getClientOriginalExtension();
-
             // Upload the original image to the "product" folder
             $originalPath = 'logo/' . $filename;
             Storage::disk('public')->put($originalPath, file_get_contents($image));
@@ -59,7 +57,7 @@ class SiteInfoController extends Controller
             $siteInfo->update([
                 'title' => $request->title,
                 'slogan' => $request->slogan,
-                'logo' => $filename,
+                'logo' => $filename??$siteInfo->logo,
                 'email' => $request->email,
                 'facebook' => $request->facebook,
                 'contact_number' => $request->contact_number,

@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Category;
+use App\Models\SiteInfo;
 use App\Models\User;
 use Illuminate\Support\Facades\Schema;
 use App\Traits\HasPermissionTrait;
@@ -345,7 +346,9 @@ function companyInfo()
         ]);
     }
 
-
+    function siteInfo(){
+        return SiteInfo::first();
+    }
 
 
     ?>

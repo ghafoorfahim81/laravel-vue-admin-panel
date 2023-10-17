@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Facades\Image;
 
 class CategoryController extends Controller
 {
@@ -43,9 +45,39 @@ class CategoryController extends Controller
     {
         try {
             DB::beginTransaction();
+            $image =null;
+            if ($request->hasFile('image')) {
+                $image = $request->file('image');
+                $image = time() . '.' . $image->getClientOriginalExtension();
 
-            $data = $request->only(['name', 'description', 'parent_id']);
-            $this->category->create($data);
+                // Upload the original image to the "product" folder
+                $originalPath = 'categories/' . $image;
+                Storage::disk('public')->put($originalPath, file_get_contents($image));
+
+                // Create a copy of the original image and resize it to 400x600 pixels
+                $resizedImage = Image::make(storage_path('app/public/' . $originalPath))
+                    ->resize(445, 450);
+
+                // Save the resized image to the "best_seller" folder
+                $bestSellerPath = 'categories/thumbnail/' . $image;
+                Storage::disk('public')->put($bestSellerPath, $resizedImage->encode());
+
+                // Create a copy of the original image and resize it to 317x317 pixels
+                $resizedImage = Image::make(storage_path('app/public/' . $originalPath))
+                    ->resize(120, 120);
+
+                // Save the resized image to the "best_seller" folder
+                $bestSellerPath = 'categories/trending/' . $image;
+                Storage::disk('public')->put($bestSellerPath, $resizedImage->encode());
+
+                // You can also save the original image path to your database or perform any additional tasks here
+            }
+            $this->category->create([
+                'name'  => $request->name,
+                'description' => $request->description,
+                'parent_id' => $request->parent_id,
+                'image' => $image
+            ]);
 
             DB::commit();
             return response()->json(['status' => 201,'message'=> 'Category created successfully',

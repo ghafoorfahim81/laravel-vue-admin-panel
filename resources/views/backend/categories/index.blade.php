@@ -138,6 +138,17 @@
                     <v-select  :options="categories" label="name" v-model="selected_category" class="mb-2" placeholder="Parent"></v-select>
                     <input type="text" placeholder="@lang('lang.name')" class="form-control mb-2" v-model="form.name">
                     <textarea cols="30" rows="10" placeholder="@lang('lang.description')" class="form-control" v-model="form.description"></textarea>
+                    <div class="custom-file mt-2">
+                        <input type="file" class="custom-file-input"
+                               name="image"
+                               v-on:change="onFileChange"
+                               id="validationCustomFile" >
+                        <label class="custom-file-label" for="validationCustomFile">Choose
+                            file...</label>
+                        <div class="invalid-feedback">
+                            Example invalid custom file feedback
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary waves-effect" data-dismiss="modal" @click="hideModal()">Close</button>
@@ -191,6 +202,7 @@
                 perPage: "{{perPage()}}",
                 selected_category:null,
                 page: 1,
+                image:null,
                 selectedRows: [],
                 form:{
                     name:null,
@@ -206,15 +218,22 @@
 
         },
         methods: {
-
+            onFileChange(e) {
+                this.file = e.target.files[0];
+            },
             openCreateModal(){
                 $('#add_modal').modal('show');
                 this.getDropdownItem(['categories']);
                 console.log('this is category',this.categories)
             },
             save() {
+                const formData = new FormData();
+                formData.append("image", this.file);
                 this.form.parent_id = this.selected_category?this.selected_category.id:null;
-                axios.post("{{route('categories.store')}}", this.form).then((response)=>{
+                axios.post("{{route('categories.store')}}", this.form,formData,{headers: {
+                    "Content-Type": "multipart/form-data",
+                },
+                }).then((response)=>{
                     console.log('this is response', response.data);
                     if(response.data.status==201){
                         toastSuccess(response.data.message);

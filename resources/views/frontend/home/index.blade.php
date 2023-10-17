@@ -1,3602 +1,4397 @@
 @extends('frontend.layouts.master')
 @section('content')
     <div id="app" v-cloak>
-        <section class="slider_section slider_s_three">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-9 offset-lg-3">
-                        <div class="slider_area owl-carousel">
-                            <?php $slider = ['hi','how are you','I am fine','and you']; ?>
-                            @foreach($slider as $key=>$value)
-                            <div class="single_slider d-flex align-items-center" data-bgimg="assets/img/slider/slider7.jpg">
-                                <div class="slider_content slider_c_three">
-                                    <h1>{{$value}}</h1>
-                                    <p>
-                                        Organic ingredients & healthy recipes
-                                    </p>
-                                    <a href="shop.html">{{$key}} </a>
+        <main class="main">
+            <section class="home-slider position-relative mb-30">
+                <div class="container">
+                    <div class="home-slide-cover mt-30">
+                        <div class="hero-slider-1 style-4 dot-style-1 dot-style-1-position-1" >
+                            <div class="single-hero-slider single-animation-wrap" style="background-image: url('{{asset('assets/frontend/rtl_assets/imgs/slider/slider-1.png')}}'">
+                                <div class="slider-content">
+                                    <h1 class="display-2 mb-40">
+                                        Don’t miss amazing<br />
+                                        grocery deals
+                                    </h1>
+                                    <p class="mb-65">Sign up for the daily newsletter</p>
+                                    <form class="form-subcriber d-flex">
+                                        <input type="email" placeholder="Your emaill address" />
+                                        <button class="btn" type="submit">Subscribe</button>
+                                    </form>
                                 </div>
                             </div>
-                                @endforeach
+                            <div class="single-hero-slider single-animation-wrap" style="background-image: url(assets/imgs/slider/slider-2.png)">
+                                <div class="slider-content">
+                                    <h1 class="display-2 mb-40">
+                                        Fresh Vegetables<br />
+                                        Big discount
+                                    </h1>
+                                    <p class="mb-65">Save up to 50% off on your first order</p>
+                                    <form class="form-subcriber d-flex">
+                                        <input type="email" placeholder="Your emaill address" />
+                                        <button class="btn" type="submit">Subscribe</button>
+                                    </form>
+                                </div>
+                            </div>
                         </div>
+                        <div class="slider-arrow hero-slider-1-arrow"></div>
                     </div>
                 </div>
-            </div>
-{{--            <div class="container">--}}
-{{--                <div class="row">--}}
-{{--                    <div class="col-lg-9 offset-lg-3">--}}
-{{--                        <div class="slider_area owl-carousel" >--}}
-{{--                            <div class="single_slider d-flex align-items-center" data-bgimg="assets/img/slider/slider10.jpg">--}}
-{{--                                <div class="slider_content slider_c_three c_four">--}}
-{{--                                    <h1>Spring Sale 50% Off</h1>--}}
-{{--                                    <p>--}}
-{{--                                        Fresh Tomatoes Organic Shop--}}
-{{--                                    </p>--}}
-{{--                                    <a href="shop.html">Read more </a>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                            <div  >--}}
-{{--                                <div v-for="product in products" class="single_slider d-flex align-items-center"--}}
-{{--                                     :data-bgimg="`{{url('products')}}/${product.image}`">--}}
-{{--                                    <div class="slider_content slider_c_three">--}}
-{{--                                        <h1>@{{ product.name }}</h1>--}}
-{{--                                        <p>--}}
-{{--                                            @{{ product.description }}--}}
-{{--                                        </p>--}}
-{{--                                        <a href="shop.html">Read more </a>--}}
-{{--                                    </div>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-
-        </section>
-        <div class="shipping_area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="single_shipping">
-                            <div class="shipping_icone">
-                                <img src="{{ url('assets/frontend/img/about/shipping5.jpg')}}" alt="">
-                            </div>
-                            <div class="shipping_content">
-                                <h3>Free Shipping</h3>
-                                <p>Free shipping on all US order or order above $200</p>
-                            </div>
+            </section>
+            <!--End hero slider-->
+            <section class="popular-categories section-padding">
+                <div class="container wow animate__animated animate__fadeIn">
+                    <div class="section-title">
+                        <div class="title">
+                            <h3>Featured Categories</h3>
+                            <ul class="list-inline nav nav-tabs links">
+                                <li class="list-inline-item nav-item"><a class="nav-link" href="shop-grid-right.html">Cake & Milk</a></li>
+                                <li class="list-inline-item nav-item"><a class="nav-link" href="shop-grid-right.html">Coffes & Teas</a></li>
+                                <li class="list-inline-item nav-item"><a class="nav-link active" href="shop-grid-right.html">Pet Foods</a></li>
+                                <li class="list-inline-item nav-item"><a class="nav-link" href="shop-grid-right.html">Vegetables</a></li>
+                            </ul>
                         </div>
+                        <div class="slider-arrow slider-arrow-2 flex-right carausel-10-columns-arrow" id="carausel-10-columns-arrows"></div>
                     </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="single_shipping col_2">
-                            <div class="shipping_icone">
-                                <img src="{{ url('assets/frontend/img/about/shipping6.jpg')}}" alt="">
+                    <div class="carausel-10-columns-cover position-relative">
+                        <div class="carausel-10-columns" id="carausel-10-columns">
+                            <div class="card-2 bg-9 wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
+                                <figure class="img-hover-scale overflow-hidden">
+                                    <a href="shop-grid-right.html"><img src="{{url('assets/frontend/rtl_assets/imgs/shop/cat-13.png')}}" alt="" /></a>
+                                </figure>
+                                <h6><a href="shop-grid-right.html">Cake & Milk</a></h6>
+                                <span>26 items</span>
                             </div>
-                            <div class="shipping_content">
-                                <h3>Support 24/7</h3>
-                                <p>Contact us 24 hours a day, 7 days a week</p>
+                            <div class="card-2 bg-10 wow animate__animated animate__fadeInUp" data-wow-delay=".2s">
+                                <figure class="img-hover-scale overflow-hidden">
+                                    <a href="shop-grid-right.html"><img src="{{url('assets/frontend/rtl_assets/imgs/shop/cat-12.png')}}" alt="" /></a>
+                                </figure>
+                                <h6><a href="shop-grid-right.html">Oganic Kiwi</a></h6>
+                                <span>28 items</span>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="single_shipping col_3">
-                            <div class="shipping_icone">
-                                <img src="{{ url('assets/frontend/img/about/shipping7.jpg')}}" alt="">
+                            <div class="card-2 bg-11 wow animate__animated animate__fadeInUp" data-wow-delay=".3s">
+                                <figure class="img-hover-scale overflow-hidden">
+                                    <a href="shop-grid-right.html"><img src="{{url('assets/frontend/rtl_assets/imgs/shop/cat-11.png')}}" alt="" /></a>
+                                </figure>
+                                <h6><a href="shop-grid-right.html">Peach</a></h6>
+                                <span>14 items</span>
                             </div>
-                            <div class="shipping_content">
-                                <h3>30 Days Return</h3>
-                                <p>Simply return it within 30 days for an exchange</p>
-
+                            <div class="card-2 bg-12 wow animate__animated animate__fadeInUp" data-wow-delay=".4s">
+                                <figure class="img-hover-scale overflow-hidden">
+                                    <a href="shop-grid-right.html"><img src="{{url('assets/frontend/rtl_assets/imgs/shop/cat-9.png')}}" alt="" /></a>
+                                </figure>
+                                <h6><a href="shop-grid-right.html">Red Apple</a></h6>
+                                <span>54 items</span>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-6">
-                        <div class="single_shipping col_4">
-                            <div class="shipping_icone">
-                                <img src="{{ url('assets/frontend/img/about/shipping8.jpg')}}" alt="">
+                            <div class="card-2 bg-13 wow animate__animated animate__fadeInUp" data-wow-delay=".5s">
+                                <figure class="img-hover-scale overflow-hidden">
+                                    <a href="shop-grid-right.html"><img src="{{url('assets/frontend/rtl_assets/imgs/shop/cat-3.png')}}" alt="" /></a>
+                                </figure>
+                                <h6><a href="shop-grid-right.html">Snack</a></h6>
+                                <span>56 items</span>
                             </div>
-                            <div class="shipping_content">
-                                <h3>100% Payment Secure</h3>
-                                <p>We ensure secure payment with PEV</p>
+                            <div class="card-2 bg-14 wow animate__animated animate__fadeInUp" data-wow-delay=".6s">
+                                <figure class="img-hover-scale overflow-hidden">
+                                    <a href="shop-grid-right.html"><img src="{{url('assets/frontend/rtl_assets/imgs/shop/cat-1.png')}}" alt="" /></a>
+                                </figure>
+                                <h6><a href="shop-grid-right.html">Vegetables</a></h6>
+                                <span>72 items</span>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--product area start-->
-        <div class="product_area color_three mb-64">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="product_header product_header3">
-                            <div class="section_title">
-                                <h2>Trending Products</h2>
+                            <div class="card-2 bg-15 wow animate__animated animate__fadeInUp" data-wow-delay=".7s">
+                                <figure class="img-hover-scale overflow-hidden">
+                                    <a href="shop-grid-right.html"><img src="{{url('assets/frontend/rtl_assets/imgs/shop/cat-2.png')}}" alt="" /></a>
+                                </figure>
+                                <h6><a href="shop-grid-right.html">Strawberry</a></h6>
+                                <span>36 items</span>
                             </div>
-                            <div class="product_tab_btn">
-                                <ul class="nav" role="tablist" id="nav-tab">
-                                    <li>
-                                        <a class="active" data-toggle="tab" href="#plant1" role="tab"
-                                           aria-controls="plant1" aria-selected="true">
-                                            Vegetables
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a data-toggle="tab" href="#plant2" role="tab" aria-controls="plant2"
-                                           aria-selected="false">
-                                            Fruits
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a data-toggle="tab" href="#plant3" role="tab" aria-controls="plant3"
-                                           aria-selected="false">
-                                            Salads
-                                        </a>
-                                    </li>
-                                </ul>
+                            <div class="card-2 bg-12 wow animate__animated animate__fadeInUp" data-wow-delay=".8s">
+                                <figure class="img-hover-scale overflow-hidden">
+                                    <a href="shop-grid-right.html"><img src="{{url('assets/frontend/rtl_assets/imgs/shop/cat-4.png')}}" alt="" /></a>
+                                </figure>
+                                <h6><a href="shop-grid-right.html">Black plum</a></h6>
+                                <span>123 items</span>
+                            </div>
+                            <div class="card-2 bg-10 wow animate__animated animate__fadeInUp" data-wow-delay=".9s">
+                                <figure class="img-hover-scale overflow-hidden">
+                                    <a href="shop-grid-right.html"><img src="{{url('assets/frontend/rtl_assets/imgs/shop/cat-5.png')}}" alt="" /></a>
+                                </figure>
+                                <h6><a href="shop-grid-right.html">Custard apple</a></h6>
+                                <span>34 items</span>
+                            </div>
+                            <div class="card-2 bg-12 wow animate__animated animate__fadeInUp" data-wow-delay="1s">
+                                <figure class="img-hover-scale overflow-hidden">
+                                    <a href="shop-grid-right.html"><img src="{{url('assets/frontend/rtl_assets/imgs/shop/cat-14.png')}}" alt="" /></a>
+                                </figure>
+                                <h6><a href="shop-grid-right.html">Coffe & Tea</a></h6>
+                                <span>89 items</span>
+                            </div>
+                            <div class="card-2 bg-11 wow animate__animated animate__fadeInUp" data-wow-delay="0s">
+                                <figure class="img-hover-scale overflow-hidden">
+                                    <a href="shop-grid-right.html"><img src="{{url('assets/frontend/rtl_assets/imgs/shop/cat-15.png')}}" alt="" /></a>
+                                </figure>
+                                <h6><a href="shop-grid-right.html">Headphone</a></h6>
+                                <span>87 items</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="product_container">
+            </section>
+            <!--End category slider-->
+            <section class="banners mb-25">
+                <div class="container">
                     <div class="row">
-                        <div class="col-12">
-                            <div class="tab-content">
-                                <div class="tab-pane fade show active" id="plant1" role="tabpanel">
-                                    <div class="product_carousel product_column5 owl-carousel">
-                                        <article class="single_product">
-                                            <figure>
-                                                <div class="product_thumb">
-                                                    <a class="primary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product1.jpg')}}"
-                                                            alt=""></a>
-                                                    <a class="secondary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product2.jpg')}}"
-                                                            alt=""></a>
-                                                    <div class="label_product">
-                                                        <span class="label_sale">Sale</span>
-                                                        <span class="label_new">New</span>
-                                                    </div>
-                                                    <div class="action_links">
-                                                        <ul>
-                                                            <li class="add_to_cart"><a href="cart.html"
-                                                                                       data-tippy="Add to cart"
-                                                                                       data-tippy-placement="top"
-                                                                                       data-tippy-arrow="true"
-                                                                                       data-tippy-inertia="true"> <span
-                                                                        class="lnr lnr-cart"></span></a></li>
-                                                            <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                        data-tippy-placement="top"
-                                                                                        data-tippy-arrow="true"
-                                                                                        data-tippy-inertia="true"
-                                                                                        data-bs-toggle="modal"
-                                                                                        data-bs-target="#modal_box">
-                                                                    <span class="lnr lnr-magnifier"></span></a></li>
-                                                            <li class="wishlist"><a href="wishlist.html"
-                                                                                    data-tippy="Add to Wishlist"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-heart"></span></a></li>
-                                                            <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-sync"></span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <figcaption class="product_content">
-                                                    <h4 class="product_name"><a href="product-details.html">Aliquam
-                                                            Consequat</a></h4>
-                                                    <p><a href="#">Fruits</a></p>
-                                                    <div class="price_box">
-                                                        <span class="current_price">$26.00</span>
-                                                        <span class="old_price">$362.00</span>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </article>
-                                        <article class="single_product">
-                                            <figure>
-                                                <div class="product_thumb">
-                                                    <a class="primary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product3.jpg')}}"
-                                                            alt=""></a>
-                                                    <a class="secondary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product4.jpg')}}"
-                                                            alt=""></a>
-                                                    <div class="label_product">
-                                                        <span class="label_sale">Sale</span>
-                                                    </div>
-                                                    <div class="action_links">
-                                                        <ul>
-                                                            <li class="add_to_cart"><a href="cart.html"
-                                                                                       data-tippy="Add to cart"
-                                                                                       data-tippy-placement="top"
-                                                                                       data-tippy-arrow="true"
-                                                                                       data-tippy-inertia="true"> <span
-                                                                        class="lnr lnr-cart"></span></a></li>
-                                                            <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                        data-tippy-placement="top"
-                                                                                        data-tippy-arrow="true"
-                                                                                        data-tippy-inertia="true"
-                                                                                        data-bs-toggle="modal"
-                                                                                        data-bs-target="#modal_box">
-                                                                    <span class="lnr lnr-magnifier"></span></a></li>
-                                                            <li class="wishlist"><a href="wishlist.html"
-                                                                                    data-tippy="Add to Wishlist"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-heart"></span></a></li>
-                                                            <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-sync"></span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <figcaption class="product_content">
-                                                    <h4 class="product_name"><a href="product-details.html">Donec Non
-                                                            Est</a></h4>
-                                                    <p><a href="#">Fruits</a></p>
-                                                    <div class="price_box">
-                                                        <span class="current_price">$46.00</span>
-                                                        <span class="old_price">$382.00</span>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </article>
-                                        <article class="single_product">
-                                            <figure>
-                                                <div class="product_thumb">
-                                                    <a class="primary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product5.jpg')}}"
-                                                            alt=""></a>
-                                                    <a class="secondary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product6.jpg')}}"
-                                                            alt=""></a>
-                                                    <div class="label_product">
-                                                        <span class="label_sale">Sale</span>
-
-                                                    </div>
-                                                    <div class="action_links">
-                                                        <ul>
-                                                            <li class="add_to_cart"><a href="cart.html"
-                                                                                       data-tippy="Add to cart"
-                                                                                       data-tippy-placement="top"
-                                                                                       data-tippy-arrow="true"
-                                                                                       data-tippy-inertia="true"> <span
-                                                                        class="lnr lnr-cart"></span></a></li>
-                                                            <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                        data-tippy-placement="top"
-                                                                                        data-tippy-arrow="true"
-                                                                                        data-tippy-inertia="true"
-                                                                                        data-bs-toggle="modal"
-                                                                                        data-bs-target="#modal_box">
-                                                                    <span class="lnr lnr-magnifier"></span></a></li>
-                                                            <li class="wishlist"><a href="wishlist.html"
-                                                                                    data-tippy="Add to Wishlist"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-heart"></span></a></li>
-                                                            <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-sync"></span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <figcaption class="product_content">
-                                                    <h4 class="product_name"><a href="product-details.html">Etiam
-                                                            Gravida</a></h4>
-                                                    <p><a href="#">Fruits</a></p>
-                                                    <div class="price_box">
-                                                        <span class="current_price">$56.00</span>
-                                                        <span class="old_price">$322.00</span>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </article>
-                                        <article class="single_product">
-                                            <figure>
-                                                <div class="product_thumb">
-                                                    <a class="primary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product7.jpg')}}"
-                                                            alt=""></a>
-                                                    <a class="secondary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product8.jpg')}}"
-                                                            alt=""></a>
-                                                    <div class="label_product">
-                                                        <span class="label_sale">Sale</span>
-                                                        <span class="label_new">New</span>
-                                                    </div>
-                                                    <div class="action_links">
-                                                        <ul>
-                                                            <li class="add_to_cart"><a href="cart.html"
-                                                                                       data-tippy="Add to cart"
-                                                                                       data-tippy-placement="top"
-                                                                                       data-tippy-arrow="true"
-                                                                                       data-tippy-inertia="true"> <span
-                                                                        class="lnr lnr-cart"></span></a></li>
-                                                            <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                        data-tippy-placement="top"
-                                                                                        data-tippy-arrow="true"
-                                                                                        data-tippy-inertia="true"
-                                                                                        data-bs-toggle="modal"
-                                                                                        data-bs-target="#modal_box">
-                                                                    <span class="lnr lnr-magnifier"></span></a></li>
-                                                            <li class="wishlist"><a href="wishlist.html"
-                                                                                    data-tippy="Add to Wishlist"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-heart"></span></a></li>
-                                                            <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-sync"></span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <figcaption class="product_content">
-                                                    <h4 class="product_name"><a href="product-details.html">Fusce
-                                                            Aliquam</a></h4>
-                                                    <p><a href="#">Fruits</a></p>
-                                                    <div class="price_box">
-                                                        <span class="current_price">$66.00</span>
-                                                        <span class="old_price">$312.00</span>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </article>
-                                        <article class="single_product">
-                                            <figure>
-                                                <div class="product_thumb">
-                                                    <a class="primary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product9.jpg')}}"
-                                                            alt=""></a>
-                                                    <a class="secondary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product10.jpg')}}"
-                                                            alt=""></a>
-                                                    <div class="label_product">
-                                                        <span class="label_sale">Sale</span>
-                                                    </div>
-                                                    <div class="action_links">
-                                                        <ul>
-                                                            <li class="add_to_cart"><a href="cart.html"
-                                                                                       data-tippy="Add to cart"
-                                                                                       data-tippy-placement="top"
-                                                                                       data-tippy-arrow="true"
-                                                                                       data-tippy-inertia="true"> <span
-                                                                        class="lnr lnr-cart"></span></a></li>
-                                                            <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                        data-tippy-placement="top"
-                                                                                        data-tippy-arrow="true"
-                                                                                        data-tippy-inertia="true"
-                                                                                        data-bs-toggle="modal"
-                                                                                        data-bs-target="#modal_box">
-                                                                    <span class="lnr lnr-magnifier"></span></a></li>
-                                                            <li class="wishlist"><a href="wishlist.html"
-                                                                                    data-tippy="Add to Wishlist"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-heart"></span></a></li>
-                                                            <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-sync"></span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <figcaption class="product_content">
-                                                    <h4 class="product_name"><a href="product-details.html">Letraset
-                                                            Sheets</a></h4>
-                                                    <p><a href="#">Fruits</a></p>
-                                                    <div class="price_box">
-                                                        <span class="current_price">$38.00</span>
-                                                        <span class="old_price">$262.00</span>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </article>
-                                        <article class="single_product">
-                                            <figure>
-                                                <div class="product_thumb">
-                                                    <a class="primary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product11.jpg')}}"
-                                                            alt=""></a>
-                                                    <a class="secondary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product12.jpg')}}"
-                                                            alt=""></a>
-                                                    <div class="label_product">
-                                                        <span class="label_sale">Sale</span>
-                                                        <span class="label_new">New</span>
-                                                    </div>
-                                                    <div class="action_links">
-                                                        <ul>
-                                                            <li class="add_to_cart"><a href="cart.html"
-                                                                                       data-tippy="Add to cart"
-                                                                                       data-tippy-placement="top"
-                                                                                       data-tippy-arrow="true"
-                                                                                       data-tippy-inertia="true"> <span
-                                                                        class="lnr lnr-cart"></span></a></li>
-                                                            <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                        data-tippy-placement="top"
-                                                                                        data-tippy-arrow="true"
-                                                                                        data-tippy-inertia="true"
-                                                                                        data-bs-toggle="modal"
-                                                                                        data-bs-target="#modal_box">
-                                                                    <span class="lnr lnr-magnifier"></span></a></li>
-                                                            <li class="wishlist"><a href="wishlist.html"
-                                                                                    data-tippy="Add to Wishlist"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-heart"></span></a></li>
-                                                            <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-sync"></span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <figcaption class="product_content">
-                                                    <h4 class="product_name"><a href="product-details.html">Lorem Ipsum
-                                                            Lec</a></h4>
-                                                    <p><a href="#">Fruits</a></p>
-                                                    <div class="price_box">
-                                                        <span class="current_price">$36.00</span>
-                                                        <span class="old_price">$145.00</span>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </article>
-                                    </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="banner-img wow animate__animated animate__fadeInUp" data-wow-delay="0">
+                                <img src="{{url('assets/frontend/rtl_assets/imgs/banner/banner-1.png')}}" alt="" />
+                                <div class="banner-text">
+                                    <h4>
+                                        Everyday Fresh & <br />Clean with Our<br />
+                                        Products
+                                    </h4>
+                                    <a href="shop-grid-right.html" class="btn btn-xs">Shop Now <i class="fi-rs-arrow-small-right"></i></a>
                                 </div>
-                                <div class="tab-pane fade" id="plant2" role="tabpanel">
-                                    <div class="product_carousel product_column5 owl-carousel">
-                                        <article class="single_product">
-                                            <figure>
-                                                <div class="product_thumb">
-                                                    <a class="primary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product13.jpg')}}"
-                                                            alt=""></a>
-                                                    <a class="secondary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product1.jpg')}}"
-                                                            alt=""></a>
-                                                    <div class="label_product">
-                                                        <span class="label_sale">Sale</span>
-                                                        <span class="label_new">New</span>
-                                                    </div>
-                                                    <div class="action_links">
-                                                        <ul>
-                                                            <li class="add_to_cart"><a href="cart.html"
-                                                                                       data-tippy="Add to cart"
-                                                                                       data-tippy-placement="top"
-                                                                                       data-tippy-arrow="true"
-                                                                                       data-tippy-inertia="true"> <span
-                                                                        class="lnr lnr-cart"></span></a></li>
-                                                            <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                        data-tippy-placement="top"
-                                                                                        data-tippy-arrow="true"
-                                                                                        data-tippy-inertia="true"
-                                                                                        data-bs-toggle="modal"
-                                                                                        data-bs-target="#modal_box">
-                                                                    <span class="lnr lnr-magnifier"></span></a></li>
-                                                            <li class="wishlist"><a href="wishlist.html"
-                                                                                    data-tippy="Add to Wishlist"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-heart"></span></a></li>
-                                                            <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-sync"></span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <figcaption class="product_content">
-                                                    <h4 class="product_name"><a href="product-details.html">Mauris Vel
-                                                            Tellus</a></h4>
-                                                    <p><a href="#">Fruits</a></p>
-                                                    <div class="price_box">
-                                                        <span class="current_price">$48.00</span>
-                                                        <span class="old_price">$257.00</span>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </article>
-                                        <article class="single_product">
-                                            <figure>
-                                                <div class="product_thumb">
-                                                    <a class="primary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product12.jpg')}}"
-                                                            alt=""></a>
-                                                    <a class="secondary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product2.jpg')}}"
-                                                            alt=""></a>
-                                                    <div class="label_product">
-                                                        <span class="label_sale">Sale</span>
-                                                    </div>
-                                                    <div class="action_links">
-                                                        <ul>
-                                                            <li class="add_to_cart"><a href="cart.html"
-                                                                                       data-tippy="Add to cart"
-                                                                                       data-tippy-placement="top"
-                                                                                       data-tippy-arrow="true"
-                                                                                       data-tippy-inertia="true"> <span
-                                                                        class="lnr lnr-cart"></span></a></li>
-                                                            <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                        data-tippy-placement="top"
-                                                                                        data-tippy-arrow="true"
-                                                                                        data-tippy-inertia="true"
-                                                                                        data-bs-toggle="modal"
-                                                                                        data-bs-target="#modal_box">
-                                                                    <span class="lnr lnr-magnifier"></span></a></li>
-                                                            <li class="wishlist"><a href="wishlist.html"
-                                                                                    data-tippy="Add to Wishlist"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-heart"></span></a></li>
-                                                            <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-sync"></span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <figcaption class="product_content">
-                                                    <h4 class="product_name"><a href="product-details.html">Nunc Neque
-                                                            Eros</a></h4>
-                                                    <p><a href="#">Fruits</a></p>
-                                                    <div class="price_box">
-                                                        <span class="current_price">$35.00</span>
-                                                        <span class="old_price">$245.00</span>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </article>
-                                        <article class="single_product">
-                                            <figure>
-                                                <div class="product_thumb">
-                                                    <a class="primary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product11.jpg')}}"
-                                                            alt=""></a>
-                                                    <a class="secondary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product3.jpg')}}"
-                                                            alt=""></a>
-                                                    <div class="label_product">
-                                                        <span class="label_sale">Sale</span>
-                                                    </div>
-                                                    <div class="action_links">
-                                                        <ul>
-                                                            <li class="add_to_cart"><a href="cart.html"
-                                                                                       data-tippy="Add to cart"
-                                                                                       data-tippy-placement="top"
-                                                                                       data-tippy-arrow="true"
-                                                                                       data-tippy-inertia="true"> <span
-                                                                        class="lnr lnr-cart"></span></a></li>
-                                                            <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                        data-tippy-placement="top"
-                                                                                        data-tippy-arrow="true"
-                                                                                        data-tippy-inertia="true"
-                                                                                        data-bs-toggle="modal"
-                                                                                        data-bs-target="#modal_box">
-                                                                    <span class="lnr lnr-magnifier"></span></a></li>
-                                                            <li class="wishlist"><a href="wishlist.html"
-                                                                                    data-tippy="Add to Wishlist"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-heart"></span></a></li>
-                                                            <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-sync"></span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <figcaption class="product_content">
-                                                    <h4 class="product_name"><a href="product-details.html">Proin Lectus
-                                                            Ipsum</a></h4>
-                                                    <p><a href="#">Fruits</a></p>
-                                                    <div class="price_box">
-                                                        <span class="current_price">$26.00</span>
-                                                        <span class="old_price">$362.00</span>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </article>
-                                        <article class="single_product">
-                                            <figure>
-                                                <div class="product_thumb">
-                                                    <a class="primary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product9.jpg')}}"
-                                                            alt=""></a>
-                                                    <a class="secondary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product4.jpg')}}"
-                                                            alt=""></a>
-                                                    <div class="label_product">
-                                                        <span class="label_sale">Sale</span>
-                                                        <span class="label_new">New</span>
-                                                    </div>
-                                                    <div class="action_links">
-                                                        <ul>
-                                                            <li class="add_to_cart"><a href="cart.html"
-                                                                                       data-tippy="Add to cart"
-                                                                                       data-tippy-placement="top"
-                                                                                       data-tippy-arrow="true"
-                                                                                       data-tippy-inertia="true"> <span
-                                                                        class="lnr lnr-cart"></span></a></li>
-                                                            <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                        data-tippy-placement="top"
-                                                                                        data-tippy-arrow="true"
-                                                                                        data-tippy-inertia="true"
-                                                                                        data-bs-toggle="modal"
-                                                                                        data-bs-target="#modal_box">
-                                                                    <span class="lnr lnr-magnifier"></span></a></li>
-                                                            <li class="wishlist"><a href="wishlist.html"
-                                                                                    data-tippy="Add to Wishlist"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-heart"></span></a></li>
-                                                            <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-sync"></span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <figcaption class="product_content">
-                                                    <h4 class="product_name"><a href="product-details.html">Quisque In
-                                                            Arcu</a></h4>
-                                                    <p><a href="#">Fruits</a></p>
-                                                    <div class="price_box">
-                                                        <span class="current_price">$55.00</span>
-                                                        <span class="old_price">$235.00</span>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </article>
-                                        <article class="single_product">
-                                            <figure>
-                                                <div class="product_thumb">
-                                                    <a class="primary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product8.jpg')}}"
-                                                            alt=""></a>
-                                                    <a class="secondary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product5.jpg')}}"
-                                                            alt=""></a>
-                                                    <div class="label_product">
-                                                        <span class="label_sale">Sale</span>
-                                                    </div>
-                                                    <div class="action_links">
-                                                        <ul>
-                                                            <li class="add_to_cart"><a href="cart.html"
-                                                                                       data-tippy="Add to cart"
-                                                                                       data-tippy-placement="top"
-                                                                                       data-tippy-arrow="true"
-                                                                                       data-tippy-inertia="true"> <span
-                                                                        class="lnr lnr-cart"></span></a></li>
-                                                            <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                        data-tippy-placement="top"
-                                                                                        data-tippy-arrow="true"
-                                                                                        data-tippy-inertia="true"
-                                                                                        data-bs-toggle="modal"
-                                                                                        data-bs-target="#modal_box">
-                                                                    <span class="lnr lnr-magnifier"></span></a></li>
-                                                            <li class="wishlist"><a href="wishlist.html"
-                                                                                    data-tippy="Add to Wishlist"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-heart"></span></a></li>
-                                                            <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-sync"></span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <figcaption class="product_content">
-                                                    <h4 class="product_name"><a href="product-details.html">Cas Meque
-                                                            Metus</a></h4>
-                                                    <p><a href="#">Fruits</a></p>
-                                                    <div class="price_box">
-                                                        <span class="current_price">$26.00</span>
-                                                        <span class="old_price">$362.00</span>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </article>
-                                        <article class="single_product">
-                                            <figure>
-                                                <div class="product_thumb">
-                                                    <a class="primary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product7.jpg')}}"
-                                                            alt=""></a>
-                                                    <a class="secondary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product6.jpg')}}"
-                                                            alt=""></a>
-                                                    <div class="label_product">
-                                                        <span class="label_sale">Sale</span>
-                                                    </div>
-                                                    <div class="action_links">
-                                                        <ul>
-                                                            <li class="add_to_cart"><a href="cart.html"
-                                                                                       data-tippy="Add to cart"
-                                                                                       data-tippy-placement="top"
-                                                                                       data-tippy-arrow="true"
-                                                                                       data-tippy-inertia="true"> <span
-                                                                        class="lnr lnr-cart"></span></a></li>
-                                                            <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                        data-tippy-placement="top"
-                                                                                        data-tippy-arrow="true"
-                                                                                        data-tippy-inertia="true"
-                                                                                        data-bs-toggle="modal"
-                                                                                        data-bs-target="#modal_box">
-                                                                    <span class="lnr lnr-magnifier"></span></a></li>
-                                                            <li class="wishlist"><a href="wishlist.html"
-                                                                                    data-tippy="Add to Wishlist"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-heart"></span></a></li>
-                                                            <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-sync"></span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <figcaption class="product_content">
-                                                    <h4 class="product_name"><a href="product-details.html">Aliquam
-                                                            Consequat</a></h4>
-                                                    <p><a href="#">Fruits</a></p>
-                                                    <div class="price_box">
-                                                        <span class="current_price">$26.00</span>
-                                                        <span class="old_price">$362.00</span>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </article>
-                                    </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                            <div class="banner-img wow animate__animated animate__fadeInUp" data-wow-delay=".2s">
+                                <img src="{{url('assets/frontend/rtl_assets/imgs/banner/banner-2.png')}}" alt="" />
+                                <div class="banner-text">
+                                    <h4>
+                                        Make your Breakfast<br />
+                                        Healthy and Easy
+                                    </h4>
+                                    <a href="shop-grid-right.html" class="btn btn-xs">Shop Now <i class="fi-rs-arrow-small-right"></i></a>
                                 </div>
-                                <div class="tab-pane fade" id="plant3" role="tabpanel">
-                                    <div class="product_carousel product_column5 owl-carousel">
-                                        <article class="single_product">
-                                            <figure>
-                                                <div class="product_thumb">
-                                                    <a class="primary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product11.jpg')}}"
-                                                            alt=""></a>
-                                                    <a class="secondary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product3.jpg')}}"
-                                                            alt=""></a>
-                                                    <div class="label_product">
-                                                        <span class="label_sale">Sale</span>
-                                                    </div>
-                                                    <div class="action_links">
-                                                        <ul>
-                                                            <li class="add_to_cart"><a href="cart.html"
-                                                                                       data-tippy="Add to cart"
-                                                                                       data-tippy-placement="top"
-                                                                                       data-tippy-arrow="true"
-                                                                                       data-tippy-inertia="true"> <span
-                                                                        class="lnr lnr-cart"></span></a></li>
-                                                            <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                        data-tippy-placement="top"
-                                                                                        data-tippy-arrow="true"
-                                                                                        data-tippy-inertia="true"
-                                                                                        data-bs-toggle="modal"
-                                                                                        data-bs-target="#modal_box">
-                                                                    <span class="lnr lnr-magnifier"></span></a></li>
-                                                            <li class="wishlist"><a href="wishlist.html"
-                                                                                    data-tippy="Add to Wishlist"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-heart"></span></a></li>
-                                                            <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-sync"></span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <figcaption class="product_content">
-                                                    <h4 class="product_name"><a href="product-details.html">Proin Lectus
-                                                            Ipsum</a></h4>
-                                                    <p><a href="#">Fruits</a></p>
-                                                    <div class="price_box">
-                                                        <span class="current_price">$26.00</span>
-                                                        <span class="old_price">$362.00</span>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </article>
-                                        <article class="single_product">
-                                            <figure>
-                                                <div class="product_thumb">
-                                                    <a class="primary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product9.jpg')}}"
-                                                            alt=""></a>
-                                                    <a class="secondary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product4.jpg')}}"
-                                                            alt=""></a>
-                                                    <div class="label_product">
-                                                        <span class="label_sale">Sale</span>
-                                                        <span class="label_new">New</span>
-                                                    </div>
-                                                    <div class="action_links">
-                                                        <ul>
-                                                            <li class="add_to_cart"><a href="cart.html"
-                                                                                       data-tippy="Add to cart"
-                                                                                       data-tippy-placement="top"
-                                                                                       data-tippy-arrow="true"
-                                                                                       data-tippy-inertia="true"> <span
-                                                                        class="lnr lnr-cart"></span></a></li>
-                                                            <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                        data-tippy-placement="top"
-                                                                                        data-tippy-arrow="true"
-                                                                                        data-tippy-inertia="true"
-                                                                                        data-bs-toggle="modal"
-                                                                                        data-bs-target="#modal_box">
-                                                                    <span class="lnr lnr-magnifier"></span></a></li>
-                                                            <li class="wishlist"><a href="wishlist.html"
-                                                                                    data-tippy="Add to Wishlist"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-heart"></span></a></li>
-                                                            <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-sync"></span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <figcaption class="product_content">
-                                                    <h4 class="product_name"><a href="product-details.html">Quisque In
-                                                            Arcu</a></h4>
-                                                    <p><a href="#">Fruits</a></p>
-                                                    <div class="price_box">
-                                                        <span class="current_price">$55.00</span>
-                                                        <span class="old_price">$235.00</span>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </article>
-                                        <article class="single_product">
-                                            <figure>
-                                                <div class="product_thumb">
-                                                    <a class="primary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product13.jpg')}}"
-                                                            alt=""></a>
-                                                    <a class="secondary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product1.jpg')}}"
-                                                            alt=""></a>
-                                                    <div class="label_product">
-                                                        <span class="label_sale">Sale</span>
-                                                        <span class="label_new">New</span>
-                                                    </div>
-                                                    <div class="action_links">
-                                                        <ul>
-                                                            <li class="add_to_cart"><a href="cart.html"
-                                                                                       data-tippy="Add to cart"
-                                                                                       data-tippy-placement="top"
-                                                                                       data-tippy-arrow="true"
-                                                                                       data-tippy-inertia="true"> <span
-                                                                        class="lnr lnr-cart"></span></a></li>
-                                                            <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                        data-tippy-placement="top"
-                                                                                        data-tippy-arrow="true"
-                                                                                        data-tippy-inertia="true"
-                                                                                        data-bs-toggle="modal"
-                                                                                        data-bs-target="#modal_box">
-                                                                    <span class="lnr lnr-magnifier"></span></a></li>
-                                                            <li class="wishlist"><a href="wishlist.html"
-                                                                                    data-tippy="Add to Wishlist"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-heart"></span></a></li>
-                                                            <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-sync"></span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <figcaption class="product_content">
-                                                    <h4 class="product_name"><a href="product-details.html">Mauris Vel
-                                                            Tellus</a></h4>
-                                                    <p><a href="#">Fruits</a></p>
-                                                    <div class="price_box">
-                                                        <span class="current_price">$48.00</span>
-                                                        <span class="old_price">$257.00</span>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </article>
-                                        <article class="single_product">
-                                            <figure>
-                                                <div class="product_thumb">
-                                                    <a class="primary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product12.jpg')}}"
-                                                            alt=""></a>
-                                                    <a class="secondary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product2.jpg')}}"
-                                                            alt=""></a>
-                                                    <div class="label_product">
-                                                        <span class="label_sale">Sale</span>
-                                                    </div>
-                                                    <div class="action_links">
-                                                        <ul>
-                                                            <li class="add_to_cart"><a href="cart.html"
-                                                                                       data-tippy="Add to cart"
-                                                                                       data-tippy-placement="top"
-                                                                                       data-tippy-arrow="true"
-                                                                                       data-tippy-inertia="true"> <span
-                                                                        class="lnr lnr-cart"></span></a></li>
-                                                            <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                        data-tippy-placement="top"
-                                                                                        data-tippy-arrow="true"
-                                                                                        data-tippy-inertia="true"
-                                                                                        data-bs-toggle="modal"
-                                                                                        data-bs-target="#modal_box">
-                                                                    <span class="lnr lnr-magnifier"></span></a></li>
-                                                            <li class="wishlist"><a href="wishlist.html"
-                                                                                    data-tippy="Add to Wishlist"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-heart"></span></a></li>
-                                                            <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-sync"></span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <figcaption class="product_content">
-                                                    <h4 class="product_name"><a href="product-details.html">Nunc Neque
-                                                            Eros</a></h4>
-                                                    <p><a href="#">Fruits</a></p>
-                                                    <div class="price_box">
-                                                        <span class="current_price">$35.00</span>
-                                                        <span class="old_price">$245.00</span>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </article>
-                                        <article class="single_product">
-                                            <figure>
-                                                <div class="product_thumb">
-                                                    <a class="primary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product1.jpg')}}"
-                                                            alt=""></a>
-                                                    <a class="secondary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product2.jpg')}}"
-                                                            alt=""></a>
-                                                    <div class="label_product">
-                                                        <span class="label_sale">Sale</span>
-                                                        <span class="label_new">New</span>
-                                                    </div>
-                                                    <div class="action_links">
-                                                        <ul>
-                                                            <li class="add_to_cart"><a href="cart.html"
-                                                                                       data-tippy="Add to cart"
-                                                                                       data-tippy-placement="top"
-                                                                                       data-tippy-arrow="true"
-                                                                                       data-tippy-inertia="true"> <span
-                                                                        class="lnr lnr-cart"></span></a></li>
-                                                            <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                        data-tippy-placement="top"
-                                                                                        data-tippy-arrow="true"
-                                                                                        data-tippy-inertia="true"
-                                                                                        data-bs-toggle="modal"
-                                                                                        data-bs-target="#modal_box">
-                                                                    <span class="lnr lnr-magnifier"></span></a></li>
-                                                            <li class="wishlist"><a href="wishlist.html"
-                                                                                    data-tippy="Add to Wishlist"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-heart"></span></a></li>
-                                                            <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-sync"></span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <figcaption class="product_content">
-                                                    <h4 class="product_name"><a href="product-details.html">Aliquam
-                                                            Consequat</a></h4>
-                                                    <p><a href="#">Fruits</a></p>
-                                                    <div class="price_box">
-                                                        <span class="current_price">$26.00</span>
-                                                        <span class="old_price">$362.00</span>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </article>
-                                        <article class="single_product">
-                                            <figure>
-                                                <div class="product_thumb">
-                                                    <a class="primary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product3.jpg')}}"
-                                                            alt=""></a>
-                                                    <a class="secondary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product4.jpg')}}"
-                                                            alt=""></a>
-                                                    <div class="label_product">
-                                                        <span class="label_sale">Sale</span>
-                                                    </div>
-                                                    <div class="action_links">
-                                                        <ul>
-                                                            <li class="add_to_cart"><a href="cart.html"
-                                                                                       data-tippy="Add to cart"
-                                                                                       data-tippy-placement="top"
-                                                                                       data-tippy-arrow="true"
-                                                                                       data-tippy-inertia="true"> <span
-                                                                        class="lnr lnr-cart"></span></a></li>
-                                                            <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                        data-tippy-placement="top"
-                                                                                        data-tippy-arrow="true"
-                                                                                        data-tippy-inertia="true"
-                                                                                        data-bs-toggle="modal"
-                                                                                        data-bs-target="#modal_box">
-                                                                    <span class="lnr lnr-magnifier"></span></a></li>
-                                                            <li class="wishlist"><a href="wishlist.html"
-                                                                                    data-tippy="Add to Wishlist"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-heart"></span></a></li>
-                                                            <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-sync"></span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <figcaption class="product_content">
-                                                    <h4 class="product_name"><a href="product-details.html">Donec Non
-                                                            Est</a></h4>
-                                                    <p><a href="#">Fruits</a></p>
-                                                    <div class="price_box">
-                                                        <span class="current_price">$46.00</span>
-                                                        <span class="old_price">$382.00</span>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </article>
-                                    </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 d-md-none d-lg-flex">
+                            <div class="banner-img mb-sm-0 wow animate__animated animate__fadeInUp" data-wow-delay=".4s">
+                                <img src="{{url('assets/frontend/rtl_assets/imgs/banner/banner-3.png')}}" alt="" />
+                                <div class="banner-text">
+                                    <h4>The best Organic <br />Products Online</h4>
+                                    <a href="shop-grid-right.html" class="btn btn-xs">Shop Now <i class="fi-rs-arrow-small-right"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        {{--    <--product area end-->--}}
-
-        <!--banner area start-->
-        <div class="banner_area banner3_col2">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6">
-                        <div class="single_banner">
-                            <div class="banner_thumb">
-                                <a href="shop.html"><img src="{{ url('assets/frontend/img/bg/banner10.jpg')}}"
-                                                         alt=""></a>
-                            </div>
-                        </div>
+            </section>
+            <!--End banners-->
+            <section class="product-tabs section-padding position-relative">
+                <div class="container">
+                    <div class="section-title style-2 wow animate__animated animate__fadeIn">
+                        <h3>Popular Products</h3>
+                        <ul class="nav nav-tabs links" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="nav-tab-one" data-bs-toggle="tab" data-bs-target="#tab-one" type="button" role="tab" aria-controls="tab-one" aria-selected="true">All</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="nav-tab-two" data-bs-toggle="tab" data-bs-target="#tab-two" type="button" role="tab" aria-controls="tab-two" aria-selected="false">Milks & Dairies</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="nav-tab-three" data-bs-toggle="tab" data-bs-target="#tab-three" type="button" role="tab" aria-controls="tab-three" aria-selected="false">Coffes & Teas</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="nav-tab-four" data-bs-toggle="tab" data-bs-target="#tab-four" type="button" role="tab" aria-controls="tab-four" aria-selected="false">Pet Foods</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="nav-tab-five" data-bs-toggle="tab" data-bs-target="#tab-five" type="button" role="tab" aria-controls="tab-five" aria-selected="false">Meats</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="nav-tab-six" data-bs-toggle="tab" data-bs-target="#tab-six" type="button" role="tab" aria-controls="tab-six" aria-selected="false">Vegetables</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="nav-tab-seven" data-bs-toggle="tab" data-bs-target="#tab-seven" type="button" role="tab" aria-controls="tab-seven" aria-selected="false">Fruits</button>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="single_banner">
-                            <div class="banner_thumb">
-                                <a href="shop.html"><img src="{{ url('assets/frontend/img/bg/banner11.jpg')}}"
-                                                         alt=""></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--banner area end-->
-
-        <!--home three bg area start-->
-        <div class="home3_bg_area color_three">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-5">
-                        <div class="productbg_right_left">
-                            <div class="deals_prodict_three">
-                                <div class="deals_title">
-                                    <h2>Deals Of The Weeks</h2>
-                                </div>
-                                <div class="deals_prodict_inner3">
-                                    <div class="product_carousel deals3_column1 owl-carousel">
-                                        <article class="single_product">
-                                            <figure>
-                                                <div class="product_thumb">
-                                                    <a class="primary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product17.jpg')}}"
-                                                            alt=""></a>
-                                                    <a class="secondary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product18.jpg')}}"
-                                                            alt=""></a>
-                                                    <div class="label_product">
-                                                        <span class="label_sale">Sale</span>
-                                                    </div>
-                                                    <div class="action_links">
-                                                        <ul>
-                                                            <li class="add_to_cart"><a href="cart.html"
-                                                                                       data-tippy="Add to cart"
-                                                                                       data-tippy-placement="top"
-                                                                                       data-tippy-arrow="true"
-                                                                                       data-tippy-inertia="true"> <span
-                                                                        class="lnr lnr-cart"></span></a></li>
-                                                            <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                        data-tippy-placement="top"
-                                                                                        data-tippy-arrow="true"
-                                                                                        data-tippy-inertia="true"
-                                                                                        data-bs-toggle="modal"
-                                                                                        data-bs-target="#modal_box">
-                                                                    <span class="lnr lnr-magnifier"></span></a></li>
-                                                            <li class="wishlist"><a href="wishlist.html"
-                                                                                    data-tippy="Add to Wishlist"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-heart"></span></a></li>
-                                                            <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-sync"></span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <figcaption class="product_content">
-                                                    <h4 class="product_name"><a href="product-details.html">Mauris Vel
-                                                            Tellus</a></h4>
-                                                    <p><a href="#">Fruits</a></p>
-                                                    <div class="price_box">
-                                                        <span class="current_price">$48.00</span>
-                                                        <span class="old_price">$257.00</span>
-                                                    </div>
-                                                    <div class="product_timing">
-                                                        <div data-countdown="2021/12/15"></div>
-                                                    </div>
-                                                    <div class="addto_cart_btn">
-                                                        <a href="cart.html" title="Add to cart">Add to Cart</a>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </article>
-                                        <article class="single_product">
-                                            <figure>
-                                                <div class="product_thumb">
-                                                    <a class="primary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product19.jpg')}}"
-                                                            alt=""></a>
-                                                    <a class="secondary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product20.jpg')}}"
-                                                            alt=""></a>
-                                                    <div class="label_product">
-                                                        <span class="label_sale">Sale</span>
-                                                    </div>
-                                                    <div class="action_links">
-                                                        <ul>
-                                                            <li class="add_to_cart"><a href="cart.html"
-                                                                                       data-tippy="Add to cart"
-                                                                                       data-tippy-placement="top"
-                                                                                       data-tippy-arrow="true"
-                                                                                       data-tippy-inertia="true"> <span
-                                                                        class="lnr lnr-cart"></span></a></li>
-                                                            <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                        data-tippy-placement="top"
-                                                                                        data-tippy-arrow="true"
-                                                                                        data-tippy-inertia="true"
-                                                                                        data-bs-toggle="modal"
-                                                                                        data-bs-target="#modal_box">
-                                                                    <span class="lnr lnr-magnifier"></span></a></li>
-                                                            <li class="wishlist"><a href="wishlist.html"
-                                                                                    data-tippy="Add to Wishlist"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-heart"></span></a></li>
-                                                            <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-sync"></span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <figcaption class="product_content">
-                                                    <h4 class="product_name"><a href="product-details.html">Donec Ac
-                                                            Tempus</a></h4>
-                                                    <p><a href="#">Fruits</a></p>
-                                                    <div class="price_box">
-                                                        <span class="current_price">$48.00</span>
-                                                        <span class="old_price">$257.00</span>
-                                                    </div>
-                                                    <div class="product_timing">
-                                                        <div data-countdown="2021/12/15"></div>
-                                                    </div>
-                                                    <div class="addto_cart_btn">
-                                                        <a href="cart.html" title="Add to cart">Add to Cart</a>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </article>
-                                        <article class="single_product">
-                                            <figure>
-                                                <div class="product_thumb">
-                                                    <a class="primary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product15.jpg')}}"
-                                                            alt=""></a>
-                                                    <a class="secondary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product16.jpg')}}"
-                                                            alt=""></a>
-                                                    <div class="label_product">
-                                                        <span class="label_sale">Sale</span>
-                                                    </div>
-                                                    <div class="action_links">
-                                                        <ul>
-                                                            <li class="add_to_cart"><a href="cart.html"
-                                                                                       data-tippy="Add to cart"
-                                                                                       data-tippy-placement="top"
-                                                                                       data-tippy-arrow="true"
-                                                                                       data-tippy-inertia="true"> <span
-                                                                        class="lnr lnr-cart"></span></a></li>
-                                                            <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                        data-tippy-placement="top"
-                                                                                        data-tippy-arrow="true"
-                                                                                        data-tippy-inertia="true"
-                                                                                        data-bs-toggle="modal"
-                                                                                        data-bs-target="#modal_box">
-                                                                    <span class="lnr lnr-magnifier"></span></a></li>
-                                                            <li class="wishlist"><a href="wishlist.html"
-                                                                                    data-tippy="Add to Wishlist"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-heart"></span></a></li>
-                                                            <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-sync"></span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <figcaption class="product_content">
-                                                    <h4 class="product_name"><a href="product-details.html">Mauris Vel
-                                                            Tellus</a></h4>
-                                                    <p><a href="#">Fruits</a></p>
-                                                    <div class="price_box">
-                                                        <span class="current_price">$48.00</span>
-                                                        <span class="old_price">$257.00</span>
-                                                    </div>
-                                                    <div class="product_timing">
-                                                        <div data-countdown="2021/12/15"></div>
-                                                    </div>
-                                                    <div class="addto_cart_btn">
-                                                        <a href="cart.html" title="Add to cart">Add to Cart</a>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </article>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="banner_thumb">
-                                <a href="shop.html"><img src="{{ url('assets/frontend/img/bg/banner12.jpg')}}"
-                                                         alt=""></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-8 col-md-7">
-                        <div class="productbg_right_side">
-                            <div class="small_product_inner3">
-                                <div class="section_title">
-                                    <h2>Best Sellers</h2>
-                                </div>
-                                <div class="small_product_area product_carousel smallp_column2 owl-carousel">
-                                    <div class="product_items">
-                                        <article class="single_product">
-                                            <figure>
-                                                <div class="product_thumb">
-                                                    <a class="primary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product1.jpg')}}"
-                                                            alt=""></a>
-                                                    <a class="secondary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product2.jpg')}}"
-                                                            alt=""></a>
-                                                </div>
-                                                <figcaption class="product_content">
-                                                    <h4 class="product_name"><a href="product-details.html">Aliquam
-                                                            Consequat</a></h4>
-                                                    <p><a href="#">Fruits</a></p>
-                                                    <div class="action_links">
-                                                        <ul>
-                                                            <li class="add_to_cart"><a href="cart.html"
-                                                                                       data-tippy="Add to cart"
-                                                                                       data-tippy-placement="top"
-                                                                                       data-tippy-arrow="true"
-                                                                                       data-tippy-inertia="true"> <span
-                                                                        class="lnr lnr-cart"></span></a></li>
-                                                            <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                        data-tippy-placement="top"
-                                                                                        data-tippy-arrow="true"
-                                                                                        data-tippy-inertia="true"
-                                                                                        data-bs-toggle="modal"
-                                                                                        data-bs-target="#modal_box">
-                                                                    <span class="lnr lnr-magnifier"></span></a></li>
-                                                            <li class="wishlist"><a href="wishlist.html"
-                                                                                    data-tippy="Add to Wishlist"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-heart"></span></a></li>
-                                                            <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-sync"></span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="price_box">
-                                                        <span class="current_price">$26.00</span>
-                                                        <span class="old_price">$362.00</span>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </article>
-                                        <article class="single_product">
-                                            <figure>
-                                                <div class="product_thumb">
-                                                    <a class="primary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product3.jpg')}}"
-                                                            alt=""></a>
-                                                    <a class="secondary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product4.jpg')}}"
-                                                            alt=""></a>
-                                                </div>
-                                                <figcaption class="product_content">
-                                                    <h4 class="product_name"><a href="product-details.html">Donec Non
-                                                            Est</a></h4>
-                                                    <p><a href="#">Fruits</a></p>
-                                                    <div class="action_links">
-                                                        <ul>
-                                                            <li class="add_to_cart"><a href="cart.html"
-                                                                                       data-tippy="Add to cart"
-                                                                                       data-tippy-placement="top"
-                                                                                       data-tippy-arrow="true"
-                                                                                       data-tippy-inertia="true"> <span
-                                                                        class="lnr lnr-cart"></span></a></li>
-                                                            <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                        data-tippy-placement="top"
-                                                                                        data-tippy-arrow="true"
-                                                                                        data-tippy-inertia="true"
-                                                                                        data-bs-toggle="modal"
-                                                                                        data-bs-target="#modal_box">
-                                                                    <span class="lnr lnr-magnifier"></span></a></li>
-                                                            <li class="wishlist"><a href="wishlist.html"
-                                                                                    data-tippy="Add to Wishlist"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-heart"></span></a></li>
-                                                            <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-sync"></span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="price_box">
-                                                        <span class="current_price">$46.00</span>
-                                                        <span class="old_price">$382.00</span>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </article>
-                                    </div>
-                                    <div class="product_items">
-                                        <article class="single_product">
-                                            <figure>
-                                                <div class="product_thumb">
-                                                    <a class="primary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product7.jpg')}}"
-                                                            alt=""></a>
-                                                    <a class="secondary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product8.jpg')}}"
-                                                            alt=""></a>
-                                                </div>
-                                                <figcaption class="product_content">
-                                                    <h4 class="product_name"><a href="product-details.html">Quisque In
-                                                            Arcu</a></h4>
-                                                    <p><a href="#">Fruits</a></p>
-                                                    <div class="action_links">
-                                                        <ul>
-                                                            <li class="add_to_cart"><a href="cart.html"
-                                                                                       data-tippy="Add to cart"
-                                                                                       data-tippy-placement="top"
-                                                                                       data-tippy-arrow="true"
-                                                                                       data-tippy-inertia="true"> <span
-                                                                        class="lnr lnr-cart"></span></a></li>
-                                                            <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                        data-tippy-placement="top"
-                                                                                        data-tippy-arrow="true"
-                                                                                        data-tippy-inertia="true"
-                                                                                        data-bs-toggle="modal"
-                                                                                        data-bs-target="#modal_box">
-                                                                    <span class="lnr lnr-magnifier"></span></a></li>
-                                                            <li class="wishlist"><a href="wishlist.html"
-                                                                                    data-tippy="Add to Wishlist"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-heart"></span></a></li>
-                                                            <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-sync"></span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="price_box">
-                                                        <span class="current_price">$20.00</span>
-                                                        <span class="old_price">$352.00</span>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </article>
-                                        <article class="single_product">
-                                            <figure>
-                                                <div class="product_thumb">
-                                                    <a class="primary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product9.jpg')}}"
-                                                            alt=""></a>
-                                                    <a class="secondary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product10.jpg')}}"
-                                                            alt=""></a>
-                                                </div>
-                                                <figcaption class="product_content">
-                                                    <h4 class="product_name"><a href="product-details.html">Cas Meque
-                                                            Metus</a></h4>
-                                                    <p><a href="#">Fruits</a></p>
-                                                    <div class="action_links">
-                                                        <ul>
-                                                            <li class="add_to_cart"><a href="cart.html"
-                                                                                       data-tippy="Add to cart"
-                                                                                       data-tippy-placement="top"
-                                                                                       data-tippy-arrow="true"
-                                                                                       data-tippy-inertia="true"> <span
-                                                                        class="lnr lnr-cart"></span></a></li>
-                                                            <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                        data-tippy-placement="top"
-                                                                                        data-tippy-arrow="true"
-                                                                                        data-tippy-inertia="true"
-                                                                                        data-bs-toggle="modal"
-                                                                                        data-bs-target="#modal_box">
-                                                                    <span class="lnr lnr-magnifier"></span></a></li>
-                                                            <li class="wishlist"><a href="wishlist.html"
-                                                                                    data-tippy="Add to Wishlist"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-heart"></span></a></li>
-                                                            <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-sync"></span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="price_box">
-                                                        <span class="current_price">$72.00</span>
-                                                        <span class="old_price">$352.00</span>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </article>
-                                    </div>
-                                    <div class="product_items">
-                                        <article class="single_product">
-                                            <figure>
-                                                <div class="product_thumb">
-                                                    <a class="primary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product13.jpg')}}"
-                                                            alt=""></a>
-                                                    <a class="secondary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product1.jpg')}}"
-                                                            alt=""></a>
-                                                </div>
-                                                <figcaption class="product_content">
-                                                    <h4 class="product_name"><a href="product-details.html">Mauris Vel
-                                                            Tellus</a></h4>
-                                                    <p><a href="#">Fruits</a></p>
-                                                    <div class="action_links">
-                                                        <ul>
-                                                            <li class="add_to_cart"><a href="cart.html"
-                                                                                       data-tippy="Add to cart"
-                                                                                       data-tippy-placement="top"
-                                                                                       data-tippy-arrow="true"
-                                                                                       data-tippy-inertia="true"> <span
-                                                                        class="lnr lnr-cart"></span></a></li>
-                                                            <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                        data-tippy-placement="top"
-                                                                                        data-tippy-arrow="true"
-                                                                                        data-tippy-inertia="true"
-                                                                                        data-bs-toggle="modal"
-                                                                                        data-bs-target="#modal_box">
-                                                                    <span class="lnr lnr-magnifier"></span></a></li>
-                                                            <li class="wishlist"><a href="wishlist.html"
-                                                                                    data-tippy="Add to Wishlist"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-heart"></span></a></li>
-                                                            <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-sync"></span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="price_box">
-                                                        <span class="current_price">$45.00</span>
-                                                        <span class="old_price">$162.00</span>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </article>
-                                        <article class="single_product">
-                                            <figure>
-                                                <div class="product_thumb">
-                                                    <a class="primary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product10.jpg')}}"
-                                                            alt=""></a>
-                                                    <a class="secondary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product3.jpg')}}"
-                                                            alt=""></a>
-                                                </div>
-                                                <figcaption class="product_content">
-                                                    <h4 class="product_name"><a href="product-details.html">Donec Non
-                                                            Est</a></h4>
-                                                    <p><a href="#">Fruits</a></p>
-                                                    <div class="action_links">
-                                                        <ul>
-                                                            <li class="add_to_cart"><a href="cart.html"
-                                                                                       data-tippy="Add to cart"
-                                                                                       data-tippy-placement="top"
-                                                                                       data-tippy-arrow="true"
-                                                                                       data-tippy-inertia="true"> <span
-                                                                        class="lnr lnr-cart"></span></a></li>
-                                                            <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                        data-tippy-placement="top"
-                                                                                        data-tippy-arrow="true"
-                                                                                        data-tippy-inertia="true"
-                                                                                        data-bs-toggle="modal"
-                                                                                        data-bs-target="#modal_box">
-                                                                    <span class="lnr lnr-magnifier"></span></a></li>
-                                                            <li class="wishlist"><a href="wishlist.html"
-                                                                                    data-tippy="Add to Wishlist"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-heart"></span></a></li>
-                                                            <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-sync"></span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                    <div class="price_box">
-                                                        <span class="current_price">$46.00</span>
-                                                        <span class="old_price">$382.00</span>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </article>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="product_conatiner3">
-                                <div class="section_title">
-                                    <h2>New Products</h2>
-                                </div>
-                                <div class="product_carousel product3_column3 owl-carousel">
-                                    <div class="product_items">
-                                        <article class="single_product">
-                                            <figure>
-                                                <div class="product_thumb">
-                                                    <a class="primary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product1.jpg')}}"
-                                                            alt=""></a>
-                                                    <a class="secondary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product2.jpg')}}"
-                                                            alt=""></a>
-                                                    <div class="label_product">
-                                                        <span class="label_sale">Sale</span>
-                                                        <span class="label_new">New</span>
-                                                    </div>
-                                                    <div class="action_links">
-                                                        <ul>
-                                                            <li class="add_to_cart"><a href="cart.html"
-                                                                                       data-tippy="Add to cart"
-                                                                                       data-tippy-placement="top"
-                                                                                       data-tippy-arrow="true"
-                                                                                       data-tippy-inertia="true"> <span
-                                                                        class="lnr lnr-cart"></span></a></li>
-                                                            <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                        data-tippy-placement="top"
-                                                                                        data-tippy-arrow="true"
-                                                                                        data-tippy-inertia="true"
-                                                                                        data-bs-toggle="modal"
-                                                                                        data-bs-target="#modal_box">
-                                                                    <span class="lnr lnr-magnifier"></span></a></li>
-                                                            <li class="wishlist"><a href="wishlist.html"
-                                                                                    data-tippy="Add to Wishlist"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-heart"></span></a></li>
-                                                            <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-sync"></span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <figcaption class="product_content">
-                                                    <h4 class="product_name"><a href="product-details.html">Aliquam
-                                                            Consequat</a></h4>
-                                                    <p><a href="#">Fruits</a></p>
-                                                    <div class="price_box">
-                                                        <span class="current_price">$26.00</span>
-                                                        <span class="old_price">$362.00</span>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </article>
-                                        <article class="single_product">
-                                            <figure>
-                                                <div class="product_thumb">
-                                                    <a class="primary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product3.jpg')}}"
-                                                            alt=""></a>
-                                                    <a class="secondary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product4.jpg')}}"
-                                                            alt=""></a>
-                                                    <div class="label_product">
-                                                        <span class="label_sale">Sale</span>
-                                                    </div>
-                                                    <div class="action_links">
-                                                        <ul>
-                                                            <li class="add_to_cart"><a href="cart.html"
-                                                                                       data-tippy="Add to cart"
-                                                                                       data-tippy-placement="top"
-                                                                                       data-tippy-arrow="true"
-                                                                                       data-tippy-inertia="true"> <span
-                                                                        class="lnr lnr-cart"></span></a></li>
-                                                            <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                        data-tippy-placement="top"
-                                                                                        data-tippy-arrow="true"
-                                                                                        data-tippy-inertia="true"
-                                                                                        data-bs-toggle="modal"
-                                                                                        data-bs-target="#modal_box">
-                                                                    <span class="lnr lnr-magnifier"></span></a></li>
-                                                            <li class="wishlist"><a href="wishlist.html"
-                                                                                    data-tippy="Add to Wishlist"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-heart"></span></a></li>
-                                                            <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-sync"></span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <figcaption class="product_content">
-                                                    <h4 class="product_name"><a href="product-details.html">Donec Non
-                                                            Est</a></h4>
-                                                    <p><a href="#">Fruits</a></p>
-                                                    <div class="price_box">
-                                                        <span class="current_price">$46.00</span>
-                                                        <span class="old_price">$382.00</span>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </article>
-                                    </div>
-                                    <div class="product_items">
-                                        <article class="single_product">
-                                            <figure>
-                                                <div class="product_thumb">
-                                                    <a class="primary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product5.jpg')}}"
-                                                            alt=""></a>
-                                                    <a class="secondary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product6.jpg')}}"
-                                                            alt=""></a>
-                                                    <div class="label_product">
-                                                        <span class="label_sale">Sale</span>
-
-                                                    </div>
-                                                    <div class="action_links">
-                                                        <ul>
-                                                            <li class="add_to_cart"><a href="cart.html"
-                                                                                       data-tippy="Add to cart"
-                                                                                       data-tippy-placement="top"
-                                                                                       data-tippy-arrow="true"
-                                                                                       data-tippy-inertia="true"> <span
-                                                                        class="lnr lnr-cart"></span></a></li>
-                                                            <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                        data-tippy-placement="top"
-                                                                                        data-tippy-arrow="true"
-                                                                                        data-tippy-inertia="true"
-                                                                                        data-bs-toggle="modal"
-                                                                                        data-bs-target="#modal_box">
-                                                                    <span class="lnr lnr-magnifier"></span></a></li>
-                                                            <li class="wishlist"><a href="wishlist.html"
-                                                                                    data-tippy="Add to Wishlist"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-heart"></span></a></li>
-                                                            <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-sync"></span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <figcaption class="product_content">
-                                                    <h4 class="product_name"><a href="product-details.html">Etiam
-                                                            Gravida</a></h4>
-                                                    <p><a href="#">Fruits</a></p>
-                                                    <div class="price_box">
-                                                        <span class="current_price">$56.00</span>
-                                                        <span class="old_price">$322.00</span>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </article>
-                                        <article class="single_product">
-                                            <figure>
-                                                <div class="product_thumb">
-                                                    <a class="primary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product7.jpg')}}"
-                                                            alt=""></a>
-                                                    <a class="secondary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product8.jpg')}}"
-                                                            alt=""></a>
-                                                    <div class="label_product">
-                                                        <span class="label_sale">Sale</span>
-                                                        <span class="label_new">New</span>
-                                                    </div>
-                                                    <div class="action_links">
-                                                        <ul>
-                                                            <li class="add_to_cart"><a href="cart.html"
-                                                                                       data-tippy="Add to cart"
-                                                                                       data-tippy-placement="top"
-                                                                                       data-tippy-arrow="true"
-                                                                                       data-tippy-inertia="true"> <span
-                                                                        class="lnr lnr-cart"></span></a></li>
-                                                            <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                        data-tippy-placement="top"
-                                                                                        data-tippy-arrow="true"
-                                                                                        data-tippy-inertia="true"
-                                                                                        data-bs-toggle="modal"
-                                                                                        data-bs-target="#modal_box">
-                                                                    <span class="lnr lnr-magnifier"></span></a></li>
-                                                            <li class="wishlist"><a href="wishlist.html"
-                                                                                    data-tippy="Add to Wishlist"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-heart"></span></a></li>
-                                                            <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-sync"></span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <figcaption class="product_content">
-                                                    <h4 class="product_name"><a href="product-details.html">Fusce
-                                                            Aliquam</a></h4>
-                                                    <p><a href="#">Fruits</a></p>
-                                                    <div class="price_box">
-                                                        <span class="current_price">$66.00</span>
-                                                        <span class="old_price">$312.00</span>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </article>
-                                    </div>
-                                    <div class="product_items">
-                                        <article class="single_product">
-                                            <figure>
-                                                <div class="product_thumb">
-                                                    <a class="primary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product9.jpg')}}"
-                                                            alt=""></a>
-                                                    <a class="secondary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product10.jpg')}}"
-                                                            alt=""></a>
-                                                    <div class="label_product">
-                                                        <span class="label_sale">Sale</span>
-                                                    </div>
-                                                    <div class="action_links">
-                                                        <ul>
-                                                            <li class="add_to_cart"><a href="cart.html"
-                                                                                       data-tippy="Add to cart"
-                                                                                       data-tippy-placement="top"
-                                                                                       data-tippy-arrow="true"
-                                                                                       data-tippy-inertia="true"> <span
-                                                                        class="lnr lnr-cart"></span></a></li>
-                                                            <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                        data-tippy-placement="top"
-                                                                                        data-tippy-arrow="true"
-                                                                                        data-tippy-inertia="true"
-                                                                                        data-bs-toggle="modal"
-                                                                                        data-bs-target="#modal_box">
-                                                                    <span class="lnr lnr-magnifier"></span></a></li>
-                                                            <li class="wishlist"><a href="wishlist.html"
-                                                                                    data-tippy="Add to Wishlist"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-heart"></span></a></li>
-                                                            <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-sync"></span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <figcaption class="product_content">
-                                                    <h4 class="product_name"><a href="product-details.html">Letraset
-                                                            Sheets</a></h4>
-                                                    <p><a href="#">Fruits</a></p>
-                                                    <div class="price_box">
-                                                        <span class="current_price">$38.00</span>
-                                                        <span class="old_price">$262.00</span>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </article>
-                                        <article class="single_product">
-                                            <figure>
-                                                <div class="product_thumb">
-                                                    <a class="primary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product11.jpg')}}"
-                                                            alt=""></a>
-                                                    <a class="secondary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product12.jpg')}}"
-                                                            alt=""></a>
-                                                    <div class="label_product">
-                                                        <span class="label_sale">Sale</span>
-                                                        <span class="label_new">New</span>
-                                                    </div>
-                                                    <div class="action_links">
-                                                        <ul>
-                                                            <li class="add_to_cart"><a href="cart.html"
-                                                                                       data-tippy="Add to cart"
-                                                                                       data-tippy-placement="top"
-                                                                                       data-tippy-arrow="true"
-                                                                                       data-tippy-inertia="true"> <span
-                                                                        class="lnr lnr-cart"></span></a></li>
-                                                            <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                        data-tippy-placement="top"
-                                                                                        data-tippy-arrow="true"
-                                                                                        data-tippy-inertia="true"
-                                                                                        data-bs-toggle="modal"
-                                                                                        data-bs-target="#modal_box">
-                                                                    <span class="lnr lnr-magnifier"></span></a></li>
-                                                            <li class="wishlist"><a href="wishlist.html"
-                                                                                    data-tippy="Add to Wishlist"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-heart"></span></a></li>
-                                                            <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-sync"></span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <figcaption class="product_content">
-                                                    <h4 class="product_name"><a href="product-details.html">Lorem Ipsum
-                                                            Lec</a></h4>
-                                                    <p><a href="#">Fruits</a></p>
-                                                    <div class="price_box">
-                                                        <span class="current_price">$36.00</span>
-                                                        <span class="old_price">$145.00</span>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </article>
-                                    </div>
-                                    <div class="product_items">
-                                        <article class="single_product">
-                                            <figure>
-                                                <div class="product_thumb">
-                                                    <a class="primary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product13.jpg')}}"
-                                                            alt=""></a>
-                                                    <a class="secondary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product1.jpg')}}"
-                                                            alt=""></a>
-                                                    <div class="label_product">
-                                                        <span class="label_sale">Sale</span>
-                                                        <span class="label_new">New</span>
-                                                    </div>
-                                                    <div class="action_links">
-                                                        <ul>
-                                                            <li class="add_to_cart"><a href="cart.html"
-                                                                                       data-tippy="Add to cart"
-                                                                                       data-tippy-placement="top"
-                                                                                       data-tippy-arrow="true"
-                                                                                       data-tippy-inertia="true"> <span
-                                                                        class="lnr lnr-cart"></span></a></li>
-                                                            <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                        data-tippy-placement="top"
-                                                                                        data-tippy-arrow="true"
-                                                                                        data-tippy-inertia="true"
-                                                                                        data-bs-toggle="modal"
-                                                                                        data-bs-target="#modal_box">
-                                                                    <span class="lnr lnr-magnifier"></span></a></li>
-                                                            <li class="wishlist"><a href="wishlist.html"
-                                                                                    data-tippy="Add to Wishlist"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-heart"></span></a></li>
-                                                            <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-sync"></span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <figcaption class="product_content">
-                                                    <h4 class="product_name"><a href="product-details.html">Mauris Vel
-                                                            Tellus</a></h4>
-                                                    <p><a href="#">Fruits</a></p>
-                                                    <div class="price_box">
-                                                        <span class="current_price">$48.00</span>
-                                                        <span class="old_price">$257.00</span>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </article>
-                                        <article class="single_product">
-                                            <figure>
-                                                <div class="product_thumb">
-                                                    <a class="primary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product12.jpg')}}"
-                                                            alt=""></a>
-                                                    <a class="secondary_img" href="product-details.html"><img
-                                                            src="{{ url('assets/frontend/img/product/product2.jpg')}}"
-                                                            alt=""></a>
-                                                    <div class="label_product">
-                                                        <span class="label_sale">Sale</span>
-                                                    </div>
-                                                    <div class="action_links">
-                                                        <ul>
-                                                            <li class="add_to_cart"><a href="cart.html"
-                                                                                       data-tippy="Add to cart"
-                                                                                       data-tippy-placement="top"
-                                                                                       data-tippy-arrow="true"
-                                                                                       data-tippy-inertia="true"> <span
-                                                                        class="lnr lnr-cart"></span></a></li>
-                                                            <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                        data-tippy-placement="top"
-                                                                                        data-tippy-arrow="true"
-                                                                                        data-tippy-inertia="true"
-                                                                                        data-bs-toggle="modal"
-                                                                                        data-bs-target="#modal_box">
-                                                                    <span class="lnr lnr-magnifier"></span></a></li>
-                                                            <li class="wishlist"><a href="wishlist.html"
-                                                                                    data-tippy="Add to Wishlist"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-heart"></span></a></li>
-                                                            <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"><span
-                                                                        class="lnr lnr-sync"></span></a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <figcaption class="product_content">
-                                                    <h4 class="product_name"><a href="product-details.html">Nunc Neque
-                                                            Eros</a></h4>
-                                                    <p><a href="#">Fruits</a></p>
-                                                    <div class="price_box">
-                                                        <span class="current_price">$35.00</span>
-                                                        <span class="old_price">$245.00</span>
-                                                    </div>
-                                                </figcaption>
-                                            </figure>
-                                        </article>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--home three bg area end-->
-
-        <!--blog area start-->
-        <section class="blog_section blog_s_three color_three">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="section_title">
-                            <p>Our recent articles about Organic</p>
-                            <h2>Our Blog Posts</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="blog_carousel blog_column3 owl-carousel">
-                        <div class="col-lg-3">
-                            <article class="single_blog">
-                                <figure>
-                                    <div class="blog_thumb">
-                                        <a href="blog-details.html"><img
-                                                src="{{ url('assets/frontend/img/blog/blog1.jpg')}}" alt=""></a>
-                                    </div>
-                                    <figcaption class="blog_content">
-                                        <div class="articles_date">
-                                            <p>23/06/2021 | <a href="#">eCommerce</a></p>
+                    <!--End nav-tabs-->
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="tab-one" role="tabpanel" aria-labelledby="tab-one">
+                            <div class="row product-grid-4">
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap mb-30 wow animate__animated animate__fadeIn" data-wow-delay=".1s">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-1-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-1-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="hot">Hot</span>
+                                            </div>
                                         </div>
-                                        <h4 class="post_title"><a href="blog-details.html">Lorem ipsum dolor sit amet,
-                                                elit. Impedit, aliquam animi, saepe ex.</a></h4>
-                                        <footer class="blog_footer">
-                                            <a href="blog-details.html">Show more</a>
-                                        </footer>
-                                    </figcaption>
-                                </figure>
-                            </article>
-                        </div>
-                        <div class="col-lg-3">
-                            <article class="single_blog">
-                                <figure>
-                                    <div class="blog_thumb">
-                                        <a href="blog-details.html"><img
-                                                src="{{ url('assets/frontend/img/blog/blog2.jpg')}}" alt=""></a>
-                                    </div>
-                                    <figcaption class="blog_content">
-                                        <div class="articles_date">
-                                            <p>23/06/2021 | <a href="#">eCommerce</a></p>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Snack</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Seeds of Change Organic Quinoa, Brown, & Red Rice</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$28.85</span>
+                                                    <span class="old-price">$32.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <h4 class="post_title"><a href="blog-details.html"> dolor sit amet, elit. Illo
-                                                iste sed animi quaerat nobis odit nulla.</a></h4>
-                                        <footer class="blog_footer">
-                                            <a href="blog-details.html">Show more</a>
-                                        </footer>
-                                    </figcaption>
-                                </figure>
-                            </article>
-                        </div>
-                        <div class="col-lg-3">
-                            <article class="single_blog">
-                                <figure>
-                                    <div class="blog_thumb">
-                                        <a href="blog-details.html"><img
-                                                src="{{ url('assets/frontend/img/blog/blog3.jpg')}}" alt=""></a>
                                     </div>
-                                    <figcaption class="blog_content">
-                                        <div class="articles_date">
-                                            <p>23/06/2021 | <a href="#">eCommerce</a></p>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap mb-30 wow animate__animated animate__fadeIn" data-wow-delay=".2s">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-2-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-2-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="sale">Sale</span>
+                                            </div>
                                         </div>
-                                        <h4 class="post_title"><a href="blog-details.html">maxime laborum voluptas
-                                                minus, est, unde eaque esse tenetur.</a></h4>
-                                        <footer class="blog_footer">
-                                            <a href="blog-details.html">Show more</a>
-                                        </footer>
-                                    </figcaption>
-                                </figure>
-                            </article>
-                        </div>
-                        <div class="col-lg-3">
-                            <article class="single_blog">
-                                <figure>
-                                    <div class="blog_thumb">
-                                        <a href="blog-details.html"><img
-                                                src="{{ url('assets/frontend/img/blog/blog2.jpg')}}" alt=""></a>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Hodo Foods</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">All Natural Italian-Style Chicken Meatballs</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 80%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (3.5)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">Stouffer</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$52.85</span>
+                                                    <span class="old-price">$55.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <figcaption class="blog_content">
-                                        <div class="articles_date">
-                                            <p>23/06/2021 | <a href="#">eCommerce</a></p>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap mb-30 wow animate__animated animate__fadeIn" data-wow-delay=".3s">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-3-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-3-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="new">New</span>
+                                            </div>
                                         </div>
-                                        <h4 class="post_title"><a href="blog-details.html">Lorem ipsum dolor sit amet,
-                                                elit. Impedit, aliquam animi, saepe ex.</a></h4>
-                                        <footer class="blog_footer">
-                                            <a href="blog-details.html">Show more</a>
-                                        </footer>
-                                    </figcaption>
-                                </figure>
-                            </article>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Snack</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Angie’s Boomchickapop Sweet & Salty Kettle Corn</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 85%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">StarKist</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$48.85</span>
+                                                    <span class="old-price">$52.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap mb-30 wow animate__animated animate__fadeIn" data-wow-delay=".4s">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-4-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-4-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Vegetables</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Foster Farms Takeout Crispy Classic Buffalo Wings</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$17.85</span>
+                                                    <span class="old-price">$19.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap mb-30 wow animate__animated animate__fadeIn" data-wow-delay=".5s">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-5-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-5-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="best">-14%</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Pet Foods</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Blue Diamond Almonds Lightly Salted Vegetables</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$23.85</span>
+                                                    <span class="old-price">$25.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap wow animate__animated animate__fadeIn" data-wow-delay=".1s">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-6-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-6-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Hodo Foods</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Chobani Complete Vanilla Greek Yogurt</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$54.85</span>
+                                                    <span class="old-price">$55.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap wow animate__animated animate__fadeIn" data-wow-delay=".2s">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-7-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-7-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Meats</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Canada Dry Ginger Ale – 2 L Bottle - 200ml - 400g</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$32.85</span>
+                                                    <span class="old-price">$33.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap wow animate__animated animate__fadeIn" data-wow-delay=".3s">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-8-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-8-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="sale">Sale</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Snack</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Encore Seafoods Stuffed Alaskan Salmon</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$35.85</span>
+                                                    <span class="old-price">$37.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap wow animate__animated animate__fadeIn" data-wow-delay=".4s">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-9-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-9-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="hot">Hot</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Coffes</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Gorton’s Beer Battered Fish Fillets with soft paper</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">Old El Paso</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$23.85</span>
+                                                    <span class="old-price">$25.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6 d-none d-xl-block">
+                                    <div class="product-cart-wrap wow animate__animated animate__fadeIn" data-wow-delay=".5s">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-10-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-10-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Cream</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Haagen-Dazs Caramel Cone Ice Cream Ketchup</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 50%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (2.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">Tyson</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$22.85</span>
+                                                    <span class="old-price">$24.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                            </div>
+                            <!--End product-grid-4-->
+                        </div>
+                        <!--En tab one-->
+                        <div class="tab-pane fade" id="tab-two" role="tabpanel" aria-labelledby="tab-two">
+                            <div class="row product-grid-4">
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap mb-30">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-10-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-10-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="hot">Hot</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Snack</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Seeds of Change Organic Quinoa, Brown, & Red Rice</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$28.85</span>
+                                                    <span class="old-price">$32.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap mb-30">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-12-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-12-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="sale">Sale</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Hodo Foods</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">All Natural Italian-Style Chicken Meatballs</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 80%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (3.5)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">Stouffer</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$52.85</span>
+                                                    <span class="old-price">$55.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap mb-30">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-13-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-13-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="new">New</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Snack</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Angie’s Boomchickapop Sweet & Salty Kettle Corn</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 85%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">StarKist</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$48.85</span>
+                                                    <span class="old-price">$52.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap mb-30">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-14-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-14-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Vegetables</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Foster Farms Takeout Crispy Classic Buffalo Wings</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$17.85</span>
+                                                    <span class="old-price">$19.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap mb-30">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-15-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-15-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="best">-14%</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Pet Foods</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Blue Diamond Almonds Lightly Salted Vegetables</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$23.85</span>
+                                                    <span class="old-price">$25.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-16-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-16-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Hodo Foods</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Chobani Complete Vanilla Greek Yogurt</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$54.85</span>
+                                                    <span class="old-price">$55.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-7-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-7-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Meats</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Canada Dry Ginger Ale – 2 L Bottle - 200ml - 400g</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$32.85</span>
+                                                    <span class="old-price">$33.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-8-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-8-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="sale">Sale</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Snack</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Encore Seafoods Stuffed Alaskan Salmon</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$35.85</span>
+                                                    <span class="old-price">$37.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-9-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-9-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="hot">Hot</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Coffes</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Gorton’s Beer Battered Fish Fillets with soft paper</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">Old El Paso</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$23.85</span>
+                                                    <span class="old-price">$25.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6 d-none d-xl-block">
+                                    <div class="product-cart-wrap">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-10-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-10-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Cream</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Haagen-Dazs Caramel Cone Ice Cream Ketchup</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 50%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (2.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">Tyson</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$22.85</span>
+                                                    <span class="old-price">$24.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                            </div>
+                            <!--End product-grid-4-->
+                        </div>
+                        <!--En tab two-->
+                        <div class="tab-pane fade" id="tab-three" role="tabpanel" aria-labelledby="tab-three">
+                            <div class="row product-grid-4">
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap mb-30">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-9-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-9-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="hot">Hot</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Snack</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Seeds of Change Organic Quinoa, Brown, & Red Rice</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$28.85</span>
+                                                    <span class="old-price">$32.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap mb-30">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-8-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-8-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="sale">Sale</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Hodo Foods</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">All Natural Italian-Style Chicken Meatballs</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 80%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (3.5)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">Stouffer</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$52.85</span>
+                                                    <span class="old-price">$55.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap mb-30">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-7-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-7-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="new">New</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Snack</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Angie’s Boomchickapop Sweet & Salty Kettle Corn</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 85%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">StarKist</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$48.85</span>
+                                                    <span class="old-price">$52.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap mb-30">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-6-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-6-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Vegetables</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Foster Farms Takeout Crispy Classic Buffalo Wings</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$17.85</span>
+                                                    <span class="old-price">$19.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap mb-30">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-5-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-5-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="best">-14%</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Pet Foods</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Blue Diamond Almonds Lightly Salted Vegetables</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$23.85</span>
+                                                    <span class="old-price">$25.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-4-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-4-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Hodo Foods</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Chobani Complete Vanilla Greek Yogurt</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$54.85</span>
+                                                    <span class="old-price">$55.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-3-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-3-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Meats</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Canada Dry Ginger Ale – 2 L Bottle - 200ml - 400g</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$32.85</span>
+                                                    <span class="old-price">$33.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-2-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-2-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="sale">Sale</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Snack</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Encore Seafoods Stuffed Alaskan Salmon</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$35.85</span>
+                                                    <span class="old-price">$37.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-9-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-9-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="hot">Hot</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Coffes</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Gorton’s Beer Battered Fish Fillets with soft paper</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">Old El Paso</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$23.85</span>
+                                                    <span class="old-price">$25.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6 d-none d-xl-block">
+                                    <div class="product-cart-wrap">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-1-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-1-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Cream</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Haagen-Dazs Caramel Cone Ice Cream Ketchup</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 50%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (2.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">Tyson</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$22.85</span>
+                                                    <span class="old-price">$24.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                            </div>
+                            <!--End product-grid-4-->
+                        </div>
+                        <!--En tab three-->
+                        <div class="tab-pane fade" id="tab-four" role="tabpanel" aria-labelledby="tab-four">
+                            <div class="row product-grid-4">
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap mb-30">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-6-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-6-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="hot">Hot</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Snack</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Seeds of Change Organic Quinoa, Brown, & Red Rice</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$28.85</span>
+                                                    <span class="old-price">$32.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap mb-30">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-7-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-7-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="sale">Sale</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Hodo Foods</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">All Natural Italian-Style Chicken Meatballs</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 80%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (3.5)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">Stouffer</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$52.85</span>
+                                                    <span class="old-price">$55.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap mb-30">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-8-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-8-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="new">New</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Snack</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Angie’s Boomchickapop Sweet & Salty Kettle Corn</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 85%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">StarKist</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$48.85</span>
+                                                    <span class="old-price">$52.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap mb-30">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-9-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-9-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Vegetables</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Foster Farms Takeout Crispy Classic Buffalo Wings</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$17.85</span>
+                                                    <span class="old-price">$19.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap mb-30">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-4-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-4-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="best">-14%</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Pet Foods</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Blue Diamond Almonds Lightly Salted Vegetables</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$23.85</span>
+                                                    <span class="old-price">$25.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap mb-30">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-3-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-3-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Hodo Foods</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Chobani Complete Vanilla Greek Yogurt</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$54.85</span>
+                                                    <span class="old-price">$55.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-2-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-2-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Meats</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Canada Dry Ginger Ale – 2 L Bottle - 200ml - 400g</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$32.85</span>
+                                                    <span class="old-price">$33.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-1-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-1-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="sale">Sale</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Snack</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Encore Seafoods Stuffed Alaskan Salmon</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$35.85</span>
+                                                    <span class="old-price">$37.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-11-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-11-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="hot">Hot</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Coffes</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Gorton’s Beer Battered Fish Fillets with soft paper</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">Old El Paso</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$23.85</span>
+                                                    <span class="old-price">$25.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6 d-none d-xl-block">
+                                    <div class="product-cart-wrap">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-12-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-12-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Cream</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Haagen-Dazs Caramel Cone Ice Cream Ketchup</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 50%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (2.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">Tyson</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$22.85</span>
+                                                    <span class="old-price">$24.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                            </div>
+                            <!--End product-grid-4-->
+                        </div>
+                        <!--En tab four-->
+                        <div class="tab-pane fade" id="tab-five" role="tabpanel" aria-labelledby="tab-five">
+                            <div class="row product-grid-4">
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap mb-30">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-12-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-12-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="hot">Hot</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Snack</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Seeds of Change Organic Quinoa, Brown, & Red Rice</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$28.85</span>
+                                                    <span class="old-price">$32.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap mb-30">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-13-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-13-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="sale">Sale</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Hodo Foods</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">All Natural Italian-Style Chicken Meatballs</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 80%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (3.5)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">Stouffer</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$52.85</span>
+                                                    <span class="old-price">$55.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap mb-30">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-14-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-14-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="new">New</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Snack</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Angie’s Boomchickapop Sweet & Salty Kettle Corn</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 85%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">StarKist</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$48.85</span>
+                                                    <span class="old-price">$52.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap mb-30">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-15-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-15-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Vegetables</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Foster Farms Takeout Crispy Classic Buffalo Wings</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$17.85</span>
+                                                    <span class="old-price">$19.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap mb-30">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-16-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-16-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="best">-14%</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Pet Foods</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Blue Diamond Almonds Lightly Salted Vegetables</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$23.85</span>
+                                                    <span class="old-price">$25.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-5-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-5-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Hodo Foods</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Chobani Complete Vanilla Greek Yogurt</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$54.85</span>
+                                                    <span class="old-price">$55.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-7-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-7-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Meats</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Canada Dry Ginger Ale – 2 L Bottle - 200ml - 400g</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$32.85</span>
+                                                    <span class="old-price">$33.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-8-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-8-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="sale">Sale</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Snack</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Encore Seafoods Stuffed Alaskan Salmon</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$35.85</span>
+                                                    <span class="old-price">$37.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-9-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-9-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="hot">Hot</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Coffes</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Gorton’s Beer Battered Fish Fillets with soft paper</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">Old El Paso</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$23.85</span>
+                                                    <span class="old-price">$25.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6 d-none d-xl-block">
+                                    <div class="product-cart-wrap">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-10-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-10-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Cream</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Haagen-Dazs Caramel Cone Ice Cream Ketchup</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 50%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (2.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">Tyson</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$22.85</span>
+                                                    <span class="old-price">$24.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                            </div>
+                            <!--End product-grid-4-->
+                        </div>
+                        <!--En tab five-->
+                        <div class="tab-pane fade" id="tab-six" role="tabpanel" aria-labelledby="tab-six">
+                            <div class="row product-grid-4">
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap mb-30">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-4-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-4-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="hot">Hot</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Snack</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Seeds of Change Organic Quinoa, Brown, & Red Rice</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$28.85</span>
+                                                    <span class="old-price">$32.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap mb-30">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-6-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-6-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="sale">Sale</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Hodo Foods</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">All Natural Italian-Style Chicken Meatballs</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 80%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (3.5)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">Stouffer</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$52.85</span>
+                                                    <span class="old-price">$55.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap mb-30">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-8-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-8-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="new">New</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Snack</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Angie’s Boomchickapop Sweet & Salty Kettle Corn</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 85%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">StarKist</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$48.85</span>
+                                                    <span class="old-price">$52.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap mb-30">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-9-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-9-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Vegetables</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Foster Farms Takeout Crispy Classic Buffalo Wings</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$17.85</span>
+                                                    <span class="old-price">$19.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap mb-30">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-5-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-5-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="best">-14%</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Pet Foods</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Blue Diamond Almonds Lightly Salted Vegetables</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$23.85</span>
+                                                    <span class="old-price">$25.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-6-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-6-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Hodo Foods</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Chobani Complete Vanilla Greek Yogurt</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$54.85</span>
+                                                    <span class="old-price">$55.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-7-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-7-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Meats</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Canada Dry Ginger Ale – 2 L Bottle - 200ml - 400g</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$32.85</span>
+                                                    <span class="old-price">$33.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-8-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-8-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="sale">Sale</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Snack</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Encore Seafoods Stuffed Alaskan Salmon</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$35.85</span>
+                                                    <span class="old-price">$37.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-9-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-9-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="hot">Hot</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Coffes</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Gorton’s Beer Battered Fish Fillets with soft paper</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">Old El Paso</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$23.85</span>
+                                                    <span class="old-price">$25.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6 d-none d-xl-block">
+                                    <div class="product-cart-wrap">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-10-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-10-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Cream</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Haagen-Dazs Caramel Cone Ice Cream Ketchup</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 50%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (2.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">Tyson</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$22.85</span>
+                                                    <span class="old-price">$24.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                            </div>
+                            <!--End product-grid-4-->
+                        </div>
+                        <!--En tab six-->
+                        <div class="tab-pane fade" id="tab-seven" role="tabpanel" aria-labelledby="tab-seven">
+                            <div class="row product-grid-4">
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap mb-30">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-5-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-5-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="hot">Hot</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Snack</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Seeds of Change Organic Quinoa, Brown, & Red Rice</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$28.85</span>
+                                                    <span class="old-price">$32.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap mb-30">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-3-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-3-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="sale">Sale</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Hodo Foods</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">All Natural Italian-Style Chicken Meatballs</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 80%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (3.5)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">Stouffer</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$52.85</span>
+                                                    <span class="old-price">$55.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap mb-30">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-7-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-7-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="new">New</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Snack</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Angie’s Boomchickapop Sweet & Salty Kettle Corn</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 85%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">StarKist</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$48.85</span>
+                                                    <span class="old-price">$52.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap mb-30">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-9-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-9-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Vegetables</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Foster Farms Takeout Crispy Classic Buffalo Wings</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$17.85</span>
+                                                    <span class="old-price">$19.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap mb-30">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-10-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-10-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="best">-14%</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Pet Foods</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Blue Diamond Almonds Lightly Salted Vegetables</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$23.85</span>
+                                                    <span class="old-price">$25.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-16-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-16-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Hodo Foods</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Chobani Complete Vanilla Greek Yogurt</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$54.85</span>
+                                                    <span class="old-price">$55.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-7-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-7-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Meats</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Canada Dry Ginger Ale – 2 L Bottle - 200ml - 400g</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$32.85</span>
+                                                    <span class="old-price">$33.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-8-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-8-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="sale">Sale</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Snack</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Encore Seafoods Stuffed Alaskan Salmon</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$35.85</span>
+                                                    <span class="old-price">$37.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6">
+                                    <div class="product-cart-wrap">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-9-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-9-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                            <div class="product-badges product-badges-position product-badges-mrg">
+                                                <span class="hot">Hot</span>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Coffes</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Gorton’s Beer Battered Fish Fillets with soft paper</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 90%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">Old El Paso</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$23.85</span>
+                                                    <span class="old-price">$25.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                                <div class="col-lg-1-5 col-md-4 col-12 col-sm-6 d-none d-xl-block">
+                                    <div class="product-cart-wrap">
+                                        <div class="product-img-action-wrap">
+                                            <div class="product-img product-img-zoom">
+                                                <a href="shop-product-right.html">
+                                                    <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-10-1.jpg')}}" alt="" />
+                                                    <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-10-2.jpg')}}" alt="" />
+                                                </a>
+                                            </div>
+                                            <div class="product-action-1">
+                                                <a aria-label="Add To Wishlist" class="action-btn" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                <a aria-label="Compare" class="action-btn" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                <a aria-label="Quick view" class="action-btn" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i class="fi-rs-eye"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="product-content-wrap">
+                                            <div class="product-category">
+                                                <a href="shop-grid-right.html">Cream</a>
+                                            </div>
+                                            <h2><a href="shop-product-right.html">Haagen-Dazs Caramel Cone Ice Cream Ketchup</a></h2>
+                                            <div class="product-rate-cover">
+                                                <div class="product-rate d-inline-block">
+                                                    <div class="product-rating" style="width: 50%"></div>
+                                                </div>
+                                                <span class="font-small ml-5 text-muted"> (2.0)</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-small text-muted">By <a href="vendor-details-1.html">Tyson</a></span>
+                                            </div>
+                                            <div class="product-card-bottom">
+                                                <div class="product-price">
+                                                    <span>$22.85</span>
+                                                    <span class="old-price">$24.8</span>
+                                                </div>
+                                                <div class="add-cart">
+                                                    <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--end product card-->
+                            </div>
+                            <!--End product-grid-4-->
+                        </div>
+                        <!--En tab seven-->
+                    </div>
+                    <!--End tab-content-->
+                </div>
+            </section>
+            <!--Products Tabs-->
+            <section class="section-padding pb-5">
+                <div class="container">
+                    <div class="section-title wow animate__animated animate__fadeIn">
+                        <h3 class="">Daily Best Sells</h3>
+                        <ul class="nav nav-tabs links" id="myTab-2" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="nav-tab-one-1" data-bs-toggle="tab" data-bs-target="#tab-one-1" type="button" role="tab" aria-controls="tab-one" aria-selected="true">Featured</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="nav-tab-two-1" data-bs-toggle="tab" data-bs-target="#tab-two-1" type="button" role="tab" aria-controls="tab-two" aria-selected="false">Popular</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="nav-tab-three-1" data-bs-toggle="tab" data-bs-target="#tab-three-1" type="button" role="tab" aria-controls="tab-three" aria-selected="false">New added</button>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-3 d-none d-lg-flex wow animate__animated animate__fadeIn">
+                            <div class="banner-img style-2">
+                                <div class="banner-text">
+                                    <h2 class="mb-100">Bring nature into your home</h2>
+                                    <a href="shop-grid-right.html" class="btn btn-xs">Shop Now <i class="fi-rs-arrow-small-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 col-md-12 wow animate__animated animate__fadeIn" data-wow-delay=".4s">
+                            <div class="tab-content" id="myTabContent-1">
+                                <div class="tab-pane fade show active" id="tab-one-1" role="tabpanel" aria-labelledby="tab-one-1">
+                                    <div class="carausel-4-columns-cover arrow-center position-relative">
+                                        <div class="slider-arrow slider-arrow-2 carausel-4-columns-arrow" id="carausel-4-columns-arrows"></div>
+                                        <div class="carausel-4-columns carausel-arrow-center" id="carausel-4-columns">
+                                            <div class="product-cart-wrap">
+                                                <div class="product-img-action-wrap">
+                                                    <div class="product-img product-img-zoom">
+                                                        <a href="shop-product-right.html">
+                                                            <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-1-1.jpg')}}" alt="" />
+                                                            <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-1-2.jpg')}}" alt="" />
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-action-1">
+                                                        <a aria-label="Quick view" class="action-btn small hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal"> <i class="fi-rs-eye"></i></a>
+                                                        <a aria-label="Add To Wishlist" class="action-btn small hover-up" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                        <a aria-label="Compare" class="action-btn small hover-up" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                    </div>
+                                                    <div class="product-badges product-badges-position product-badges-mrg">
+                                                        <span class="hot">Save 15%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="product-content-wrap">
+                                                    <div class="product-category">
+                                                        <a href="shop-grid-right.html">Hodo Foods</a>
+                                                    </div>
+                                                    <h2><a href="shop-product-right.html">Seeds of Change Organic Quinoa, Brown</a></h2>
+                                                    <div class="product-rate d-inline-block">
+                                                        <div class="product-rating" style="width: 80%"></div>
+                                                    </div>
+                                                    <div class="product-price mt-10">
+                                                        <span>$238.85 </span>
+                                                        <span class="old-price">$245.8</span>
+                                                    </div>
+                                                    <div class="sold mt-15 mb-15">
+                                                        <div class="progress mb-5">
+                                                            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                        <span class="font-xs text-heading"> Sold: 90/120</span>
+                                                    </div>
+                                                    <a href="shop-cart.html" class="btn w-100 hover-up"><i class="fi-rs-shopping-cart mr-5"></i>Add To Cart</a>
+                                                </div>
+                                            </div>
+                                            <!--End product Wrap-->
+                                            <div class="product-cart-wrap">
+                                                <div class="product-img-action-wrap">
+                                                    <div class="product-img product-img-zoom">
+                                                        <a href="shop-product-right.html">
+                                                            <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-5-1.jpg')}}" alt="" />
+                                                            <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-5-2.jpg')}}" alt="" />
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-action-1">
+                                                        <a aria-label="Quick view" class="action-btn small hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal"> <i class="fi-rs-eye"></i></a>
+                                                        <a aria-label="Add To Wishlist" class="action-btn small hover-up" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                        <a aria-label="Compare" class="action-btn small hover-up" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                    </div>
+                                                    <div class="product-badges product-badges-position product-badges-mrg">
+                                                        <span class="new">Save 35%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="product-content-wrap">
+                                                    <div class="product-category">
+                                                        <a href="shop-grid-right.html">Hodo Foods</a>
+                                                    </div>
+                                                    <h2><a href="shop-product-right.html">All Natural Italian-Style Chicken Meatballs</a></h2>
+                                                    <div class="product-rate d-inline-block">
+                                                        <div class="product-rating" style="width: 80%"></div>
+                                                    </div>
+                                                    <div class="product-price mt-10">
+                                                        <span>$238.85 </span>
+                                                        <span class="old-price">$245.8</span>
+                                                    </div>
+                                                    <div class="sold mt-15 mb-15">
+                                                        <div class="progress mb-5">
+                                                            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                        <span class="font-xs text-heading"> Sold: 90/120</span>
+                                                    </div>
+                                                    <a href="shop-cart.html" class="btn w-100 hover-up"><i class="fi-rs-shopping-cart mr-5"></i>Add To Cart</a>
+                                                </div>
+                                            </div>
+                                            <!--End product Wrap-->
+                                            <div class="product-cart-wrap">
+                                                <div class="product-img-action-wrap">
+                                                    <div class="product-img product-img-zoom">
+                                                        <a href="shop-product-right.html">
+                                                            <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-2-1.jpg')}}" alt="" />
+                                                            <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-2-2.jpg')}}" alt="" />
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-action-1">
+                                                        <a aria-label="Quick view" class="action-btn small hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal"> <i class="fi-rs-eye"></i></a>
+                                                        <a aria-label="Add To Wishlist" class="action-btn small hover-up" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                        <a aria-label="Compare" class="action-btn small hover-up" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                    </div>
+                                                    <div class="product-badges product-badges-position product-badges-mrg">
+                                                        <span class="sale">Sale</span>
+                                                    </div>
+                                                </div>
+                                                <div class="product-content-wrap">
+                                                    <div class="product-category">
+                                                        <a href="shop-grid-right.html">Hodo Foods</a>
+                                                    </div>
+                                                    <h2><a href="shop-product-right.html">Angie’s Boomchickapop Sweet and womnies</a></h2>
+                                                    <div class="product-rate d-inline-block">
+                                                        <div class="product-rating" style="width: 80%"></div>
+                                                    </div>
+                                                    <div class="product-price mt-10">
+                                                        <span>$238.85 </span>
+                                                        <span class="old-price">$245.8</span>
+                                                    </div>
+                                                    <div class="sold mt-15 mb-15">
+                                                        <div class="progress mb-5">
+                                                            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                        <span class="font-xs text-heading"> Sold: 90/120</span>
+                                                    </div>
+                                                    <a href="shop-cart.html" class="btn w-100 hover-up"><i class="fi-rs-shopping-cart mr-5"></i>Add To Cart</a>
+                                                </div>
+                                            </div>
+                                            <!--End product Wrap-->
+                                            <div class="product-cart-wrap">
+                                                <div class="product-img-action-wrap">
+                                                    <div class="product-img product-img-zoom">
+                                                        <a href="shop-product-right.html">
+                                                            <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-3-1.jpg')}}" alt="" />
+                                                            <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-3-2.jpg')}}" alt="" />
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-action-1">
+                                                        <a aria-label="Quick view" class="action-btn small hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal"> <i class="fi-rs-eye"></i></a>
+                                                        <a aria-label="Add To Wishlist" class="action-btn small hover-up" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                        <a aria-label="Compare" class="action-btn small hover-up" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                    </div>
+                                                    <div class="product-badges product-badges-position product-badges-mrg">
+                                                        <span class="best">Best sale</span>
+                                                    </div>
+                                                </div>
+                                                <div class="product-content-wrap">
+                                                    <div class="product-category">
+                                                        <a href="shop-grid-right.html">Hodo Foods</a>
+                                                    </div>
+                                                    <h2><a href="shop-product-right.html">Foster Farms Takeout Crispy Classic </a></h2>
+                                                    <div class="product-rate d-inline-block">
+                                                        <div class="product-rating" style="width: 80%"></div>
+                                                    </div>
+                                                    <div class="product-price mt-10">
+                                                        <span>$238.85 </span>
+                                                        <span class="old-price">$245.8</span>
+                                                    </div>
+                                                    <div class="sold mt-15 mb-15">
+                                                        <div class="progress mb-5">
+                                                            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                        <span class="font-xs text-heading"> Sold: 90/120</span>
+                                                    </div>
+                                                    <a href="shop-cart.html" class="btn w-100 hover-up"><i class="fi-rs-shopping-cart mr-5"></i>Add To Cart</a>
+                                                </div>
+                                            </div>
+                                            <!--End product Wrap-->
+                                            <div class="product-cart-wrap">
+                                                <div class="product-img-action-wrap">
+                                                    <div class="product-img product-img-zoom">
+                                                        <a href="shop-product-right.html">
+                                                            <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-4-1.jpg')}}" alt="" />
+                                                            <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-4-2.jpg')}}" alt="" />
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-action-1">
+                                                        <a aria-label="Quick view" class="action-btn small hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal"> <i class="fi-rs-eye"></i></a>
+                                                        <a aria-label="Add To Wishlist" class="action-btn small hover-up" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                        <a aria-label="Compare" class="action-btn small hover-up" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                    </div>
+                                                    <div class="product-badges product-badges-position product-badges-mrg">
+                                                        <span class="hot">Save 15%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="product-content-wrap">
+                                                    <div class="product-category">
+                                                        <a href="shop-grid-right.html">Hodo Foods</a>
+                                                    </div>
+                                                    <h2><a href="shop-product-right.html">Blue Diamond Almonds Lightly Salted</a></h2>
+                                                    <div class="product-rate d-inline-block">
+                                                        <div class="product-rating" style="width: 80%"></div>
+                                                    </div>
+                                                    <div class="product-price mt-10">
+                                                        <span>$238.85 </span>
+                                                        <span class="old-price">$245.8</span>
+                                                    </div>
+                                                    <div class="sold mt-15 mb-15">
+                                                        <div class="progress mb-5">
+                                                            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                        <span class="font-xs text-heading"> Sold: 90/120</span>
+                                                    </div>
+                                                    <a href="shop-cart.html" class="btn w-100 hover-up"><i class="fi-rs-shopping-cart mr-5"></i>Add To Cart</a>
+                                                </div>
+                                            </div>
+                                            <!--End product Wrap-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--End tab-pane-->
+                                <div class="tab-pane fade" id="tab-two-1" role="tabpanel" aria-labelledby="tab-two-1">
+                                    <div class="carausel-4-columns-cover arrow-center position-relative">
+                                        <div class="slider-arrow slider-arrow-2 carausel-4-columns-arrow" id="carausel-4-columns-2-arrows"></div>
+                                        <div class="carausel-4-columns carausel-arrow-center" id="carausel-4-columns-2">
+                                            <div class="product-cart-wrap">
+                                                <div class="product-img-action-wrap">
+                                                    <div class="product-img product-img-zoom">
+                                                        <a href="shop-product-right.html">
+                                                            <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-10-1.jpg')}}" alt="" />
+                                                            <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-10-2.jpg')}}" alt="" />
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-action-1">
+                                                        <a aria-label="Quick view" class="action-btn small hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal"> <i class="fi-rs-eye"></i></a>
+                                                        <a aria-label="Add To Wishlist" class="action-btn small hover-up" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                        <a aria-label="Compare" class="action-btn small hover-up" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                    </div>
+                                                    <div class="product-badges product-badges-position product-badges-mrg">
+                                                        <span class="hot">Save 15%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="product-content-wrap">
+                                                    <div class="product-category">
+                                                        <a href="shop-grid-right.html">Hodo Foods</a>
+                                                    </div>
+                                                    <h2><a href="shop-product-right.html">Canada Dry Ginger Ale – 2 L Bottle</a></h2>
+                                                    <div class="product-rate d-inline-block">
+                                                        <div class="product-rating" style="width: 80%"></div>
+                                                    </div>
+                                                    <div class="product-price mt-10">
+                                                        <span>$238.85 </span>
+                                                        <span class="old-price">$245.8</span>
+                                                    </div>
+                                                    <div class="sold mt-15 mb-15">
+                                                        <div class="progress mb-5">
+                                                            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                        <span class="font-xs text-heading"> Sold: 90/120</span>
+                                                    </div>
+                                                    <a href="shop-cart.html" class="btn w-100 hover-up"><i class="fi-rs-shopping-cart mr-5"></i>Add To Cart</a>
+                                                </div>
+                                            </div>
+                                            <!--End product Wrap-->
+                                            <div class="product-cart-wrap">
+                                                <div class="product-img-action-wrap">
+                                                    <div class="product-img product-img-zoom">
+                                                        <a href="shop-product-right.html">
+                                                            <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-15-1.jpg')}}" alt="" />
+                                                            <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-15-2.jpg')}}" alt="" />
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-action-1">
+                                                        <a aria-label="Quick view" class="action-btn small hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal"> <i class="fi-rs-eye"></i></a>
+                                                        <a aria-label="Add To Wishlist" class="action-btn small hover-up" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                        <a aria-label="Compare" class="action-btn small hover-up" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                    </div>
+                                                    <div class="product-badges product-badges-position product-badges-mrg">
+                                                        <span class="new">Save 35%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="product-content-wrap">
+                                                    <div class="product-category">
+                                                        <a href="shop-grid-right.html">Hodo Foods</a>
+                                                    </div>
+                                                    <h2><a href="shop-product-right.html">Encore Seafoods Stuffed Alaskan</a></h2>
+                                                    <div class="product-rate d-inline-block">
+                                                        <div class="product-rating" style="width: 80%"></div>
+                                                    </div>
+                                                    <div class="product-price mt-10">
+                                                        <span>$238.85 </span>
+                                                        <span class="old-price">$245.8</span>
+                                                    </div>
+                                                    <div class="sold mt-15 mb-15">
+                                                        <div class="progress mb-5">
+                                                            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                        <span class="font-xs text-heading"> Sold: 90/120</span>
+                                                    </div>
+                                                    <a href="shop-cart.html" class="btn w-100 hover-up"><i class="fi-rs-shopping-cart mr-5"></i>Add To Cart</a>
+                                                </div>
+                                            </div>
+                                            <!--End product Wrap-->
+                                            <div class="product-cart-wrap">
+                                                <div class="product-img-action-wrap">
+                                                    <div class="product-img product-img-zoom">
+                                                        <a href="shop-product-right.html">
+                                                            <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-12-1.jpg')}}" alt="" />
+                                                            <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-12-2.jpg')}}" alt="" />
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-action-1">
+                                                        <a aria-label="Quick view" class="action-btn small hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal"> <i class="fi-rs-eye"></i></a>
+                                                        <a aria-label="Add To Wishlist" class="action-btn small hover-up" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                        <a aria-label="Compare" class="action-btn small hover-up" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                    </div>
+                                                    <div class="product-badges product-badges-position product-badges-mrg">
+                                                        <span class="sale">Sale</span>
+                                                    </div>
+                                                </div>
+                                                <div class="product-content-wrap">
+                                                    <div class="product-category">
+                                                        <a href="shop-grid-right.html">Hodo Foods</a>
+                                                    </div>
+                                                    <h2><a href="shop-product-right.html">Gorton’s Beer Battered Fish </a></h2>
+                                                    <div class="product-rate d-inline-block">
+                                                        <div class="product-rating" style="width: 80%"></div>
+                                                    </div>
+                                                    <div class="product-price mt-10">
+                                                        <span>$238.85 </span>
+                                                        <span class="old-price">$245.8</span>
+                                                    </div>
+                                                    <div class="sold mt-15 mb-15">
+                                                        <div class="progress mb-5">
+                                                            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                        <span class="font-xs text-heading"> Sold: 90/120</span>
+                                                    </div>
+                                                    <a href="shop-cart.html" class="btn w-100 hover-up"><i class="fi-rs-shopping-cart mr-5"></i>Add To Cart</a>
+                                                </div>
+                                            </div>
+                                            <!--End product Wrap-->
+                                            <div class="product-cart-wrap">
+                                                <div class="product-img-action-wrap">
+                                                    <div class="product-img product-img-zoom">
+                                                        <a href="shop-product-right.html">
+                                                            <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-13-1.jpg')}}" alt="" />
+                                                            <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-13-2.jpg')}}" alt="" />
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-action-1">
+                                                        <a aria-label="Quick view" class="action-btn small hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal"> <i class="fi-rs-eye"></i></a>
+                                                        <a aria-label="Add To Wishlist" class="action-btn small hover-up" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                        <a aria-label="Compare" class="action-btn small hover-up" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                    </div>
+                                                    <div class="product-badges product-badges-position product-badges-mrg">
+                                                        <span class="best">Best sale</span>
+                                                    </div>
+                                                </div>
+                                                <div class="product-content-wrap">
+                                                    <div class="product-category">
+                                                        <a href="shop-grid-right.html">Hodo Foods</a>
+                                                    </div>
+                                                    <h2><a href="shop-product-right.html">Haagen-Dazs Caramel Cone Ice</a></h2>
+                                                    <div class="product-rate d-inline-block">
+                                                        <div class="product-rating" style="width: 80%"></div>
+                                                    </div>
+                                                    <div class="product-price mt-10">
+                                                        <span>$238.85 </span>
+                                                        <span class="old-price">$245.8</span>
+                                                    </div>
+                                                    <div class="sold mt-15 mb-15">
+                                                        <div class="progress mb-5">
+                                                            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                        <span class="font-xs text-heading"> Sold: 90/120</span>
+                                                    </div>
+                                                    <a href="shop-cart.html" class="btn w-100 hover-up"><i class="fi-rs-shopping-cart mr-5"></i>Add To Cart</a>
+                                                </div>
+                                            </div>
+                                            <!--End product Wrap-->
+                                            <div class="product-cart-wrap">
+                                                <div class="product-img-action-wrap">
+                                                    <div class="product-img product-img-zoom">
+                                                        <a href="shop-product-right.html">
+                                                            <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-14-1.jpg')}}" alt="" />
+                                                            <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-14-2.jpg')}}" alt="" />
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-action-1">
+                                                        <a aria-label="Quick view" class="action-btn small hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal"> <i class="fi-rs-eye"></i></a>
+                                                        <a aria-label="Add To Wishlist" class="action-btn small hover-up" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                        <a aria-label="Compare" class="action-btn small hover-up" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                    </div>
+                                                    <div class="product-badges product-badges-position product-badges-mrg">
+                                                        <span class="hot">Save 15%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="product-content-wrap">
+                                                    <div class="product-category">
+                                                        <a href="shop-grid-right.html">Hodo Foods</a>
+                                                    </div>
+                                                    <h2><a href="shop-product-right.html">Italian-Style Chicken Meatball</a></h2>
+                                                    <div class="product-rate d-inline-block">
+                                                        <div class="product-rating" style="width: 80%"></div>
+                                                    </div>
+                                                    <div class="product-price mt-10">
+                                                        <span>$238.85 </span>
+                                                        <span class="old-price">$245.8</span>
+                                                    </div>
+                                                    <div class="sold mt-15 mb-15">
+                                                        <div class="progress mb-5">
+                                                            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                        <span class="font-xs text-heading"> Sold: 90/120</span>
+                                                    </div>
+                                                    <a href="shop-cart.html" class="btn w-100 hover-up"><i class="fi-rs-shopping-cart mr-5"></i>Add To Cart</a>
+                                                </div>
+                                            </div>
+                                            <!--End product Wrap-->
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="tab-three-1" role="tabpanel" aria-labelledby="tab-three-1">
+                                    <div class="carausel-4-columns-cover arrow-center position-relative">
+                                        <div class="slider-arrow slider-arrow-2 carausel-4-columns-arrow" id="carausel-4-columns-3-arrows"></div>
+                                        <div class="carausel-4-columns carausel-arrow-center" id="carausel-4-columns-3">
+                                            <div class="product-cart-wrap">
+                                                <div class="product-img-action-wrap">
+                                                    <div class="product-img product-img-zoom">
+                                                        <a href="shop-product-right.html">
+                                                            <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-7-1.jpg')}}" alt="" />
+                                                            <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-7-2.jpg')}}" alt="" />
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-action-1">
+                                                        <a aria-label="Quick view" class="action-btn small hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal"> <i class="fi-rs-eye"></i></a>
+                                                        <a aria-label="Add To Wishlist" class="action-btn small hover-up" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                        <a aria-label="Compare" class="action-btn small hover-up" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                    </div>
+                                                    <div class="product-badges product-badges-position product-badges-mrg">
+                                                        <span class="hot">Save 15%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="product-content-wrap">
+                                                    <div class="product-category">
+                                                        <a href="shop-grid-right.html">Hodo Foods</a>
+                                                    </div>
+                                                    <h2><a href="shop-product-right.html">Perdue Simply Smart Organics Gluten Free</a></h2>
+                                                    <div class="product-rate d-inline-block">
+                                                        <div class="product-rating" style="width: 80%"></div>
+                                                    </div>
+                                                    <div class="product-price mt-10">
+                                                        <span>$238.85 </span>
+                                                        <span class="old-price">$245.8</span>
+                                                    </div>
+                                                    <div class="sold mt-15 mb-15">
+                                                        <div class="progress mb-5">
+                                                            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                        <span class="font-xs text-heading"> Sold: 90/120</span>
+                                                    </div>
+                                                    <a href="shop-cart.html" class="btn w-100 hover-up"><i class="fi-rs-shopping-cart mr-5"></i>Add To Cart</a>
+                                                </div>
+                                            </div>
+                                            <!--End product Wrap-->
+                                            <div class="product-cart-wrap">
+                                                <div class="product-img-action-wrap">
+                                                    <div class="product-img product-img-zoom">
+                                                        <a href="shop-product-right.html">
+                                                            <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-8-1.jpg')}}" alt="" />
+                                                            <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-8-2.jpg')}}" alt="" />
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-action-1">
+                                                        <a aria-label="Quick view" class="action-btn small hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal"> <i class="fi-rs-eye"></i></a>
+                                                        <a aria-label="Add To Wishlist" class="action-btn small hover-up" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                        <a aria-label="Compare" class="action-btn small hover-up" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                    </div>
+                                                    <div class="product-badges product-badges-position product-badges-mrg">
+                                                        <span class="new">Save 35%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="product-content-wrap">
+                                                    <div class="product-category">
+                                                        <a href="shop-grid-right.html">Hodo Foods</a>
+                                                    </div>
+                                                    <h2><a href="shop-product-right.html">Seeds of Change Organic Quinoa</a></h2>
+                                                    <div class="product-rate d-inline-block">
+                                                        <div class="product-rating" style="width: 80%"></div>
+                                                    </div>
+                                                    <div class="product-price mt-10">
+                                                        <span>$238.85 </span>
+                                                        <span class="old-price">$245.8</span>
+                                                    </div>
+                                                    <div class="sold mt-15 mb-15">
+                                                        <div class="progress mb-5">
+                                                            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                        <span class="font-xs text-heading"> Sold: 90/120</span>
+                                                    </div>
+                                                    <a href="shop-cart.html" class="btn w-100 hover-up"><i class="fi-rs-shopping-cart mr-5"></i>Add To Cart</a>
+                                                </div>
+                                            </div>
+                                            <!--End product Wrap-->
+                                            <div class="product-cart-wrap">
+                                                <div class="product-img-action-wrap">
+                                                    <div class="product-img product-img-zoom">
+                                                        <a href="shop-product-right.html">
+                                                            <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-9-1.jpg')}}" alt="" />
+                                                            <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-9-2.jpg')}}" alt="" />
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-action-1">
+                                                        <a aria-label="Quick view" class="action-btn small hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal"> <i class="fi-rs-eye"></i></a>
+                                                        <a aria-label="Add To Wishlist" class="action-btn small hover-up" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                        <a aria-label="Compare" class="action-btn small hover-up" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                    </div>
+                                                    <div class="product-badges product-badges-position product-badges-mrg">
+                                                        <span class="sale">Sale</span>
+                                                    </div>
+                                                </div>
+                                                <div class="product-content-wrap">
+                                                    <div class="product-category">
+                                                        <a href="shop-grid-right.html">Hodo Foods</a>
+                                                    </div>
+                                                    <h2><a href="shop-product-right.html">Signature Wood-Fired Mushroom</a></h2>
+                                                    <div class="product-rate d-inline-block">
+                                                        <div class="product-rating" style="width: 80%"></div>
+                                                    </div>
+                                                    <div class="product-price mt-10">
+                                                        <span>$238.85 </span>
+                                                        <span class="old-price">$245.8</span>
+                                                    </div>
+                                                    <div class="sold mt-15 mb-15">
+                                                        <div class="progress mb-5">
+                                                            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                        <span class="font-xs text-heading"> Sold: 90/120</span>
+                                                    </div>
+                                                    <a href="shop-cart.html" class="btn w-100 hover-up"><i class="fi-rs-shopping-cart mr-5"></i>Add To Cart</a>
+                                                </div>
+                                            </div>
+                                            <!--End product Wrap-->
+                                            <div class="product-cart-wrap">
+                                                <div class="product-img-action-wrap">
+                                                    <div class="product-img product-img-zoom">
+                                                        <a href="shop-product-right.html">
+                                                            <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-13-1.jpg')}}" alt="" />
+                                                            <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-13-2.jpg')}}" alt="" />
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-action-1">
+                                                        <a aria-label="Quick view" class="action-btn small hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal"> <i class="fi-rs-eye"></i></a>
+                                                        <a aria-label="Add To Wishlist" class="action-btn small hover-up" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                        <a aria-label="Compare" class="action-btn small hover-up" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                    </div>
+                                                    <div class="product-badges product-badges-position product-badges-mrg">
+                                                        <span class="best">Best sale</span>
+                                                    </div>
+                                                </div>
+                                                <div class="product-content-wrap">
+                                                    <div class="product-category">
+                                                        <a href="shop-grid-right.html">Hodo Foods</a>
+                                                    </div>
+                                                    <h2><a href="shop-product-right.html">Simply Lemonade with Raspberry Juice</a></h2>
+                                                    <div class="product-rate d-inline-block">
+                                                        <div class="product-rating" style="width: 80%"></div>
+                                                    </div>
+                                                    <div class="product-price mt-10">
+                                                        <span>$238.85 </span>
+                                                        <span class="old-price">$245.8</span>
+                                                    </div>
+                                                    <div class="sold mt-15 mb-15">
+                                                        <div class="progress mb-5">
+                                                            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                        <span class="font-xs text-heading"> Sold: 90/120</span>
+                                                    </div>
+                                                    <a href="shop-cart.html" class="btn w-100 hover-up"><i class="fi-rs-shopping-cart mr-5"></i>Add To Cart</a>
+                                                </div>
+                                            </div>
+                                            <!--End product Wrap-->
+                                            <div class="product-cart-wrap">
+                                                <div class="product-img-action-wrap">
+                                                    <div class="product-img product-img-zoom">
+                                                        <a href="shop-product-right.html">
+                                                            <img class="default-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-14-1.jpg')}}" alt="" />
+                                                            <img class="hover-img" src="{{url('assets/frontend/rtl_assets/imgs/shop/product-14-2.jpg')}}" alt="" />
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-action-1">
+                                                        <a aria-label="Quick view" class="action-btn small hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal"> <i class="fi-rs-eye"></i></a>
+                                                        <a aria-label="Add To Wishlist" class="action-btn small hover-up" href="shop-wishlist.html"><i class="fi-rs-heart"></i></a>
+                                                        <a aria-label="Compare" class="action-btn small hover-up" href="shop-compare.html"><i class="fi-rs-shuffle"></i></a>
+                                                    </div>
+                                                    <div class="product-badges product-badges-position product-badges-mrg">
+                                                        <span class="hot">Save 15%</span>
+                                                    </div>
+                                                </div>
+                                                <div class="product-content-wrap">
+                                                    <div class="product-category">
+                                                        <a href="shop-grid-right.html">Hodo Foods</a>
+                                                    </div>
+                                                    <h2><a href="shop-product-right.html">Organic Quinoa, Brown, & Red Rice</a></h2>
+                                                    <div class="product-rate d-inline-block">
+                                                        <div class="product-rating" style="width: 80%"></div>
+                                                    </div>
+                                                    <div class="product-price mt-10">
+                                                        <span>$238.85 </span>
+                                                        <span class="old-price">$245.8</span>
+                                                    </div>
+                                                    <div class="sold mt-15 mb-15">
+                                                        <div class="progress mb-5">
+                                                            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuemin="0" aria-valuemax="100"></div>
+                                                        </div>
+                                                        <span class="font-xs text-heading"> Sold: 90/120</span>
+                                                    </div>
+                                                    <a href="shop-cart.html" class="btn w-100 hover-up"><i class="fi-rs-shopping-cart mr-5"></i>Add To Cart</a>
+                                                </div>
+                                            </div>
+                                            <!--End product Wrap-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--End tab-content-->
+                        </div>
+                        <!--End Col-lg-9-->
+                    </div>
+                </div>
+            </section>
+            <!--End Best Sales-->
+            <section class="section-padding pb-5">
+                <div class="container">
+                    <div class="section-title wow animate__animated animate__fadeIn" data-wow-delay="0">
+                        <h3 class="">Deals Of The Day</h3>
+                        <a class="show-all" href="shop-grid-right.html">
+                            <i class="fi-rs-angle-left"></i>
+                            All Deals
+                        </a>
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-4 col-md-6">
+                            <div class="product-cart-wrap style-2 wow animate__animated animate__fadeInUp" data-wow-delay="0">
+                                <div class="product-img-action-wrap">
+                                    <div class="product-img">
+                                        <a href="shop-product-right.html">
+                                            <img src="{{url('assets/frontend/rtl_assets/imgs/banner/banner-5.png')}}" alt="" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="product-content-wrap">
+                                    <div class="deals-countdown-wrap">
+                                        <div class="deals-countdown" data-countdown="2025/03/25 00:00:00"></div>
+                                    </div>
+                                    <div class="deals-content">
+                                        <h2><a href="shop-product-right.html">Seeds of Change Organic Quinoa, Brown, & Red Rice</a></h2>
+                                        <div class="product-rate-cover">
+                                            <div class="product-rate d-inline-block">
+                                                <div class="product-rating" style="width: 90%"></div>
+                                            </div>
+                                            <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                        </div>
+                                        <div>
+                                            <span class="font-small text-muted">By <a href="vendor-details-1.html">NestFood</a></span>
+                                        </div>
+                                        <div class="product-card-bottom">
+                                            <div class="product-price">
+                                                <span>$32.85</span>
+                                                <span class="old-price">$33.8</span>
+                                            </div>
+                                            <div class="add-cart">
+                                                <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6">
+                            <div class="product-cart-wrap style-2 wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
+                                <div class="product-img-action-wrap">
+                                    <div class="product-img">
+                                        <a href="shop-product-right.html">
+                                            <img src="{{url('assets/frontend/rtl_assets/imgs/banner/banner-6.png')}}" alt="" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="product-content-wrap">
+                                    <div class="deals-countdown-wrap">
+                                        <div class="deals-countdown" data-countdown="2026/04/25 00:00:00"></div>
+                                    </div>
+                                    <div class="deals-content">
+                                        <h2><a href="shop-product-right.html">Perdue Simply Smart Organics Gluten Free</a></h2>
+                                        <div class="product-rate-cover">
+                                            <div class="product-rate d-inline-block">
+                                                <div class="product-rating" style="width: 90%"></div>
+                                            </div>
+                                            <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                        </div>
+                                        <div>
+                                            <span class="font-small text-muted">By <a href="vendor-details-1.html">Old El Paso</a></span>
+                                        </div>
+                                        <div class="product-card-bottom">
+                                            <div class="product-price">
+                                                <span>$24.85</span>
+                                                <span class="old-price">$26.8</span>
+                                            </div>
+                                            <div class="add-cart">
+                                                <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 d-none d-lg-block">
+                            <div class="product-cart-wrap style-2 wow animate__animated animate__fadeInUp" data-wow-delay=".2s">
+                                <div class="product-img-action-wrap">
+                                    <div class="product-img">
+                                        <a href="shop-product-right.html">
+                                            <img src="{{url('assets/frontend/rtl_assets/imgs/banner/banner-7.png')}}" alt="" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="product-content-wrap">
+                                    <div class="deals-countdown-wrap">
+                                        <div class="deals-countdown" data-countdown="2027/03/25 00:00:00"></div>
+                                    </div>
+                                    <div class="deals-content">
+                                        <h2><a href="shop-product-right.html">Signature Wood-Fired Mushroom and Caramelized</a></h2>
+                                        <div class="product-rate-cover">
+                                            <div class="product-rate d-inline-block">
+                                                <div class="product-rating" style="width: 80%"></div>
+                                            </div>
+                                            <span class="font-small ml-5 text-muted"> (3.0)</span>
+                                        </div>
+                                        <div>
+                                            <span class="font-small text-muted">By <a href="vendor-details-1.html">Progresso</a></span>
+                                        </div>
+                                        <div class="product-card-bottom">
+                                            <div class="product-price">
+                                                <span>$12.85</span>
+                                                <span class="old-price">$13.8</span>
+                                            </div>
+                                            <div class="add-cart">
+                                                <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 d-none d-xl-block">
+                            <div class="product-cart-wrap style-2 wow animate__animated animate__fadeInUp" data-wow-delay=".3s">
+                                <div class="product-img-action-wrap">
+                                    <div class="product-img">
+                                        <a href="shop-product-right.html">
+                                            <img src="{{url('assets/frontend/rtl_assets/imgs/banner/banner-8.png')}}" alt="" />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="product-content-wrap">
+                                    <div class="deals-countdown-wrap">
+                                        <div class="deals-countdown" data-countdown="2025/02/25 00:00:00"></div>
+                                    </div>
+                                    <div class="deals-content">
+                                        <h2><a href="shop-product-right.html">Simply Lemonade with Raspberry Juice</a></h2>
+                                        <div class="product-rate-cover">
+                                            <div class="product-rate d-inline-block">
+                                                <div class="product-rating" style="width: 80%"></div>
+                                            </div>
+                                            <span class="font-small ml-5 text-muted"> (3.0)</span>
+                                        </div>
+                                        <div>
+                                            <span class="font-small text-muted">By <a href="vendor-details-1.html">Yoplait</a></span>
+                                        </div>
+                                        <div class="product-card-bottom">
+                                            <div class="product-price">
+                                                <span>$15.85</span>
+                                                <span class="old-price">$16.8</span>
+                                            </div>
+                                            <div class="add-cart">
+                                                <a class="add" href="shop-cart.html"><i class="fi-rs-shopping-cart mr-5"></i>Add </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!--blog area end-->
+            </section>
+            <!--End Deals-->
+            <section class="section-padding mb-30">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-4 col-md-6 mb-sm-5 mb-md-0 wow animate__animated animate__fadeInUp" data-wow-delay="0">
+                            <h4 class="section-title style-1 mb-30 animated animated">Top Selling</h4>
+                            <div class="product-list-small animated animated">
+                                <article class="row align-items-center hover-up">
+                                    <figure class="col-md-4 mb-0">
+                                        <a href="shop-product-right.html"><img src="{{url('assets/frontend/rtl_assets/imgs/shop/thumbnail-1.jpg')}}" alt="" /></a>
+                                    </figure>
+                                    <div class="col-md-8 mb-0">
+                                        <h6>
+                                            <a href="shop-product-right.html">Nestle Original Coffee-Mate Coffee Creamer</a>
+                                        </h6>
+                                        <div class="product-rate-cover">
+                                            <div class="product-rate d-inline-block">
+                                                <div class="product-rating" style="width: 90%"></div>
+                                            </div>
+                                            <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                        </div>
+                                        <div class="product-price">
+                                            <span>$32.85</span>
+                                            <span class="old-price">$33.8</span>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="row align-items-center hover-up">
+                                    <figure class="col-md-4 mb-0">
+                                        <a href="shop-product-right.html"><img src="{{url('assets/frontend/rtl_assets/imgs/shop/thumbnail-2.jpg')}}" alt="" /></a>
+                                    </figure>
+                                    <div class="col-md-8 mb-0">
+                                        <h6>
+                                            <a href="shop-product-right.html">Nestle Original Coffee-Mate Coffee Creamer</a>
+                                        </h6>
+                                        <div class="product-rate-cover">
+                                            <div class="product-rate d-inline-block">
+                                                <div class="product-rating" style="width: 90%"></div>
+                                            </div>
+                                            <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                        </div>
+                                        <div class="product-price">
+                                            <span>$32.85</span>
+                                            <span class="old-price">$33.8</span>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="row align-items-center hover-up">
+                                    <figure class="col-md-4 mb-0">
+                                        <a href="shop-product-right.html"><img src="{{url('assets/frontend/rtl_assets/imgs/shop/thumbnail-3.jpg')}}" alt="" /></a>
+                                    </figure>
+                                    <div class="col-md-8 mb-0">
+                                        <h6>
+                                            <a href="shop-product-right.html">Nestle Original Coffee-Mate Coffee Creamer</a>
+                                        </h6>
+                                        <div class="product-rate-cover">
+                                            <div class="product-rate d-inline-block">
+                                                <div class="product-rating" style="width: 90%"></div>
+                                            </div>
+                                            <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                        </div>
+                                        <div class="product-price">
+                                            <span>$32.85</span>
+                                            <span class="old-price">$33.8</span>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 mb-md-0 wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
+                            <h4 class="section-title style-1 mb-30 animated animated">Trending Products</h4>
+                            <div class="product-list-small animated animated">
+                                <article class="row align-items-center hover-up">
+                                    <figure class="col-md-4 mb-0">
+                                        <a href="shop-product-right.html"><img src="{{url('assets/frontend/rtl_assets/imgs/shop/thumbnail-4.jpg')}}" alt="" /></a>
+                                    </figure>
+                                    <div class="col-md-8 mb-0">
+                                        <h6>
+                                            <a href="shop-product-right.html">Organic Cage-Free Grade A Large Brown Eggs</a>
+                                        </h6>
+                                        <div class="product-rate-cover">
+                                            <div class="product-rate d-inline-block">
+                                                <div class="product-rating" style="width: 90%"></div>
+                                            </div>
+                                            <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                        </div>
+                                        <div class="product-price">
+                                            <span>$32.85</span>
+                                            <span class="old-price">$33.8</span>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="row align-items-center hover-up">
+                                    <figure class="col-md-4 mb-0">
+                                        <a href="shop-product-right.html"><img src="{{url('assets/frontend/rtl_assets/imgs/shop/thumbnail-5.jpg')}}" alt="" /></a>
+                                    </figure>
+                                    <div class="col-md-8 mb-0">
+                                        <h6>
+                                            <a href="shop-product-right.html">Seeds of Change Organic Quinoa, Brown, & Red Rice</a>
+                                        </h6>
+                                        <div class="product-rate-cover">
+                                            <div class="product-rate d-inline-block">
+                                                <div class="product-rating" style="width: 90%"></div>
+                                            </div>
+                                            <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                        </div>
+                                        <div class="product-price">
+                                            <span>$32.85</span>
+                                            <span class="old-price">$33.8</span>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="row align-items-center hover-up">
+                                    <figure class="col-md-4 mb-0">
+                                        <a href="shop-product-right.html"><img src="{{url('assets/frontend/rtl_assets/imgs/shop/thumbnail-6.jpg')}}" alt="" /></a>
+                                    </figure>
+                                    <div class="col-md-8 mb-0">
+                                        <h6>
+                                            <a href="shop-product-right.html">Naturally Flavored Cinnamon Vanilla Light Roast Coffee</a>
+                                        </h6>
+                                        <div class="product-rate-cover">
+                                            <div class="product-rate d-inline-block">
+                                                <div class="product-rating" style="width: 90%"></div>
+                                            </div>
+                                            <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                        </div>
+                                        <div class="product-price">
+                                            <span>$32.85</span>
+                                            <span class="old-price">$33.8</span>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 mb-sm-5 mb-md-0 d-none d-lg-block wow animate__animated animate__fadeInUp" data-wow-delay=".2s">
+                            <h4 class="section-title style-1 mb-30 animated animated">Recently added</h4>
+                            <div class="product-list-small animated animated">
+                                <article class="row align-items-center hover-up">
+                                    <figure class="col-md-4 mb-0">
+                                        <a href="shop-product-right.html"><img src="{{url('assets/frontend/rtl_assets/imgs/shop/thumbnail-7.jpg')}}" alt="" /></a>
+                                    </figure>
+                                    <div class="col-md-8 mb-0">
+                                        <h6>
+                                            <a href="shop-product-right.html">Pepperidge Farm Farmhouse Hearty White Bread</a>
+                                        </h6>
+                                        <div class="product-rate-cover">
+                                            <div class="product-rate d-inline-block">
+                                                <div class="product-rating" style="width: 90%"></div>
+                                            </div>
+                                            <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                        </div>
+                                        <div class="product-price">
+                                            <span>$32.85</span>
+                                            <span class="old-price">$33.8</span>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="row align-items-center hover-up">
+                                    <figure class="col-md-4 mb-0">
+                                        <a href="shop-product-right.html"><img src="{{url('assets/frontend/rtl_assets/imgs/shop/thumbnail-8.jpg')}}" alt="" /></a>
+                                    </figure>
+                                    <div class="col-md-8 mb-0">
+                                        <h6>
+                                            <a href="shop-product-right.html">Organic Frozen Triple Berry Blend</a>
+                                        </h6>
+                                        <div class="product-rate-cover">
+                                            <div class="product-rate d-inline-block">
+                                                <div class="product-rating" style="width: 90%"></div>
+                                            </div>
+                                            <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                        </div>
+                                        <div class="product-price">
+                                            <span>$32.85</span>
+                                            <span class="old-price">$33.8</span>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="row align-items-center hover-up">
+                                    <figure class="col-md-4 mb-0">
+                                        <a href="shop-product-right.html"><img src="{{url('assets/frontend/rtl_assets/imgs/shop/thumbnail-9.jpg')}}" alt="" /></a>
+                                    </figure>
+                                    <div class="col-md-8 mb-0">
+                                        <h6>
+                                            <a href="shop-product-right.html">Oroweat Country Buttermilk Bread</a>
+                                        </h6>
+                                        <div class="product-rate-cover">
+                                            <div class="product-rate d-inline-block">
+                                                <div class="product-rating" style="width: 90%"></div>
+                                            </div>
+                                            <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                        </div>
+                                        <div class="product-price">
+                                            <span>$32.85</span>
+                                            <span class="old-price">$33.8</span>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 mb-sm-5 mb-md-0 d-none d-xl-block wow animate__animated animate__fadeInUp" data-wow-delay=".3s">
+                            <h4 class="section-title style-1 mb-30 animated animated">Top Rated</h4>
+                            <div class="product-list-small animated animated">
+                                <article class="row align-items-center hover-up">
+                                    <figure class="col-md-4 mb-0">
+                                        <a href="shop-product-right.html"><img src="{{url('assets/frontend/rtl_assets/imgs/shop/thumbnail-10.jpg')}}" alt="" /></a>
+                                    </figure>
+                                    <div class="col-md-8 mb-0">
+                                        <h6>
+                                            <a href="shop-product-right.html">Foster Farms Takeout Crispy Classic Buffalo Wings</a>
+                                        </h6>
+                                        <div class="product-rate-cover">
+                                            <div class="product-rate d-inline-block">
+                                                <div class="product-rating" style="width: 90%"></div>
+                                            </div>
+                                            <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                        </div>
+                                        <div class="product-price">
+                                            <span>$32.85</span>
+                                            <span class="old-price">$33.8</span>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="row align-items-center hover-up">
+                                    <figure class="col-md-4 mb-0">
+                                        <a href="shop-product-right.html"><img src="{{url('assets/frontend/rtl_assets/imgs/shop/thumbnail-11.jpg')}}" alt="" /></a>
+                                    </figure>
+                                    <div class="col-md-8 mb-0">
+                                        <h6>
+                                            <a href="shop-product-right.html">Angie’s Boomchickapop Sweet & Salty Kettle Corn</a>
+                                        </h6>
+                                        <div class="product-rate-cover">
+                                            <div class="product-rate d-inline-block">
+                                                <div class="product-rating" style="width: 90%"></div>
+                                            </div>
+                                            <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                        </div>
+                                        <div class="product-price">
+                                            <span>$32.85</span>
+                                            <span class="old-price">$33.8</span>
+                                        </div>
+                                    </div>
+                                </article>
+                                <article class="row align-items-center hover-up">
+                                    <figure class="col-md-4 mb-0">
+                                        <a href="shop-product-right.html"><img src="{{url('assets/frontend/rtl_assets/imgs/shop/thumbnail-12.jpg')}}" alt="" /></a>
+                                    </figure>
+                                    <div class="col-md-8 mb-0">
+                                        <h6>
+                                            <a href="shop-product-right.html">All Natural Italian-Style Chicken Meatballs</a>
+                                        </h6>
+                                        <div class="product-rate-cover">
+                                            <div class="product-rate d-inline-block">
+                                                <div class="product-rating" style="width: 90%"></div>
+                                            </div>
+                                            <span class="font-small ml-5 text-muted"> (4.0)</span>
+                                        </div>
+                                        <div class="product-price">
+                                            <span>$32.85</span>
+                                            <span class="old-price">$33.8</span>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--End 4 columns-->
+        </main>
 
-        <!--banner area start-->
-        <div class="banner_area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="banner_thumb">
-                            <a href="shop.html"><img src="{{ url('assets/frontend/img/bg/banner13.jpg')}}" alt=""></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--banner area end-->
-
-        <!--custom product area start-->
-        <div class="custom_product_area custom_product3 color_three">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="single_custom_product3">
-                            <div class="section_title">
-                                <h2>Fruits</h2>
-                            </div>
-                            <div class="small_product_area product_carousel product_column1 owl-carousel">
-                                <div class="product_items">
-                                    <article class="single_product">
-                                        <figure>
-                                            <div class="product_thumb">
-                                                <a class="primary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product1.jpg')}}"
-                                                        alt=""></a>
-                                                <a class="secondary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product2.jpg')}}"
-                                                        alt=""></a>
-                                            </div>
-                                            <figcaption class="product_content">
-                                                <h4 class="product_name"><a href="product-details.html">Aliquam
-                                                        Consequat</a></h4>
-                                                <p><a href="#">Fruits</a></p>
-                                                <div class="action_links">
-                                                    <ul>
-                                                        <li class="add_to_cart"><a href="cart.html"
-                                                                                   data-tippy="Add to cart"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"> <span
-                                                                    class="lnr lnr-cart"></span></a></li>
-                                                        <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"
-                                                                                    data-bs-toggle="modal"
-                                                                                    data-bs-target="#modal_box"> <span
-                                                                    class="lnr lnr-magnifier"></span></a></li>
-                                                        <li class="wishlist"><a href="wishlist.html"
-                                                                                data-tippy="Add to Wishlist"
-                                                                                data-tippy-placement="top"
-                                                                                data-tippy-arrow="true"
-                                                                                data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-heart"></span></a></li>
-                                                        <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                               data-tippy-placement="top"
-                                                                               data-tippy-arrow="true"
-                                                                               data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-sync"></span></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="price_box">
-                                                    <span class="current_price">$26.00</span>
-                                                    <span class="old_price">$362.00</span>
-                                                </div>
-                                            </figcaption>
-                                        </figure>
-                                    </article>
-                                    <article class="single_product">
-                                        <figure>
-                                            <div class="product_thumb">
-                                                <a class="primary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product3.jpg')}}"
-                                                        alt=""></a>
-                                                <a class="secondary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product4.jpg')}}"
-                                                        alt=""></a>
-                                            </div>
-                                            <figcaption class="product_content">
-                                                <h4 class="product_name"><a href="product-details.html">Donec Non
-                                                        Est</a></h4>
-                                                <p><a href="#">Fruits</a></p>
-                                                <div class="action_links">
-                                                    <ul>
-                                                        <li class="add_to_cart"><a href="cart.html"
-                                                                                   data-tippy="Add to cart"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"> <span
-                                                                    class="lnr lnr-cart"></span></a></li>
-                                                        <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"
-                                                                                    data-bs-toggle="modal"
-                                                                                    data-bs-target="#modal_box"> <span
-                                                                    class="lnr lnr-magnifier"></span></a></li>
-                                                        <li class="wishlist"><a href="wishlist.html"
-                                                                                data-tippy="Add to Wishlist"
-                                                                                data-tippy-placement="top"
-                                                                                data-tippy-arrow="true"
-                                                                                data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-heart"></span></a></li>
-                                                        <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                               data-tippy-placement="top"
-                                                                               data-tippy-arrow="true"
-                                                                               data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-sync"></span></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="price_box">
-                                                    <span class="current_price">$46.00</span>
-                                                    <span class="old_price">$382.00</span>
-                                                </div>
-                                            </figcaption>
-                                        </figure>
-                                    </article>
-                                    <article class="single_product">
-                                        <figure>
-                                            <div class="product_thumb">
-                                                <a class="primary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product5.jpg')}}"
-                                                        alt=""></a>
-                                                <a class="secondary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product6.jpg')}}"
-                                                        alt=""></a>
-                                            </div>
-                                            <figcaption class="product_content">
-                                                <h4 class="product_name"><a href="product-details.html">Mauris Vel
-                                                        Tellus</a></h4>
-                                                <p><a href="#">Fruits</a></p>
-                                                <div class="action_links">
-                                                    <ul>
-                                                        <li class="add_to_cart"><a href="cart.html"
-                                                                                   data-tippy="Add to cart"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"> <span
-                                                                    class="lnr lnr-cart"></span></a></li>
-                                                        <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"
-                                                                                    data-bs-toggle="modal"
-                                                                                    data-bs-target="#modal_box"> <span
-                                                                    class="lnr lnr-magnifier"></span></a></li>
-                                                        <li class="wishlist"><a href="wishlist.html"
-                                                                                data-tippy="Add to Wishlist"
-                                                                                data-tippy-placement="top"
-                                                                                data-tippy-arrow="true"
-                                                                                data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-heart"></span></a></li>
-                                                        <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                               data-tippy-placement="top"
-                                                                               data-tippy-arrow="true"
-                                                                               data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-sync"></span></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="price_box">
-                                                    <span class="current_price">$56.00</span>
-                                                    <span class="old_price">$362.00</span>
-                                                </div>
-                                            </figcaption>
-                                        </figure>
-                                    </article>
-                                </div>
-                                <div class="product_items">
-                                    <article class="single_product">
-                                        <figure>
-                                            <div class="product_thumb">
-                                                <a class="primary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product7.jpg')}}"
-                                                        alt=""></a>
-                                                <a class="secondary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product8.jpg')}}"
-                                                        alt=""></a>
-                                            </div>
-                                            <figcaption class="product_content">
-                                                <h4 class="product_name"><a href="product-details.html">Quisque In
-                                                        Arcu</a></h4>
-                                                <p><a href="#">Fruits</a></p>
-                                                <div class="action_links">
-                                                    <ul>
-                                                        <li class="add_to_cart"><a href="cart.html"
-                                                                                   data-tippy="Add to cart"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"> <span
-                                                                    class="lnr lnr-cart"></span></a></li>
-                                                        <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"
-                                                                                    data-bs-toggle="modal"
-                                                                                    data-bs-target="#modal_box"> <span
-                                                                    class="lnr lnr-magnifier"></span></a></li>
-                                                        <li class="wishlist"><a href="wishlist.html"
-                                                                                data-tippy="Add to Wishlist"
-                                                                                data-tippy-placement="top"
-                                                                                data-tippy-arrow="true"
-                                                                                data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-heart"></span></a></li>
-                                                        <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                               data-tippy-placement="top"
-                                                                               data-tippy-arrow="true"
-                                                                               data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-sync"></span></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="price_box">
-                                                    <span class="current_price">$20.00</span>
-                                                    <span class="old_price">$352.00</span>
-                                                </div>
-                                            </figcaption>
-                                        </figure>
-                                    </article>
-                                    <article class="single_product">
-                                        <figure>
-                                            <div class="product_thumb">
-                                                <a class="primary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product9.jpg')}}"
-                                                        alt=""></a>
-                                                <a class="secondary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product10.jpg')}}"
-                                                        alt=""></a>
-                                            </div>
-                                            <figcaption class="product_content">
-                                                <h4 class="product_name"><a href="product-details.html">Cas Meque
-                                                        Metus</a></h4>
-                                                <p><a href="#">Fruits</a></p>
-                                                <div class="action_links">
-                                                    <ul>
-                                                        <li class="add_to_cart"><a href="cart.html"
-                                                                                   data-tippy="Add to cart"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"> <span
-                                                                    class="lnr lnr-cart"></span></a></li>
-                                                        <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"
-                                                                                    data-bs-toggle="modal"
-                                                                                    data-bs-target="#modal_box"> <span
-                                                                    class="lnr lnr-magnifier"></span></a></li>
-                                                        <li class="wishlist"><a href="wishlist.html"
-                                                                                data-tippy="Add to Wishlist"
-                                                                                data-tippy-placement="top"
-                                                                                data-tippy-arrow="true"
-                                                                                data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-heart"></span></a></li>
-                                                        <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                               data-tippy-placement="top"
-                                                                               data-tippy-arrow="true"
-                                                                               data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-sync"></span></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="price_box">
-                                                    <span class="current_price">$72.00</span>
-                                                    <span class="old_price">$352.00</span>
-                                                </div>
-                                            </figcaption>
-                                        </figure>
-                                    </article>
-                                    <article class="single_product">
-                                        <figure>
-                                            <div class="product_thumb">
-                                                <a class="primary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product11.jpg')}}"
-                                                        alt=""></a>
-                                                <a class="secondary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product12.jpg')}}"
-                                                        alt=""></a>
-                                            </div>
-                                            <figcaption class="product_content">
-                                                <h4 class="product_name"><a href="product-details.html">Proin Lectus
-                                                        Ipsum</a></h4>
-                                                <p><a href="#">Fruits</a></p>
-                                                <div class="action_links">
-                                                    <ul>
-                                                        <li class="add_to_cart"><a href="cart.html"
-                                                                                   data-tippy="Add to cart"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"> <span
-                                                                    class="lnr lnr-cart"></span></a></li>
-                                                        <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"
-                                                                                    data-bs-toggle="modal"
-                                                                                    data-bs-target="#modal_box"> <span
-                                                                    class="lnr lnr-magnifier"></span></a></li>
-                                                        <li class="wishlist"><a href="wishlist.html"
-                                                                                data-tippy="Add to Wishlist"
-                                                                                data-tippy-placement="top"
-                                                                                data-tippy-arrow="true"
-                                                                                data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-heart"></span></a></li>
-                                                        <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                               data-tippy-placement="top"
-                                                                               data-tippy-arrow="true"
-                                                                               data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-sync"></span></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="price_box">
-                                                    <span class="current_price">$36.00</span>
-                                                    <span class="old_price">$282.00</span>
-                                                </div>
-                                            </figcaption>
-                                        </figure>
-                                    </article>
-                                </div>
-                                <div class="product_items">
-                                    <article class="single_product">
-                                        <figure>
-                                            <div class="product_thumb">
-                                                <a class="primary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product13.jpg')}}"
-                                                        alt=""></a>
-                                                <a class="secondary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product1.jpg')}}"
-                                                        alt=""></a>
-                                            </div>
-                                            <figcaption class="product_content">
-                                                <h4 class="product_name"><a href="product-details.html">Mauris Vel
-                                                        Tellus</a></h4>
-                                                <p><a href="#">Fruits</a></p>
-                                                <div class="action_links">
-                                                    <ul>
-                                                        <li class="add_to_cart"><a href="cart.html"
-                                                                                   data-tippy="Add to cart"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"> <span
-                                                                    class="lnr lnr-cart"></span></a></li>
-                                                        <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"
-                                                                                    data-bs-toggle="modal"
-                                                                                    data-bs-target="#modal_box"> <span
-                                                                    class="lnr lnr-magnifier"></span></a></li>
-                                                        <li class="wishlist"><a href="wishlist.html"
-                                                                                data-tippy="Add to Wishlist"
-                                                                                data-tippy-placement="top"
-                                                                                data-tippy-arrow="true"
-                                                                                data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-heart"></span></a></li>
-                                                        <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                               data-tippy-placement="top"
-                                                                               data-tippy-arrow="true"
-                                                                               data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-sync"></span></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="price_box">
-                                                    <span class="current_price">$45.00</span>
-                                                    <span class="old_price">$162.00</span>
-                                                </div>
-                                            </figcaption>
-                                        </figure>
-                                    </article>
-                                    <article class="single_product">
-                                        <figure>
-                                            <div class="product_thumb">
-                                                <a class="primary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product10.jpg')}}"
-                                                        alt=""></a>
-                                                <a class="secondary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product3.jpg')}}"
-                                                        alt=""></a>
-                                            </div>
-                                            <figcaption class="product_content">
-                                                <h4 class="product_name"><a href="product-details.html">Donec Non
-                                                        Est</a></h4>
-                                                <p><a href="#">Fruits</a></p>
-                                                <div class="action_links">
-                                                    <ul>
-                                                        <li class="add_to_cart"><a href="cart.html"
-                                                                                   data-tippy="Add to cart"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"> <span
-                                                                    class="lnr lnr-cart"></span></a></li>
-                                                        <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"
-                                                                                    data-bs-toggle="modal"
-                                                                                    data-bs-target="#modal_box"> <span
-                                                                    class="lnr lnr-magnifier"></span></a></li>
-                                                        <li class="wishlist"><a href="wishlist.html"
-                                                                                data-tippy="Add to Wishlist"
-                                                                                data-tippy-placement="top"
-                                                                                data-tippy-arrow="true"
-                                                                                data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-heart"></span></a></li>
-                                                        <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                               data-tippy-placement="top"
-                                                                               data-tippy-arrow="true"
-                                                                               data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-sync"></span></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="price_box">
-                                                    <span class="current_price">$46.00</span>
-                                                    <span class="old_price">$382.00</span>
-                                                </div>
-                                            </figcaption>
-                                        </figure>
-                                    </article>
-                                    <article class="single_product">
-                                        <figure>
-                                            <div class="product_thumb">
-                                                <a class="primary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product8.jpg')}}"
-                                                        alt=""></a>
-                                                <a class="secondary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product5.jpg')}}"
-                                                        alt=""></a>
-                                            </div>
-                                            <figcaption class="product_content">
-                                                <h4 class="product_name"><a href="product-details.html">Donec Non
-                                                        Est</a></h4>
-                                                <p><a href="#">Fruits</a></p>
-                                                <div class="action_links">
-                                                    <ul>
-                                                        <li class="add_to_cart"><a href="cart.html"
-                                                                                   data-tippy="Add to cart"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"> <span
-                                                                    class="lnr lnr-cart"></span></a></li>
-                                                        <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"
-                                                                                    data-bs-toggle="modal"
-                                                                                    data-bs-target="#modal_box"> <span
-                                                                    class="lnr lnr-magnifier"></span></a></li>
-                                                        <li class="wishlist"><a href="wishlist.html"
-                                                                                data-tippy="Add to Wishlist"
-                                                                                data-tippy-placement="top"
-                                                                                data-tippy-arrow="true"
-                                                                                data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-heart"></span></a></li>
-                                                        <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                               data-tippy-placement="top"
-                                                                               data-tippy-arrow="true"
-                                                                               data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-sync"></span></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="price_box">
-                                                    <span class="current_price">$46.00</span>
-                                                    <span class="old_price">$382.00</span>
-                                                </div>
-                                            </figcaption>
-                                        </figure>
-                                    </article>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="single_custom_product3">
-                            <div class="section_title">
-                                <h2>Salads</h2>
-                            </div>
-                            <div class="small_product_area product_carousel product_column1 owl-carousel">
-                                <div class="product_items">
-                                    <article class="single_product">
-                                        <figure>
-                                            <div class="product_thumb">
-                                                <a class="primary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product7.jpg')}}"
-                                                        alt=""></a>
-                                                <a class="secondary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product8.jpg')}}"
-                                                        alt=""></a>
-                                            </div>
-                                            <figcaption class="product_content">
-                                                <h4 class="product_name"><a href="product-details.html">Quisque In
-                                                        Arcu</a></h4>
-                                                <p><a href="#">Fruits</a></p>
-                                                <div class="action_links">
-                                                    <ul>
-                                                        <li class="add_to_cart"><a href="cart.html"
-                                                                                   data-tippy="Add to cart"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"> <span
-                                                                    class="lnr lnr-cart"></span></a></li>
-                                                        <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"
-                                                                                    data-bs-toggle="modal"
-                                                                                    data-bs-target="#modal_box"> <span
-                                                                    class="lnr lnr-magnifier"></span></a></li>
-                                                        <li class="wishlist"><a href="wishlist.html"
-                                                                                data-tippy="Add to Wishlist"
-                                                                                data-tippy-placement="top"
-                                                                                data-tippy-arrow="true"
-                                                                                data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-heart"></span></a></li>
-                                                        <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                               data-tippy-placement="top"
-                                                                               data-tippy-arrow="true"
-                                                                               data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-sync"></span></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="price_box">
-                                                    <span class="current_price">$20.00</span>
-                                                    <span class="old_price">$352.00</span>
-                                                </div>
-                                            </figcaption>
-                                        </figure>
-                                    </article>
-                                    <article class="single_product">
-                                        <figure>
-                                            <div class="product_thumb">
-                                                <a class="primary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product9.jpg')}}"
-                                                        alt=""></a>
-                                                <a class="secondary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product10.jpg')}}"
-                                                        alt=""></a>
-                                            </div>
-                                            <figcaption class="product_content">
-                                                <h4 class="product_name"><a href="product-details.html">Cas Meque
-                                                        Metus</a></h4>
-                                                <p><a href="#">Fruits</a></p>
-                                                <div class="action_links">
-                                                    <ul>
-                                                        <li class="add_to_cart"><a href="cart.html"
-                                                                                   data-tippy="Add to cart"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"> <span
-                                                                    class="lnr lnr-cart"></span></a></li>
-                                                        <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"
-                                                                                    data-bs-toggle="modal"
-                                                                                    data-bs-target="#modal_box"> <span
-                                                                    class="lnr lnr-magnifier"></span></a></li>
-                                                        <li class="wishlist"><a href="wishlist.html"
-                                                                                data-tippy="Add to Wishlist"
-                                                                                data-tippy-placement="top"
-                                                                                data-tippy-arrow="true"
-                                                                                data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-heart"></span></a></li>
-                                                        <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                               data-tippy-placement="top"
-                                                                               data-tippy-arrow="true"
-                                                                               data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-sync"></span></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="price_box">
-                                                    <span class="current_price">$72.00</span>
-                                                    <span class="old_price">$352.00</span>
-                                                </div>
-                                            </figcaption>
-                                        </figure>
-                                    </article>
-                                    <article class="single_product">
-                                        <figure>
-                                            <div class="product_thumb">
-                                                <a class="primary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product11.jpg')}}"
-                                                        alt=""></a>
-                                                <a class="secondary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product12.jpg')}}"
-                                                        alt=""></a>
-                                            </div>
-                                            <figcaption class="product_content">
-                                                <h4 class="product_name"><a href="product-details.html">Proin Lectus
-                                                        Ipsum</a></h4>
-                                                <p><a href="#">Fruits</a></p>
-                                                <div class="action_links">
-                                                    <ul>
-                                                        <li class="add_to_cart"><a href="cart.html"
-                                                                                   data-tippy="Add to cart"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"> <span
-                                                                    class="lnr lnr-cart"></span></a></li>
-                                                        <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"
-                                                                                    data-bs-toggle="modal"
-                                                                                    data-bs-target="#modal_box"> <span
-                                                                    class="lnr lnr-magnifier"></span></a></li>
-                                                        <li class="wishlist"><a href="wishlist.html"
-                                                                                data-tippy="Add to Wishlist"
-                                                                                data-tippy-placement="top"
-                                                                                data-tippy-arrow="true"
-                                                                                data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-heart"></span></a></li>
-                                                        <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                               data-tippy-placement="top"
-                                                                               data-tippy-arrow="true"
-                                                                               data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-sync"></span></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="price_box">
-                                                    <span class="current_price">$36.00</span>
-                                                    <span class="old_price">$282.00</span>
-                                                </div>
-                                            </figcaption>
-                                        </figure>
-                                    </article>
-                                </div>
-                                <div class="product_items">
-                                    <article class="single_product">
-                                        <figure>
-                                            <div class="product_thumb">
-                                                <a class="primary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product13.jpg')}}"
-                                                        alt=""></a>
-                                                <a class="secondary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product1.jpg')}}"
-                                                        alt=""></a>
-                                            </div>
-                                            <figcaption class="product_content">
-                                                <h4 class="product_name"><a href="product-details.html">Mauris Vel
-                                                        Tellus</a></h4>
-                                                <p><a href="#">Fruits</a></p>
-                                                <div class="action_links">
-                                                    <ul>
-                                                        <li class="add_to_cart"><a href="cart.html"
-                                                                                   data-tippy="Add to cart"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"> <span
-                                                                    class="lnr lnr-cart"></span></a></li>
-                                                        <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"
-                                                                                    data-bs-toggle="modal"
-                                                                                    data-bs-target="#modal_box"> <span
-                                                                    class="lnr lnr-magnifier"></span></a></li>
-                                                        <li class="wishlist"><a href="wishlist.html"
-                                                                                data-tippy="Add to Wishlist"
-                                                                                data-tippy-placement="top"
-                                                                                data-tippy-arrow="true"
-                                                                                data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-heart"></span></a></li>
-                                                        <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                               data-tippy-placement="top"
-                                                                               data-tippy-arrow="true"
-                                                                               data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-sync"></span></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="price_box">
-                                                    <span class="current_price">$45.00</span>
-                                                    <span class="old_price">$162.00</span>
-                                                </div>
-                                            </figcaption>
-                                        </figure>
-                                    </article>
-                                    <article class="single_product">
-                                        <figure>
-                                            <div class="product_thumb">
-                                                <a class="primary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product10.jpg')}}"
-                                                        alt=""></a>
-                                                <a class="secondary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product3.jpg')}}"
-                                                        alt=""></a>
-                                            </div>
-                                            <figcaption class="product_content">
-                                                <h4 class="product_name"><a href="product-details.html">Donec Non
-                                                        Est</a></h4>
-                                                <p><a href="#">Fruits</a></p>
-                                                <div class="action_links">
-                                                    <ul>
-                                                        <li class="add_to_cart"><a href="cart.html"
-                                                                                   data-tippy="Add to cart"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"> <span
-                                                                    class="lnr lnr-cart"></span></a></li>
-                                                        <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"
-                                                                                    data-bs-toggle="modal"
-                                                                                    data-bs-target="#modal_box"> <span
-                                                                    class="lnr lnr-magnifier"></span></a></li>
-                                                        <li class="wishlist"><a href="wishlist.html"
-                                                                                data-tippy="Add to Wishlist"
-                                                                                data-tippy-placement="top"
-                                                                                data-tippy-arrow="true"
-                                                                                data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-heart"></span></a></li>
-                                                        <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                               data-tippy-placement="top"
-                                                                               data-tippy-arrow="true"
-                                                                               data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-sync"></span></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="price_box">
-                                                    <span class="current_price">$46.00</span>
-                                                    <span class="old_price">$382.00</span>
-                                                </div>
-                                            </figcaption>
-                                        </figure>
-                                    </article>
-                                    <article class="single_product">
-                                        <figure>
-                                            <div class="product_thumb">
-                                                <a class="primary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product8.jpg')}}"
-                                                        alt=""></a>
-                                                <a class="secondary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product5.jpg')}}"
-                                                        alt=""></a>
-                                            </div>
-                                            <figcaption class="product_content">
-                                                <h4 class="product_name"><a href="product-details.html">Donec Non
-                                                        Est</a></h4>
-                                                <p><a href="#">Fruits</a></p>
-                                                <div class="action_links">
-                                                    <ul>
-                                                        <li class="add_to_cart"><a href="cart.html"
-                                                                                   data-tippy="Add to cart"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"> <span
-                                                                    class="lnr lnr-cart"></span></a></li>
-                                                        <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"
-                                                                                    data-bs-toggle="modal"
-                                                                                    data-bs-target="#modal_box"> <span
-                                                                    class="lnr lnr-magnifier"></span></a></li>
-                                                        <li class="wishlist"><a href="wishlist.html"
-                                                                                data-tippy="Add to Wishlist"
-                                                                                data-tippy-placement="top"
-                                                                                data-tippy-arrow="true"
-                                                                                data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-heart"></span></a></li>
-                                                        <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                               data-tippy-placement="top"
-                                                                               data-tippy-arrow="true"
-                                                                               data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-sync"></span></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="price_box">
-                                                    <span class="current_price">$46.00</span>
-                                                    <span class="old_price">$382.00</span>
-                                                </div>
-                                            </figcaption>
-                                        </figure>
-                                    </article>
-                                </div>
-                                <div class="product_items">
-                                    <article class="single_product">
-                                        <figure>
-                                            <div class="product_thumb">
-                                                <a class="primary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product1.jpg')}}"
-                                                        alt=""></a>
-                                                <a class="secondary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product2.jpg')}}"
-                                                        alt=""></a>
-                                            </div>
-                                            <figcaption class="product_content">
-                                                <h4 class="product_name"><a href="product-details.html">Aliquam
-                                                        Consequat</a></h4>
-                                                <p><a href="#">Fruits</a></p>
-                                                <div class="action_links">
-                                                    <ul>
-                                                        <li class="add_to_cart"><a href="cart.html"
-                                                                                   data-tippy="Add to cart"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"> <span
-                                                                    class="lnr lnr-cart"></span></a></li>
-                                                        <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"
-                                                                                    data-bs-toggle="modal"
-                                                                                    data-bs-target="#modal_box"> <span
-                                                                    class="lnr lnr-magnifier"></span></a></li>
-                                                        <li class="wishlist"><a href="wishlist.html"
-                                                                                data-tippy="Add to Wishlist"
-                                                                                data-tippy-placement="top"
-                                                                                data-tippy-arrow="true"
-                                                                                data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-heart"></span></a></li>
-                                                        <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                               data-tippy-placement="top"
-                                                                               data-tippy-arrow="true"
-                                                                               data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-sync"></span></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="price_box">
-                                                    <span class="current_price">$26.00</span>
-                                                    <span class="old_price">$362.00</span>
-                                                </div>
-                                            </figcaption>
-                                        </figure>
-                                    </article>
-                                    <article class="single_product">
-                                        <figure>
-                                            <div class="product_thumb">
-                                                <a class="primary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product11.jpg')}}"
-                                                        alt=""></a>
-                                                <a class="secondary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product10.jpg')}}"
-                                                        alt=""></a>
-                                            </div>
-                                            <figcaption class="product_content">
-                                                <h4 class="product_name"><a href="product-details.html">Donec Non
-                                                        Est</a></h4>
-                                                <p><a href="#">Fruits</a></p>
-                                                <div class="action_links">
-                                                    <ul>
-                                                        <li class="add_to_cart"><a href="cart.html"
-                                                                                   data-tippy="Add to cart"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"> <span
-                                                                    class="lnr lnr-cart"></span></a></li>
-                                                        <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"
-                                                                                    data-bs-toggle="modal"
-                                                                                    data-bs-target="#modal_box"> <span
-                                                                    class="lnr lnr-magnifier"></span></a></li>
-                                                        <li class="wishlist"><a href="wishlist.html"
-                                                                                data-tippy="Add to Wishlist"
-                                                                                data-tippy-placement="top"
-                                                                                data-tippy-arrow="true"
-                                                                                data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-heart"></span></a></li>
-                                                        <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                               data-tippy-placement="top"
-                                                                               data-tippy-arrow="true"
-                                                                               data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-sync"></span></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="price_box">
-                                                    <span class="current_price">$46.00</span>
-                                                    <span class="old_price">$382.00</span>
-                                                </div>
-                                            </figcaption>
-                                        </figure>
-                                    </article>
-                                    <article class="single_product">
-                                        <figure>
-                                            <div class="product_thumb">
-                                                <a class="primary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product9.jpg')}}"
-                                                        alt=""></a>
-                                                <a class="secondary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product8.jpg')}}"
-                                                        alt=""></a>
-                                            </div>
-                                            <figcaption class="product_content">
-                                                <h4 class="product_name"><a href="product-details.html">Mauris Vel
-                                                        Tellus</a></h4>
-                                                <p><a href="#">Fruits</a></p>
-                                                <div class="action_links">
-                                                    <ul>
-                                                        <li class="add_to_cart"><a href="cart.html"
-                                                                                   data-tippy="Add to cart"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"> <span
-                                                                    class="lnr lnr-cart"></span></a></li>
-                                                        <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"
-                                                                                    data-bs-toggle="modal"
-                                                                                    data-bs-target="#modal_box"> <span
-                                                                    class="lnr lnr-magnifier"></span></a></li>
-                                                        <li class="wishlist"><a href="wishlist.html"
-                                                                                data-tippy="Add to Wishlist"
-                                                                                data-tippy-placement="top"
-                                                                                data-tippy-arrow="true"
-                                                                                data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-heart"></span></a></li>
-                                                        <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                               data-tippy-placement="top"
-                                                                               data-tippy-arrow="true"
-                                                                               data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-sync"></span></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="price_box">
-                                                    <span class="current_price">$56.00</span>
-                                                    <span class="old_price">$362.00</span>
-                                                </div>
-                                            </figcaption>
-                                        </figure>
-                                    </article>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div class="single_custom_product3 columnp3">
-                            <div class="section_title">
-                                <h2>Fish & Seafood</h2>
-                            </div>
-                            <div class="small_product_area product_carousel product_column1 owl-carousel">
-                                <div class="product_items">
-                                    <article class="single_product">
-                                        <figure>
-                                            <div class="product_thumb">
-                                                <a class="primary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product13.jpg')}}"
-                                                        alt=""></a>
-                                                <a class="secondary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product1.jpg')}}"
-                                                        alt=""></a>
-                                            </div>
-                                            <figcaption class="product_content">
-                                                <h4 class="product_name"><a href="product-details.html">Mauris Vel
-                                                        Tellus</a></h4>
-                                                <p><a href="#">Fruits</a></p>
-                                                <div class="action_links">
-                                                    <ul>
-                                                        <li class="add_to_cart"><a href="cart.html"
-                                                                                   data-tippy="Add to cart"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"> <span
-                                                                    class="lnr lnr-cart"></span></a></li>
-                                                        <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"
-                                                                                    data-bs-toggle="modal"
-                                                                                    data-bs-target="#modal_box"> <span
-                                                                    class="lnr lnr-magnifier"></span></a></li>
-                                                        <li class="wishlist"><a href="wishlist.html"
-                                                                                data-tippy="Add to Wishlist"
-                                                                                data-tippy-placement="top"
-                                                                                data-tippy-arrow="true"
-                                                                                data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-heart"></span></a></li>
-                                                        <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                               data-tippy-placement="top"
-                                                                               data-tippy-arrow="true"
-                                                                               data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-sync"></span></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="price_box">
-                                                    <span class="current_price">$45.00</span>
-                                                    <span class="old_price">$162.00</span>
-                                                </div>
-                                            </figcaption>
-                                        </figure>
-                                    </article>
-                                    <article class="single_product">
-                                        <figure>
-                                            <div class="product_thumb">
-                                                <a class="primary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product10.jpg')}}"
-                                                        alt=""></a>
-                                                <a class="secondary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product3.jpg')}}"
-                                                        alt=""></a>
-                                            </div>
-                                            <figcaption class="product_content">
-                                                <h4 class="product_name"><a href="product-details.html">Donec Non
-                                                        Est</a></h4>
-                                                <p><a href="#">Fruits</a></p>
-                                                <div class="action_links">
-                                                    <ul>
-                                                        <li class="add_to_cart"><a href="cart.html"
-                                                                                   data-tippy="Add to cart"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"> <span
-                                                                    class="lnr lnr-cart"></span></a></li>
-                                                        <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"
-                                                                                    data-bs-toggle="modal"
-                                                                                    data-bs-target="#modal_box"> <span
-                                                                    class="lnr lnr-magnifier"></span></a></li>
-                                                        <li class="wishlist"><a href="wishlist.html"
-                                                                                data-tippy="Add to Wishlist"
-                                                                                data-tippy-placement="top"
-                                                                                data-tippy-arrow="true"
-                                                                                data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-heart"></span></a></li>
-                                                        <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                               data-tippy-placement="top"
-                                                                               data-tippy-arrow="true"
-                                                                               data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-sync"></span></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="price_box">
-                                                    <span class="current_price">$46.00</span>
-                                                    <span class="old_price">$382.00</span>
-                                                </div>
-                                            </figcaption>
-                                        </figure>
-                                    </article>
-                                    <article class="single_product">
-                                        <figure>
-                                            <div class="product_thumb">
-                                                <a class="primary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product8.jpg')}}"
-                                                        alt=""></a>
-                                                <a class="secondary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product5.jpg')}}"
-                                                        alt=""></a>
-                                            </div>
-                                            <figcaption class="product_content">
-                                                <h4 class="product_name"><a href="product-details.html">Donec Non
-                                                        Est</a></h4>
-                                                <p><a href="#">Fruits</a></p>
-                                                <div class="action_links">
-                                                    <ul>
-                                                        <li class="add_to_cart"><a href="cart.html"
-                                                                                   data-tippy="Add to cart"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"> <span
-                                                                    class="lnr lnr-cart"></span></a></li>
-                                                        <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"
-                                                                                    data-bs-toggle="modal"
-                                                                                    data-bs-target="#modal_box"> <span
-                                                                    class="lnr lnr-magnifier"></span></a></li>
-                                                        <li class="wishlist"><a href="wishlist.html"
-                                                                                data-tippy="Add to Wishlist"
-                                                                                data-tippy-placement="top"
-                                                                                data-tippy-arrow="true"
-                                                                                data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-heart"></span></a></li>
-                                                        <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                               data-tippy-placement="top"
-                                                                               data-tippy-arrow="true"
-                                                                               data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-sync"></span></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="price_box">
-                                                    <span class="current_price">$46.00</span>
-                                                    <span class="old_price">$382.00</span>
-                                                </div>
-                                            </figcaption>
-                                        </figure>
-                                    </article>
-                                </div>
-                                <div class="product_items">
-                                    <article class="single_product">
-                                        <figure>
-                                            <div class="product_thumb">
-                                                <a class="primary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product1.jpg')}}"
-                                                        alt=""></a>
-                                                <a class="secondary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product2.jpg')}}"
-                                                        alt=""></a>
-                                            </div>
-                                            <figcaption class="product_content">
-                                                <h4 class="product_name"><a href="product-details.html">Aliquam
-                                                        Consequat</a></h4>
-                                                <p><a href="#">Fruits</a></p>
-                                                <div class="action_links">
-                                                    <ul>
-                                                        <li class="add_to_cart"><a href="cart.html"
-                                                                                   data-tippy="Add to cart"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"> <span
-                                                                    class="lnr lnr-cart"></span></a></li>
-                                                        <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"
-                                                                                    data-bs-toggle="modal"
-                                                                                    data-bs-target="#modal_box"> <span
-                                                                    class="lnr lnr-magnifier"></span></a></li>
-                                                        <li class="wishlist"><a href="wishlist.html"
-                                                                                data-tippy="Add to Wishlist"
-                                                                                data-tippy-placement="top"
-                                                                                data-tippy-arrow="true"
-                                                                                data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-heart"></span></a></li>
-                                                        <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                               data-tippy-placement="top"
-                                                                               data-tippy-arrow="true"
-                                                                               data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-sync"></span></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="price_box">
-                                                    <span class="current_price">$26.00</span>
-                                                    <span class="old_price">$362.00</span>
-                                                </div>
-                                            </figcaption>
-                                        </figure>
-                                    </article>
-                                    <article class="single_product">
-                                        <figure>
-                                            <div class="product_thumb">
-                                                <a class="primary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product3.jpg')}}"
-                                                        alt=""></a>
-                                                <a class="secondary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product4.jpg')}}"
-                                                        alt=""></a>
-                                            </div>
-                                            <figcaption class="product_content">
-                                                <h4 class="product_name"><a href="product-details.html">Donec Non
-                                                        Est</a></h4>
-                                                <p><a href="#">Fruits</a></p>
-                                                <div class="action_links">
-                                                    <ul>
-                                                        <li class="add_to_cart"><a href="cart.html"
-                                                                                   data-tippy="Add to cart"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"> <span
-                                                                    class="lnr lnr-cart"></span></a></li>
-                                                        <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"
-                                                                                    data-bs-toggle="modal"
-                                                                                    data-bs-target="#modal_box"> <span
-                                                                    class="lnr lnr-magnifier"></span></a></li>
-                                                        <li class="wishlist"><a href="wishlist.html"
-                                                                                data-tippy="Add to Wishlist"
-                                                                                data-tippy-placement="top"
-                                                                                data-tippy-arrow="true"
-                                                                                data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-heart"></span></a></li>
-                                                        <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                               data-tippy-placement="top"
-                                                                               data-tippy-arrow="true"
-                                                                               data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-sync"></span></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="price_box">
-                                                    <span class="current_price">$46.00</span>
-                                                    <span class="old_price">$382.00</span>
-                                                </div>
-                                            </figcaption>
-                                        </figure>
-                                    </article>
-                                    <article class="single_product">
-                                        <figure>
-                                            <div class="product_thumb">
-                                                <a class="primary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product5.jpg')}}"
-                                                        alt=""></a>
-                                                <a class="secondary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product6.jpg')}}"
-                                                        alt=""></a>
-                                            </div>
-                                            <figcaption class="product_content">
-                                                <h4 class="product_name"><a href="product-details.html">Mauris Vel
-                                                        Tellus</a></h4>
-                                                <p><a href="#">Fruits</a></p>
-                                                <div class="action_links">
-                                                    <ul>
-                                                        <li class="add_to_cart"><a href="cart.html"
-                                                                                   data-tippy="Add to cart"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"> <span
-                                                                    class="lnr lnr-cart"></span></a></li>
-                                                        <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"
-                                                                                    data-bs-toggle="modal"
-                                                                                    data-bs-target="#modal_box"> <span
-                                                                    class="lnr lnr-magnifier"></span></a></li>
-                                                        <li class="wishlist"><a href="wishlist.html"
-                                                                                data-tippy="Add to Wishlist"
-                                                                                data-tippy-placement="top"
-                                                                                data-tippy-arrow="true"
-                                                                                data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-heart"></span></a></li>
-                                                        <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                               data-tippy-placement="top"
-                                                                               data-tippy-arrow="true"
-                                                                               data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-sync"></span></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="price_box">
-                                                    <span class="current_price">$56.00</span>
-                                                    <span class="old_price">$362.00</span>
-                                                </div>
-                                            </figcaption>
-                                        </figure>
-                                    </article>
-                                </div>
-                                <div class="product_items">
-                                    <article class="single_product">
-                                        <figure>
-                                            <div class="product_thumb">
-                                                <a class="primary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product1.jpg')}}"
-                                                        alt=""></a>
-                                                <a class="secondary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product2.jpg')}}"
-                                                        alt=""></a>
-                                            </div>
-                                            <figcaption class="product_content">
-                                                <h4 class="product_name"><a href="product-details.html">Aliquam
-                                                        Consequat</a></h4>
-                                                <p><a href="#">Fruits</a></p>
-                                                <div class="action_links">
-                                                    <ul>
-                                                        <li class="add_to_cart"><a href="cart.html"
-                                                                                   data-tippy="Add to cart"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"> <span
-                                                                    class="lnr lnr-cart"></span></a></li>
-                                                        <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"
-                                                                                    data-bs-toggle="modal"
-                                                                                    data-bs-target="#modal_box"> <span
-                                                                    class="lnr lnr-magnifier"></span></a></li>
-                                                        <li class="wishlist"><a href="wishlist.html"
-                                                                                data-tippy="Add to Wishlist"
-                                                                                data-tippy-placement="top"
-                                                                                data-tippy-arrow="true"
-                                                                                data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-heart"></span></a></li>
-                                                        <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                               data-tippy-placement="top"
-                                                                               data-tippy-arrow="true"
-                                                                               data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-sync"></span></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="price_box">
-                                                    <span class="current_price">$26.00</span>
-                                                    <span class="old_price">$362.00</span>
-                                                </div>
-                                            </figcaption>
-                                        </figure>
-                                    </article>
-                                    <article class="single_product">
-                                        <figure>
-                                            <div class="product_thumb">
-                                                <a class="primary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product11.jpg')}}"
-                                                        alt=""></a>
-                                                <a class="secondary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product10.jpg')}}"
-                                                        alt=""></a>
-                                            </div>
-                                            <figcaption class="product_content">
-                                                <h4 class="product_name"><a href="product-details.html">Donec Non
-                                                        Est</a></h4>
-                                                <p><a href="#">Fruits</a></p>
-                                                <div class="action_links">
-                                                    <ul>
-                                                        <li class="add_to_cart"><a href="cart.html"
-                                                                                   data-tippy="Add to cart"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"> <span
-                                                                    class="lnr lnr-cart"></span></a></li>
-                                                        <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"
-                                                                                    data-bs-toggle="modal"
-                                                                                    data-bs-target="#modal_box"> <span
-                                                                    class="lnr lnr-magnifier"></span></a></li>
-                                                        <li class="wishlist"><a href="wishlist.html"
-                                                                                data-tippy="Add to Wishlist"
-                                                                                data-tippy-placement="top"
-                                                                                data-tippy-arrow="true"
-                                                                                data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-heart"></span></a></li>
-                                                        <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                               data-tippy-placement="top"
-                                                                               data-tippy-arrow="true"
-                                                                               data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-sync"></span></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="price_box">
-                                                    <span class="current_price">$46.00</span>
-                                                    <span class="old_price">$382.00</span>
-                                                </div>
-                                            </figcaption>
-                                        </figure>
-                                    </article>
-                                    <article class="single_product">
-                                        <figure>
-                                            <div class="product_thumb">
-                                                <a class="primary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product9.jpg')}}"
-                                                        alt=""></a>
-                                                <a class="secondary_img" href="product-details.html"><img
-                                                        src="{{ url('assets/frontend/img/product/product8.jpg')}}"
-                                                        alt=""></a>
-                                            </div>
-                                            <figcaption class="product_content">
-                                                <h4 class="product_name"><a href="product-details.html">Mauris Vel
-                                                        Tellus</a></h4>
-                                                <p><a href="#">Fruits</a></p>
-                                                <div class="action_links">
-                                                    <ul>
-                                                        <li class="add_to_cart"><a href="cart.html"
-                                                                                   data-tippy="Add to cart"
-                                                                                   data-tippy-placement="top"
-                                                                                   data-tippy-arrow="true"
-                                                                                   data-tippy-inertia="true"> <span
-                                                                    class="lnr lnr-cart"></span></a></li>
-                                                        <li class="quick_button"><a href="#" data-tippy="quick view"
-                                                                                    data-tippy-placement="top"
-                                                                                    data-tippy-arrow="true"
-                                                                                    data-tippy-inertia="true"
-                                                                                    data-bs-toggle="modal"
-                                                                                    data-bs-target="#modal_box"> <span
-                                                                    class="lnr lnr-magnifier"></span></a></li>
-                                                        <li class="wishlist"><a href="wishlist.html"
-                                                                                data-tippy="Add to Wishlist"
-                                                                                data-tippy-placement="top"
-                                                                                data-tippy-arrow="true"
-                                                                                data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-heart"></span></a></li>
-                                                        <li class="compare"><a href="#" data-tippy="Add to Compare"
-                                                                               data-tippy-placement="top"
-                                                                               data-tippy-arrow="true"
-                                                                               data-tippy-inertia="true"><span
-                                                                    class="lnr lnr-sync"></span></a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="price_box">
-                                                    <span class="current_price">$56.00</span>
-                                                    <span class="old_price">$362.00</span>
-                                                </div>
-                                            </figcaption>
-                                        </figure>
-                                    </article>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--custom product area end-->
-
-        <!--brand area start-->
-        <div class="brand_area">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="brand_container owl-carousel ">
-                            <div class="single_brand">
-                                <a href="#"><img src="{{ url('assets/frontend/img/brand/brand1.jpg')}}" alt=""></a>
-                            </div>
-                            <div class="single_brand">
-                                <a href="#"><img src="{{ url('assets/frontend/img/brand/brand2.jpg')}}" alt=""></a>
-                            </div>
-                            <div class="single_brand">
-                                <a href="#"><img src="{{ url('assets/frontend/img/brand/brand3.jpg')}}" alt=""></a>
-                            </div>
-                            <div class="single_brand">
-                                <a href="#"><img src="{{ url('assets/frontend/img/brand/brand4.jpg')}}" alt=""></a>
-                            </div>
-                            <div class="single_brand">
-                                <a href="#"><img src="{{ url('assets/frontend/img/brand/brand2.jpg')}}" alt=""></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        -->
-        <!--brand area end-->
     </div>
 @endsection
 
@@ -3616,7 +4411,7 @@
                 }
 
             },
-            beforeMount: function () {
+            mounted: function () {
                 this.getDropdownItem(['products','categories']);
             },
             methods: {
