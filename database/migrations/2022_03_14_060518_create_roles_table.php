@@ -15,9 +15,14 @@ return new class extends Migration
     {
         if(!Schema::hasTable('roles'))
         Schema::create('roles', function (Blueprint $table) {
-            $table->uuid('id')->primary();
+            $table->id();
             $table->string('name')->unique()->index();
+            $table->string('slug')->default('other');
             $table->string('description')->nullable();
+            $table->integer('updated_by')->nullable();
+            $table->integer('created_by');
+            $table->integer('deleted_by')->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

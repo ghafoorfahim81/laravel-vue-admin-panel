@@ -12,23 +12,25 @@ return new class extends Migration
      * @return void
      */
     public function up()
-    { 
+    {
         Schema::create('users', function (Blueprint $table) {
-            $table->uuid('id')->primary();
-            $table->string('name');
-            $table->string('email')->unique();
+            $table->id();
+            $table->string('email')->nullable();
+            $table->string('user_name')->unique();
             $table->timestamp('email_verified_at')->nullable();
+            $table->timestamp('first_login_at')->nullable();
             $table->string('password');
+            $table->integer('status')->default(1);
+            $table->integer('employee_id');
+            $table->integer('directorate_id');
+            $table->bigInteger('created_by');
+            $table->bigInteger('updated_by')->nullable();
+            $table->bigInteger('deleted_by')->nullable();
             $table->rememberToken();
-            $table->foreignId('current_team_id')->nullable();
             $table->string('profile_photo_path', 2048)->nullable();
-            $table->json('setting')->nullable();
-            $table->json('companies')->nullable();
-            $table->uuid('current_company')->nullable();
-            $table->string('type')->nullable();
-            $table->json('location_id')->nullable();
-            $table->uuid('province_id')->nullable();
             $table->timestamps();
+            $table->softDeletes();
+
         });
     }
 

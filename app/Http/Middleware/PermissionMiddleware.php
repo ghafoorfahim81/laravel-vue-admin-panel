@@ -59,8 +59,7 @@ class PermissionMiddleware
                         if ($request->ajax()) {
                             return response(__('message.401_msg'),401);
                         } else {
-                            abort(403, 'Unauthorized action.');
-                            return redirect('401');
+                            return redirect('forbidden');
 
                         }
                         //return $next($request);
@@ -72,8 +71,7 @@ class PermissionMiddleware
                 if ($request->ajax()) {
                     return response(__('message.401_msg'),401);
                 } else {
-                    abort(403, 'Unauthorized action.');
-                    return redirect('401');
+                    return redirect('forbidden');
                 }
                 //return $next($request);
             }

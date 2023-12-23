@@ -2,10 +2,10 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Carbon\Carbon;
 use Illuminate\Database\Seeder;
-use App\Models\Client\Client;
-
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -16,10 +16,31 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // Client::factory(10)->create();
-        $this->call(PermissionsTableSeeder::class);
-        $this->call(RolesTableSeeder::class);
-        $this->call(UserTableSeeder::class);
-        $this->call(LanguagesTableSeeder::class);
+        $this->call([
+                PermissionsTableSeeder::class,
+                RolesTableSeeder::class,
+                UsersTableSeeder::class,
+            ]
+        );
+//        Artisan::call('app:fetch-hr-data');
+//        DB::table('doc_types')->insert([
+//            [
+//                'name' => 'عریضه',
+//                'slug' => 'requisition',
+//                'created_at' => Carbon::now()
+//            ],
+//            [
+//                'name' => 'مکتوب',
+//                'slug' => 'letter',
+//                'created_at' => Carbon::now()
+//            ],
+//            [
+//                'name' => 'پیشنهاد',
+//                'slug' => 'suggestion',
+//                'created_at' => Carbon::now()
+//            ],
+//        ]);
+
+
     }
 }

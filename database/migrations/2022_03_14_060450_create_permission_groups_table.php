@@ -15,7 +15,7 @@ return new class extends Migration
     {
         if(!Schema::hasTable('permission_groups'))
         Schema::create('permission_groups', function (Blueprint $table) {
-            $table->uuid('id')->primary();
+            $table->id();
             $table->string('name')->index();
             $table->string('category')->nullable();
             $table->timestamps();

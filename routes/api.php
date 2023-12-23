@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DTSController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -13,7 +14,10 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+//Route::get('local-hr/get-directorates', [DTSController::class, 'getDirectoratesFromLocalHR']);
+//
+//Route::get('local-hr/get-employees', [DTSController::class, 'getEmployeesFromLocalHR']);
+//
+//Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//    return $request->user();
+//});

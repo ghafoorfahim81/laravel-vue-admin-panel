@@ -28,7 +28,9 @@ return [
     | of your password brokers setup in your "auth" configuration file.
     |
     */
-
+    'controllers' => [
+        'login' => \App\Http\Controllers\CustomLoginController::class,
+    ],
     'passwords' => 'users',
 
     /*
@@ -138,8 +140,18 @@ return [
         Features::updateProfileInformation(),
         Features::updatePasswords(),
         Features::twoFactorAuthentication([
+            'confirm' => true,
             'confirmPassword' => true,
+            // 'window' => 0,
         ]),
+    ],
+    'redirects' => [
+        'login' => 'dashboard',
+        'logout' => 'login',
+        'password-confirmation' => null,
+        'register' => 'dashboard',
+        'email-verification' => null,
+        'password-reset' => null,
     ],
 
 ];

@@ -1,22 +1,31 @@
 const mix = require('laravel-mix');
 
-/*
- |--------------------------------------------------------------------------
- | Mix Asset Management
- |--------------------------------------------------------------------------
- |
- | Mix provides a clean, fluent API for defining some Webpack build steps
- | for your Laravel applications. By default, we are compiling the CSS
- | file for the application as well as bundling up all the JS files.
- |
- */
-
-mix.js('resources/js/app.js', 'public/js').vue()
+mix.js('resources/js/app.js', 'public/js')
     .postCss('resources/css/app.css', 'public/css', [
-        require('postcss-import'),
-        require('tailwindcss'),
+        require("tailwindcss"),
     ]);
 
-if (mix.inProduction()) {
-    mix.version();
-}
+// Optional: If you're using Vue 3, include .vue() to enable Vue.js support
+mix.vue();
+
+// Optional: Set publicPath for asset versioning
+// mix.setPublicPath('public');
+
+// Optional: Customize asset versioning file name
+// mix.versionFileName('my-version.json');
+
+// Additional customization or asset compilation can be added here
+
+// Example: Compile assets with versioning and source maps enabled
+// mix.js('resources/js/app.js', 'public/js').vue()
+//     .postCss('resources/css/app.css', 'public/css', [
+//         require("tailwindcss"),
+//     ]).version().sourceMaps();
+
+// Example: Compile assets for production with minification and versioning
+// if (mix.inProduction()) {
+//     mix.js('resources/js/app.js', 'public/js').vue()
+//         .postCss('resources/css/app.css', 'public/css', [
+//             require("tailwindcss"),
+//         ]).version();
+// }

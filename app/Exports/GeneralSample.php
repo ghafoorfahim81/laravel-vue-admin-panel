@@ -31,14 +31,18 @@ class GeneralSample implements
     protected $header;
     protected $data;
     protected $column_size;
+    protected $title;
     protected $alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'Y', 'Z'];
-    function __construct(array $data, int $length, $type, $header, $column_size)
+    function __construct(array $data, int $length, $type, $header, $column_size, $title=null)
     {
         $this->header = $header;
         $this->data = $data;
         $this->column_size = $column_size;
         $this->length = $length;
         $this->type = $type;
+        $this->title = $title;
+
+
     }
 
     use Exportable;
@@ -86,7 +90,9 @@ class GeneralSample implements
         $spreadsheet->getStyle('A6:' . $this->alphabet[$lastColumn] . '6')->getFill()->setFillType(\PhpOffice\PhpSpreadsheet\Style\Fill::FILL_SOLID);
         $spreadsheet->getStyle('A6:' . $this->alphabet[$lastColumn] . '6')->getFill()->getStartColor()->setRGB('0277bd');
         $spreadsheet->getStyle('A1:' . $this->alphabet[$lastColumn] . '' . $maxLength)->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
+        $spreadsheet->getStyle('A2:' . $this->alphabet[$lastColumn] . '' . $maxLength)->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
         $spreadsheet->getStyle('A1:' . $this->alphabet[$lastColumn] . '5')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
+        $spreadsheet->getStyle('A2:' . $this->alphabet[$lastColumn] . '5')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
         $spreadsheet->getStyle('6')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
         $spreadsheet->getStyle('6')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
         $spreadsheet->getRowDimension('6')->setRowHeight(30);
@@ -95,7 +101,9 @@ class GeneralSample implements
         }
 
         $spreadsheet->getStyle('A1:' . $this->alphabet[$lastColumn] . '5')->getFill()->setFillType(\PhpOffice\PhpSpreadsheet\Style\Fill::FILL_SOLID);
-        $spreadsheet->mergeCells('A1:' . $this->alphabet[$lastColumn] . '2');
+        $spreadsheet->getStyle('A2:' . $this->alphabet[$lastColumn] . '5')->getFill()->setFillType(\PhpOffice\PhpSpreadsheet\Style\Fill::FILL_SOLID);
+        $spreadsheet->mergeCells('A1:' . $this->alphabet[$lastColumn] . '1');
+        $spreadsheet->mergeCells('A2:' . $this->alphabet[$lastColumn] . '2');
         $spreadsheet->mergeCells('A3:' . $this->alphabet[$lastColumn] . '4');
         $spreadsheet->mergeCells('A5:' . $this->alphabet[$lastColumn] . '5');
         // --------------------------------------------------------->>
@@ -108,10 +116,12 @@ class GeneralSample implements
         // --------------------------------------------------------->>
 
 
-        // Title || Company ||  Email || Name
-        $spreadsheet->getCell('A1')->setValue('Afghan Sharq Money Services');
+        // Title || Company || Name
+        $spreadsheet->getCell('A1')->setValue(__('general_words.ministry_of_finance'));
         $spreadsheet->getStyle('A1')->getAlignment()->setWrapText(true);
-        $spreadsheet->getCell('A3')->setValue( "Office#, 42 Sari-shahzada, Kabul, Afghanistan  \n0777816565 ,info@afghansharq.com");
+        $spreadsheet->getCell('A2')->setValue(__('general_words.archive_directorate'));
+        $spreadsheet->getStyle('A2')->getAlignment()->setWrapText(true);
+        $spreadsheet->getCell('A3')->setValue($this->title);
         $spreadsheet->getStyle('A3')->getAlignment()->setWrapText(true);
         // --------------------------------------------------------->>
 
@@ -119,7 +129,7 @@ class GeneralSample implements
         // Date Of Export
         $spreadsheet->getStyle('A5')->getFont()->setSize(13);
         $spreadsheet->getStyle('A5')->getFont()->setBold(true);
-        $spreadsheet->getCell('A5')->setValue($type . ' Export on Date:' . $date);
+        $spreadsheet->getCell('A5')->setValue($type . __('general_words.exported_date') . $date);
         $spreadsheet->getStyle('A5:' . $this->alphabet[$lastColumn] . '5')->getAlignment()->setVertical(\PhpOffice\PhpSpreadsheet\Style\Alignment::VERTICAL_CENTER);
         $spreadsheet->getStyle('A5:' . $this->alphabet[$lastColumn] . '5')->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
         // --------------------------------------------------------->>
@@ -128,7 +138,14 @@ class GeneralSample implements
         // Body Cells alignment
         $spreadsheet->getStyle('B7:' . '' . $this->alphabet[$lastColumn] . '' . $maxLength)->getAlignment()->setHorizontal(\PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER);
         // --------------------------------------------------------->>
-
+        \App::setLocale('prs');
+        if(\App::isLocale('prs') || \App::isLocale('pa')){
+            $spreadsheet->setRightToLeft(true);
+        }
+        else
+        {
+            $spreadsheet->setRightToLeft(false);
+        }
 
         // All Cells Borders Inside And Outline
         $styleArray = [

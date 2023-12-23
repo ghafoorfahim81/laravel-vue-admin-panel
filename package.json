@@ -1,65 +1,50 @@
 {
-  "private": true,
-  "scripts": {
-    "dev": "npm run development",
-    "development": "mix",
-    "watch": "mix watch",
-    "watch-poll": "mix watch -- --watch-options-poll=1000",
-    "hot": "mix watch --hot",
-    "prod": "npm run production",
-    "type": "module",
-    "production": "mix --production"
-  },
-  "devDependencies": {
-    "@tailwindcss/forms": "^0.4.0",
-    "@tailwindcss/typography": "^0.5.0",
-    "@vue/compiler-sfc": "^3.2.31",
-    "alpinejs": "^3.0.6",
-    "axios": "^0.25.0",
-    "laravel-echo": "^1.11.4",
-    "laravel-mix": "^6.0.6",
-    "lodash": "^4.17.19",
-    "popper.js": "^1.12",
-    "postcss": "^8.1.14",
-    "postcss-import": "^14.0.1",
-    "pusher-js": "^4",
-    "resolve-url-loader": "^3.1.2",
-    "tailwindcss": "^3.0.0",
-    "vue-loader": "^15.9.6",
-    "vue-template-compiler": "^2.6.12"
-  },
-  "dependencies": {
-    "@fullcalendar/core": "^5.10.1",
-    "@fullcalendar/daygrid": "^5.10.1",
-    "@fullcalendar/interaction": "^5.10.1",
-    "@fullcalendar/vue": "^5.10.1",
-    "laravel-vue-pagination": "^2.3.1",
-    "skeleton-loader-vue": "^1.0.10",
-    "sweetalert": "^2.1.2",
-    "sweetalert2": "^11.4.4",
-    "tagify-vue": "0.0.6",
-    "vee-validate": "^2.2.15",
-    "vue": "^2.6.14",
-    "vue-avatar": "^2.3.3",
-    "vue-loading-skeleton": "^1.1.9",
-    "vue-select": "^3.11.2",
-    "vue-sidebar-menu": "^4.8.1"
-  },
-  "name": "yes",
-  "description": "<p align=\"center\"><a href=\"https://laravel.com\" target=\"_blank\"><img src=\"https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg\" width=\"400\"></a></p>",
-  "version": "4.9.8",
-  "main": "tailwind.config.js",
-  "directories": {
-    "test": "tests"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Asadullahmoradi/AAH.git"
-  },
-  "author": "",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Asadullahmoradi/AAH/issues"
-  },
-  "homepage": "https://github.com/Asadullahmoradi/AAH#readme"
+    "private": true,
+    "scripts": {
+        "dev": "npm run development",
+        "development": "mix",
+        "watch": "mix watch",
+        "watch-poll": "mix watch -- --watch-options-poll=1000",
+        "hot": "mix watch --hot",
+        "prod": "npm run production",
+        "type": "module",
+        "production": "mix --production",
+        "build": "vite build"
+    },
+    "devDependencies": {
+        "@alpinejs/focus": "^3.10.5",
+        "@tailwindcss/forms": "^0.5.2",
+        "@tailwindcss/typography": "^0.5.0",
+        "alpinejs": "^3.0.6",
+        "autoprefixer": "^10.4.16",
+        "axios": "^0.27",
+        "laravel-mix": "^6.0.49",
+        "laravel-vite-plugin": "^0.6.0",
+        "laravel-vue-pagination": "^2.3.1",
+        "lodash": "^4.17.19",
+        "postcss": "^8.4.31",
+        "tailwindcss": "^3.3.3",
+        "vite": "^3.0.0",
+        "vue-loader": "^15.9.6",
+        "vue-template-compiler": "^2.6.12"
+    },
+    "dependencies": {
+        "chart.js": "^4.4.0",
+        "laravel-echo": "^1.15.3",
+        "laravel-vue-pagination": "^4.0.0",
+        "latest": "^0.2.0",
+        "material-icons": "^1.13.12",
+        "moment": "^2.29.4",
+        "npm-install-global": "^1.0.0",
+        "popper.js": "^1.16.1",
+        "pusher-js": "7.0",
+        "skeleton-loader-vue": "^1.0.10",
+        "sweetalert2": "^11.4.8",
+        "tw-elements": "^1.0.0",
+        "vue": "^2.6.14",
+        "vue-datetime-js": "^1.2.2",
+        "vue-multiselect": "^2.1.7",
+        "vue-select": "^3.20.0",
+        "vuelidate": "^0.7.7"
+    }
 }

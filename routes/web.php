@@ -1,20 +1,5 @@
 <?php
 
-use App\Http\Controllers\Client\ClientController;
-use App\Http\Controllers\Client\ClinicalASController;
-use App\Http\Controllers\Client\ReferralController;
-use App\Http\Controllers\CompanyController;
-use App\Http\Controllers\InvoiceController;
-use App\Http\Controllers\ItemController;
-use App\Http\Controllers\Order\OrderController;
-use App\Http\Controllers\Partial\DisabilityController;
-use App\Http\Controllers\Partial\MajorSymptomController;
-use App\Http\Controllers\Partial\SymptomController;
-use App\Http\Controllers\ProjectController;
-use App\Http\Controllers\PsychologistController;
-use App\Http\Controllers\Reports;
-use App\Http\Controllers\TimingController;
-use App\Http\Controllers\TransactionsController;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/broadcast',function(){
@@ -60,6 +45,7 @@ Route::get('/mail/send', ['uses' => 'ItemController@sendMail', 'as' => 'item.mai
 
 Route::middleware('auth')->group(callback: function () {
 
+    Route::prefix('admin')->group(function () {
     Route::get('dashboard', ['uses' => 'DashboardController@index', 'as' => 'dashboard']);
     Route::get('categories', ['uses' => 'CategoryController@index', 'middleware' => ['permission:category_list'], 'as' => 'categories.index']);
     Route::get('categoriesAll', ['uses' => 'CategoryController@categories', 'middleware' => ['permission:category_list'], 'as' => 'categories']);
@@ -165,5 +151,5 @@ Route::middleware('auth')->group(callback: function () {
 
 
     });
-
+    });
 });

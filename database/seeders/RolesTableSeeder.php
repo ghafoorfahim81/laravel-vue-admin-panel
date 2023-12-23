@@ -2,15 +2,12 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Database\Seeder;
-
-
 use App\Models\Permission;
-use App\Models\PermissionGroup;
 use App\Models\Role;
 use App\Models\RolePermission;
+use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
+
 
 class RolesTableSeeder extends Seeder
 {
@@ -22,18 +19,21 @@ class RolesTableSeeder extends Seeder
     public function run()
     {
         // role table
-        $r=(new Role())->where('name','supper admin')->first();
-        if(!$r)
-        {
-            $r=Role::create([
-                'name'=>'supper admin'
+        $check_role = (new Role())->where('slug', 'admin')->first();
+        if (!$check_role) {
+            $role = Role::create([
+                'name' => 'admin',
+                'slug' => 'admin'
             ]);
-
+            // foreach (Permission::all() as $key => $value) {
+            //     $role->permissions()->attach($value, ['id' => Str::uuid()->toString()]);
+            // }
             foreach(Permission::all() AS $key=>$value)
             {
-                $r->permissions()->attach($value, ['id' => Str::uuid()->toString()]);
+                $role->permissions()->attach($value);
             }
         }
+
 
     }
 }
